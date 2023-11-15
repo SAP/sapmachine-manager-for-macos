@@ -1,0 +1,994 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD0285F12A4DBDC600DB339E /* MTSettingsTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0285F02A4DBDC600DB339E /* MTSettingsTabViewController.m */; };
+		AD094F6B2A67FD18006A1BD6 /* MTSapMachineDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = AD094F692A67FD18006A1BD6 /* MTSapMachineDownload.m */; };
+		AD094F6D2A67FD18006A1BD6 /* MTSapMachineDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = AD094F692A67FD18006A1BD6 /* MTSapMachineDownload.m */; };
+		AD0E46982A83772A00F79152 /* MTPackageIntroController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E46962A83772A00F79152 /* MTPackageIntroController.m */; };
+		AD10D1B22AAA0E6D009463D7 /* MTSapMachineUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD10D1B12AAA0E6D009463D7 /* MTSapMachineUser.m */; };
+		AD10D1B32AAA0E6D009463D7 /* MTSapMachineUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD10D1B12AAA0E6D009463D7 /* MTSapMachineUser.m */; };
+		AD1555B92A53E0E30024B0C2 /* MTSapMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1555B82A53E0E30024B0C2 /* MTSapMachine.m */; };
+		AD1555BA2A53E0E30024B0C2 /* MTSapMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1555B82A53E0E30024B0C2 /* MTSapMachine.m */; };
+		AD192AA92A531161001C4E63 /* MTButtonTitleTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD192AA82A531161001C4E63 /* MTButtonTitleTransformer.m */; };
+		AD1C65A42AC809A300E36DF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADE0D4EC2AB9FB9E008015C2 /* Localizable.strings */; };
+		AD204D582A77DD3000D0752A /* MTLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD204D572A77DD3000D0752A /* MTLogController.m */; };
+		AD204D5A2A77E0E700D0752A /* SapMachine Manager.mobileconfig in Resources */ = {isa = PBXBuildFile; fileRef = AD204D592A77E0E700D0752A /* SapMachine Manager.mobileconfig */; };
+		AD25B9512AAEFE260020D1DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD25B9532AAEFE260020D1DA /* Localizable.strings */; };
+		AD25B9592AAEFF350020D1DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD25B95B2AAEFF350020D1DA /* InfoPlist.strings */; };
+		AD2A0A732A793E1C006DB604 /* MTLogLevelValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2A0A722A793E1C006DB604 /* MTLogLevelValueTransformer.m */; };
+		AD32E2DA2A7420D2003770AF /* MTSettingsGeneralController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32E2D92A7420D2003770AF /* MTSettingsGeneralController.m */; };
+		AD3863882A74207600618546 /* MTJavaHome.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A43529ED29B40038D09F /* MTJavaHome.m */; };
+		AD3F68EE2AD6CD49007C1E5B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AD3F68F02AD6CD49007C1E5B /* Credits.rtf */; };
+		AD5509B72A7D4D1800C44CE8 /* MTMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5509B52A7D4D1800C44CE8 /* MTMainWindowController.m */; };
+		AD5FA6732A7B9D58006BF8BD /* MTToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5FA6712A7B9D58006BF8BD /* MTToolbarItem.m */; };
+		AD6079922A9F7D15006BE22E /* MTInstallController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6079902A9F7D15006BE22E /* MTInstallController.m */; };
+		AD60A45C2A9E29B500C57284 /* MTInstallIntroController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD60A45B2A9E29B500C57284 /* MTInstallIntroController.m */; };
+		AD70853A2A7D350D00392389 /* MTDaemonConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCF37152A7CFA0B00CD3886 /* MTDaemonConnection.m */; };
+		AD70CC612A4ED37B00C48A93 /* SapMachineXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD70CC602A4ED37B00C48A93 /* SapMachineXPC.m */; };
+		AD70CC642A4ED37B00C48A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD70CC632A4ED37B00C48A93 /* main.m */; };
+		AD70CC692A4ED37B00C48A93 /* SapMachineXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = AD70CC5D2A4ED37B00C48A93 /* SapMachineXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AD8C00132A815EEF00C9B0A1 /* MTStoryboardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C000F2A815EEF00C9B0A1 /* MTStoryboardAnimator.m */; };
+		AD8C00142A815EEF00C9B0A1 /* MTStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C00122A815EEF00C9B0A1 /* MTStoryboardSegue.m */; };
+		AD92189C2A546025001F3963 /* MTLabelTextTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92189B2A546025001F3963 /* MTLabelTextTransformer.m */; };
+		AD92189F2A5463CB001F3963 /* MTReleaseNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92189E2A5463CB001F3963 /* MTReleaseNameTransformer.m */; };
+		AD9A515E2A52C71600601849 /* MTSapMachineAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A43D29ED49E10038D09F /* MTSapMachineAsset.m */; };
+		AD9A515F2A52C71900601849 /* MTSapMachineVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFD3C5D2A49D79D001BFE61 /* MTSapMachineVersion.m */; };
+		AD9A51602A52C71F00601849 /* MTJavaHome.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A43529ED29B40038D09F /* MTJavaHome.m */; };
+		AD9A51632A52CE8F00601849 /* corp.sap.SMUDaemon.plist in Embed Daemon Plist */ = {isa = PBXBuildFile; fileRef = AD9A51612A52CE7F00601849 /* corp.sap.SMUDaemon.plist */; };
+		AD9E88722AA784BC007A0D55 /* MTTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9E88712AA784BC007A0D55 /* MTTableView.m */; };
+		ADA87FAB2A56B0AF00DEAFBB /* SMUDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA87FAA2A56B0AF00DEAFBB /* SMUDaemon.m */; };
+		ADA87FAC2A56B3EC00DEAFBB /* MTChecksum.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC76FB529F8F5F700BB27DA /* MTChecksum.m */; };
+		ADABBA5F2A554AFD005FD105 /* MTReleaseStatusTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADABBA5E2A554AFD005FD105 /* MTReleaseStatusTransformer.m */; };
+		ADABBA622A554F55005FD105 /* MTReleaseImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADABBA612A554F55005FD105 /* MTReleaseImageTransformer.m */; };
+		ADB21B872A768F1600E45C2D /* MTSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB21B862A768F1600E45C2D /* MTSystemInfo.m */; };
+		ADB21B882A768F1600E45C2D /* MTSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB21B862A768F1600E45C2D /* MTSystemInfo.m */; };
+		ADB21B8A2A769CDD00E45C2D /* MTChecksum.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC76FB529F8F5F700BB27DA /* MTChecksum.m */; };
+		ADBDF9B42A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBDF9B32A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.m */; };
+		ADC326272A822ACF0072FEF5 /* MTPackageReleaseSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC326252A822ACF0072FEF5 /* MTPackageReleaseSelectController.m */; };
+		ADCF37172A7CFA0B00CD3886 /* MTDaemonConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCF37152A7CFA0B00CD3886 /* MTDaemonConnection.m */; };
+		ADD4D2702A825E24005C1798 /* MTPackageArchSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD4D26E2A825E24005C1798 /* MTPackageArchSelectController.m */; };
+		ADD4D2762A82869A005C1798 /* MTPackageBuildController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD4D2752A82869A005C1798 /* MTPackageBuildController.m */; };
+		ADD7702D2A70F95D003F1C9A /* MTOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7702B2A70F95D003F1C9A /* MTOperationQueue.m */; };
+		ADD7702E2A70F95D003F1C9A /* MTOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7702B2A70F95D003F1C9A /* MTOperationQueue.m */; };
+		ADE0D4CB2AB9B890008015C2 /* SMUDaemon in Copy Daemon */ = {isa = PBXBuildFile; fileRef = ADF0AA3D2A52B5AD006DB834 /* SMUDaemon */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		ADE2A3F629ED281F0038D09F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A3F529ED281F0038D09F /* AppDelegate.m */; };
+		ADE2A3F929ED281F0038D09F /* MTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A3F829ED281F0038D09F /* MTMainViewController.m */; };
+		ADE2A3FB29ED28200038D09F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADE2A3FA29ED28200038D09F /* Assets.xcassets */; };
+		ADE2A3FE29ED28200038D09F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE2A3FC29ED28200038D09F /* Main.storyboard */; };
+		ADE2A40029ED28200038D09F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A3FF29ED28200038D09F /* main.m */; };
+		ADE2A43F29ED87CF0038D09F /* MTSapMachineAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A43D29ED49E10038D09F /* MTSapMachineAsset.m */; };
+		ADF0AA402A52B5AD006DB834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF0AA3F2A52B5AD006DB834 /* main.m */; };
+		ADFBE1B42ABC8776008A8476 /* postinstall.txt in Resources */ = {isa = PBXBuildFile; fileRef = ADFBE1B32ABC8776008A8476 /* postinstall.txt */; };
+		ADFD3C5F2A49D79E001BFE61 /* MTSapMachineVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFD3C5D2A49D79D001BFE61 /* MTSapMachineVersion.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD70CC672A4ED37B00C48A93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADE2A3E929ED281F0038D09F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD70CC5C2A4ED37B00C48A93;
+			remoteInfo = SapMachineJVMChecker;
+		};
+		ADF0AA442A52B5D9006DB834 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADE2A3E929ED281F0038D09F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADF0AA3C2A52B5AD006DB834;
+			remoteInfo = SMUDaemon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD0286022A4DD28000DB339E /* Embed Daemon Plist */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchDaemons;
+			dstSubfolderSpec = 1;
+			files = (
+				AD9A51632A52CE8F00601849 /* corp.sap.SMUDaemon.plist in Embed Daemon Plist */,
+			);
+			name = "Embed Daemon Plist";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE0D4CA2AB9B87E008015C2 /* Copy Daemon */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				ADE0D4CB2AB9B890008015C2 /* SMUDaemon in Copy Daemon */,
+			);
+			name = "Copy Daemon";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE2A41B29ED28670038D09F /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				AD70CC692A4ED37B00C48A93 /* SapMachineXPC.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADF0AA3B2A52B5AD006DB834 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AD0285EF2A4DBDC600DB339E /* MTSettingsTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSettingsTabViewController.h; sourceTree = "<group>"; };
+		AD0285F02A4DBDC600DB339E /* MTSettingsTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSettingsTabViewController.m; sourceTree = "<group>"; };
+		AD094F692A67FD18006A1BD6 /* MTSapMachineDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSapMachineDownload.m; sourceTree = "<group>"; };
+		AD094F6A2A67FD18006A1BD6 /* MTSapMachineDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSapMachineDownload.h; sourceTree = "<group>"; };
+		AD0E46962A83772A00F79152 /* MTPackageIntroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPackageIntroController.m; sourceTree = "<group>"; };
+		AD0E46972A83772A00F79152 /* MTPackageIntroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPackageIntroController.h; sourceTree = "<group>"; };
+		AD10D1B02AAA0E6D009463D7 /* MTSapMachineUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTSapMachineUser.h; path = Shared/Classes/MTSapMachineUser.h; sourceTree = SOURCE_ROOT; };
+		AD10D1B12AAA0E6D009463D7 /* MTSapMachineUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTSapMachineUser.m; path = Shared/Classes/MTSapMachineUser.m; sourceTree = SOURCE_ROOT; };
+		AD1555B72A53E0E30024B0C2 /* MTSapMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTSapMachine.h; path = Shared/Classes/MTSapMachine.h; sourceTree = SOURCE_ROOT; };
+		AD1555B82A53E0E30024B0C2 /* MTSapMachine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTSapMachine.m; path = Shared/Classes/MTSapMachine.m; sourceTree = SOURCE_ROOT; };
+		AD192AA72A531161001C4E63 /* MTButtonTitleTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTButtonTitleTransformer.h; sourceTree = "<group>"; };
+		AD192AA82A531161001C4E63 /* MTButtonTitleTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTButtonTitleTransformer.m; sourceTree = "<group>"; };
+		AD204D562A77DD3000D0752A /* MTLogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLogController.h; sourceTree = "<group>"; };
+		AD204D572A77DD3000D0752A /* MTLogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLogController.m; sourceTree = "<group>"; };
+		AD204D592A77E0E700D0752A /* SapMachine Manager.mobileconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "SapMachine Manager.mobileconfig"; sourceTree = "<group>"; };
+		AD25B9522AAEFE260020D1DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD25B9542AAEFE840020D1DA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD25B95A2AAEFF350020D1DA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AD2A0A712A793E1C006DB604 /* MTLogLevelValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLogLevelValueTransformer.h; sourceTree = "<group>"; };
+		AD2A0A722A793E1C006DB604 /* MTLogLevelValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLogLevelValueTransformer.m; sourceTree = "<group>"; };
+		AD32E2D82A7420D2003770AF /* MTSettingsGeneralController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSettingsGeneralController.h; sourceTree = "<group>"; };
+		AD32E2D92A7420D2003770AF /* MTSettingsGeneralController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSettingsGeneralController.m; sourceTree = "<group>"; };
+		AD3F68EF2AD6CD49007C1E5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
+		AD3F68F12AD6CD4D007C1E5B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Credits.rtf; sourceTree = "<group>"; };
+		AD5509B52A7D4D1800C44CE8 /* MTMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMainWindowController.m; sourceTree = "<group>"; };
+		AD5509B62A7D4D1800C44CE8 /* MTMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMainWindowController.h; sourceTree = "<group>"; };
+		AD5FA6712A7B9D58006BF8BD /* MTToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTToolbarItem.m; sourceTree = "<group>"; };
+		AD5FA6722A7B9D58006BF8BD /* MTToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTToolbarItem.h; sourceTree = "<group>"; };
+		AD6079902A9F7D15006BE22E /* MTInstallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTInstallController.m; sourceTree = "<group>"; };
+		AD6079912A9F7D15006BE22E /* MTInstallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTInstallController.h; sourceTree = "<group>"; };
+		AD60A45A2A9E29B500C57284 /* MTInstallIntroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTInstallIntroController.h; sourceTree = "<group>"; };
+		AD60A45B2A9E29B500C57284 /* MTInstallIntroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTInstallIntroController.m; sourceTree = "<group>"; };
+		AD6EF05F2A52D3BE006E8325 /* SMUDaemon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMUDaemon-Info.plist"; sourceTree = "<group>"; };
+		AD70CC5D2A4ED37B00C48A93 /* SapMachineXPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = SapMachineXPC.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD70CC5F2A4ED37B00C48A93 /* SapMachineXPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SapMachineXPC.h; sourceTree = "<group>"; };
+		AD70CC602A4ED37B00C48A93 /* SapMachineXPC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SapMachineXPC.m; sourceTree = "<group>"; };
+		AD70CC622A4ED37B00C48A93 /* SapMachineXPCProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SapMachineXPCProtocol.h; sourceTree = "<group>"; };
+		AD70CC632A4ED37B00C48A93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD70CC652A4ED37B00C48A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD8C000F2A815EEF00C9B0A1 /* MTStoryboardAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStoryboardAnimator.m; sourceTree = "<group>"; };
+		AD8C00102A815EEF00C9B0A1 /* MTStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStoryboardSegue.h; sourceTree = "<group>"; };
+		AD8C00112A815EEF00C9B0A1 /* MTStoryboardAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStoryboardAnimator.h; sourceTree = "<group>"; };
+		AD8C00122A815EEF00C9B0A1 /* MTStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStoryboardSegue.m; sourceTree = "<group>"; };
+		AD92189A2A546025001F3963 /* MTLabelTextTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLabelTextTransformer.h; sourceTree = "<group>"; };
+		AD92189B2A546025001F3963 /* MTLabelTextTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLabelTextTransformer.m; sourceTree = "<group>"; };
+		AD92189D2A5463CB001F3963 /* MTReleaseNameTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTReleaseNameTransformer.h; sourceTree = "<group>"; };
+		AD92189E2A5463CB001F3963 /* MTReleaseNameTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTReleaseNameTransformer.m; sourceTree = "<group>"; };
+		AD9A515C2A52C4D300601849 /* SMUDaemonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUDaemonProtocol.h; sourceTree = "<group>"; };
+		AD9A51612A52CE7F00601849 /* corp.sap.SMUDaemon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = corp.sap.SMUDaemon.plist; sourceTree = "<group>"; };
+		AD9E88702AA784BC007A0D55 /* MTTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTTableView.h; sourceTree = "<group>"; };
+		AD9E88712AA784BC007A0D55 /* MTTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTTableView.m; sourceTree = "<group>"; };
+		ADA87FA92A56B0AF00DEAFBB /* SMUDaemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUDaemon.h; sourceTree = "<group>"; };
+		ADA87FAA2A56B0AF00DEAFBB /* SMUDaemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMUDaemon.m; sourceTree = "<group>"; };
+		ADABBA5D2A554AFD005FD105 /* MTReleaseStatusTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTReleaseStatusTransformer.h; sourceTree = "<group>"; };
+		ADABBA5E2A554AFD005FD105 /* MTReleaseStatusTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTReleaseStatusTransformer.m; sourceTree = "<group>"; };
+		ADABBA602A554F55005FD105 /* MTReleaseImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTReleaseImageTransformer.h; sourceTree = "<group>"; };
+		ADABBA612A554F55005FD105 /* MTReleaseImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTReleaseImageTransformer.m; sourceTree = "<group>"; };
+		ADB21B852A768F1600E45C2D /* MTSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSystemInfo.h; sourceTree = "<group>"; };
+		ADB21B862A768F1600E45C2D /* MTSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSystemInfo.m; sourceTree = "<group>"; };
+		ADBDF9B22A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTReleaseStatusToolTipTransformer.h; sourceTree = "<group>"; };
+		ADBDF9B32A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTReleaseStatusToolTipTransformer.m; sourceTree = "<group>"; };
+		ADC326252A822ACF0072FEF5 /* MTPackageReleaseSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPackageReleaseSelectController.m; sourceTree = "<group>"; };
+		ADC326262A822ACF0072FEF5 /* MTPackageReleaseSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPackageReleaseSelectController.h; sourceTree = "<group>"; };
+		ADC76FB429F8F5F700BB27DA /* MTChecksum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTChecksum.h; path = Shared/Classes/MTChecksum.h; sourceTree = SOURCE_ROOT; };
+		ADC76FB529F8F5F700BB27DA /* MTChecksum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTChecksum.m; path = Shared/Classes/MTChecksum.m; sourceTree = SOURCE_ROOT; };
+		ADCF37152A7CFA0B00CD3886 /* MTDaemonConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDaemonConnection.m; sourceTree = "<group>"; };
+		ADCF37162A7CFA0B00CD3886 /* MTDaemonConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDaemonConnection.h; sourceTree = "<group>"; };
+		ADD4D26E2A825E24005C1798 /* MTPackageArchSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPackageArchSelectController.m; sourceTree = "<group>"; };
+		ADD4D26F2A825E24005C1798 /* MTPackageArchSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPackageArchSelectController.h; sourceTree = "<group>"; };
+		ADD4D2742A82869A005C1798 /* MTPackageBuildController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPackageBuildController.h; sourceTree = "<group>"; };
+		ADD4D2752A82869A005C1798 /* MTPackageBuildController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPackageBuildController.m; sourceTree = "<group>"; };
+		ADD7702B2A70F95D003F1C9A /* MTOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTOperationQueue.m; sourceTree = "<group>"; };
+		ADD7702C2A70F95D003F1C9A /* MTOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTOperationQueue.h; sourceTree = "<group>"; };
+		ADE0D4ED2AB9FB9E008015C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ADE0D4EE2AB9FB9E008015C2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ADE2A3F129ED281F0038D09F /* SapMachine Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SapMachine Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE2A3F429ED281F0038D09F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ADE2A3F529ED281F0038D09F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ADE2A3F729ED281F0038D09F /* MTMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMainViewController.h; sourceTree = "<group>"; };
+		ADE2A3F829ED281F0038D09F /* MTMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMainViewController.m; sourceTree = "<group>"; };
+		ADE2A3FA29ED28200038D09F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADE2A3FD29ED28200038D09F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADE2A3FF29ED28200038D09F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ADE2A40129ED28200038D09F /* SapMachine_Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SapMachine_Manager.entitlements; sourceTree = "<group>"; };
+		ADE2A43429ED29B40038D09F /* MTJavaHome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTJavaHome.h; sourceTree = "<group>"; };
+		ADE2A43529ED29B40038D09F /* MTJavaHome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTJavaHome.m; sourceTree = "<group>"; };
+		ADE2A43729ED2CE10038D09F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		ADE2A43C29ED49E10038D09F /* MTSapMachineAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSapMachineAsset.h; sourceTree = "<group>"; };
+		ADE2A43D29ED49E10038D09F /* MTSapMachineAsset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSapMachineAsset.m; sourceTree = "<group>"; };
+		ADE3BB552AAF388B0016C1F2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		ADF0AA3D2A52B5AD006DB834 /* SMUDaemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SMUDaemon; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADF0AA3F2A52B5AD006DB834 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ADFBE1B32ABC8776008A8476 /* postinstall.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = postinstall.txt; sourceTree = "<group>"; };
+		ADFD3C5D2A49D79D001BFE61 /* MTSapMachineVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSapMachineVersion.m; sourceTree = "<group>"; };
+		ADFD3C5E2A49D79E001BFE61 /* MTSapMachineVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSapMachineVersion.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD70CC5A2A4ED37B00C48A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE2A3EE29ED281F0038D09F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADF0AA3A2A52B5AD006DB834 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD0286042A4DD46C00DB339E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD3863852A741F6B00618546 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				ADE2A43729ED2CE10038D09F /* Constants.h */,
+				ADE2A43329ED29420038D09F /* Classes */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AD3863872A741FE500618546 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD6079912A9F7D15006BE22E /* MTInstallController.h */,
+				AD6079902A9F7D15006BE22E /* MTInstallController.m */,
+				AD60A45A2A9E29B500C57284 /* MTInstallIntroController.h */,
+				AD60A45B2A9E29B500C57284 /* MTInstallIntroController.m */,
+				AD204D562A77DD3000D0752A /* MTLogController.h */,
+				AD204D572A77DD3000D0752A /* MTLogController.m */,
+				ADE2A3F729ED281F0038D09F /* MTMainViewController.h */,
+				ADE2A3F829ED281F0038D09F /* MTMainViewController.m */,
+				ADD4D26F2A825E24005C1798 /* MTPackageArchSelectController.h */,
+				ADD4D26E2A825E24005C1798 /* MTPackageArchSelectController.m */,
+				ADD4D2742A82869A005C1798 /* MTPackageBuildController.h */,
+				ADD4D2752A82869A005C1798 /* MTPackageBuildController.m */,
+				AD0E46972A83772A00F79152 /* MTPackageIntroController.h */,
+				AD0E46962A83772A00F79152 /* MTPackageIntroController.m */,
+				ADC326262A822ACF0072FEF5 /* MTPackageReleaseSelectController.h */,
+				ADC326252A822ACF0072FEF5 /* MTPackageReleaseSelectController.m */,
+				AD32E2D82A7420D2003770AF /* MTSettingsGeneralController.h */,
+				AD32E2D92A7420D2003770AF /* MTSettingsGeneralController.m */,
+				AD0285EF2A4DBDC600DB339E /* MTSettingsTabViewController.h */,
+				AD0285F02A4DBDC600DB339E /* MTSettingsTabViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AD3C1C1A2A4C7E850018F8D0 /* Value Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				AD192AA72A531161001C4E63 /* MTButtonTitleTransformer.h */,
+				AD192AA82A531161001C4E63 /* MTButtonTitleTransformer.m */,
+				AD92189A2A546025001F3963 /* MTLabelTextTransformer.h */,
+				AD92189B2A546025001F3963 /* MTLabelTextTransformer.m */,
+				AD2A0A712A793E1C006DB604 /* MTLogLevelValueTransformer.h */,
+				AD2A0A722A793E1C006DB604 /* MTLogLevelValueTransformer.m */,
+				ADABBA602A554F55005FD105 /* MTReleaseImageTransformer.h */,
+				ADABBA612A554F55005FD105 /* MTReleaseImageTransformer.m */,
+				AD92189D2A5463CB001F3963 /* MTReleaseNameTransformer.h */,
+				AD92189E2A5463CB001F3963 /* MTReleaseNameTransformer.m */,
+				ADBDF9B22A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.h */,
+				ADBDF9B32A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.m */,
+				ADABBA5D2A554AFD005FD105 /* MTReleaseStatusTransformer.h */,
+				ADABBA5E2A554AFD005FD105 /* MTReleaseStatusTransformer.m */,
+			);
+			path = "Value Transformers";
+			sourceTree = "<group>";
+		};
+		AD5FA6742A7B9ED2006BF8BD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ADCF37162A7CFA0B00CD3886 /* MTDaemonConnection.h */,
+				ADCF37152A7CFA0B00CD3886 /* MTDaemonConnection.m */,
+				AD5509B62A7D4D1800C44CE8 /* MTMainWindowController.h */,
+				AD5509B52A7D4D1800C44CE8 /* MTMainWindowController.m */,
+				AD8C00112A815EEF00C9B0A1 /* MTStoryboardAnimator.h */,
+				AD8C000F2A815EEF00C9B0A1 /* MTStoryboardAnimator.m */,
+				AD8C00102A815EEF00C9B0A1 /* MTStoryboardSegue.h */,
+				AD8C00122A815EEF00C9B0A1 /* MTStoryboardSegue.m */,
+				AD9E88702AA784BC007A0D55 /* MTTableView.h */,
+				AD9E88712AA784BC007A0D55 /* MTTableView.m */,
+				AD5FA6722A7B9D58006BF8BD /* MTToolbarItem.h */,
+				AD5FA6712A7B9D58006BF8BD /* MTToolbarItem.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AD70CC5E2A4ED37B00C48A93 /* SapMachineXPC */ = {
+			isa = PBXGroup;
+			children = (
+				AD70CC5F2A4ED37B00C48A93 /* SapMachineXPC.h */,
+				AD70CC602A4ED37B00C48A93 /* SapMachineXPC.m */,
+				AD70CC622A4ED37B00C48A93 /* SapMachineXPCProtocol.h */,
+				AD70CC632A4ED37B00C48A93 /* main.m */,
+				ADE0D4EC2AB9FB9E008015C2 /* Localizable.strings */,
+				AD70CC652A4ED37B00C48A93 /* Info.plist */,
+			);
+			path = SapMachineXPC;
+			sourceTree = "<group>";
+		};
+		ADE2A3E829ED281F0038D09F = {
+			isa = PBXGroup;
+			children = (
+				AD3863852A741F6B00618546 /* Shared */,
+				ADE2A3F329ED281F0038D09F /* SapMachine Manager */,
+				AD70CC5E2A4ED37B00C48A93 /* SapMachineXPC */,
+				ADF0AA3E2A52B5AD006DB834 /* SMUDaemon */,
+				ADE2A3F229ED281F0038D09F /* Products */,
+				AD0286042A4DD46C00DB339E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ADE2A3F229ED281F0038D09F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADE2A3F129ED281F0038D09F /* SapMachine Manager.app */,
+				AD70CC5D2A4ED37B00C48A93 /* SapMachineXPC.xpc */,
+				ADF0AA3D2A52B5AD006DB834 /* SMUDaemon */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADE2A3F329ED281F0038D09F /* SapMachine Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AD5FA6742A7B9ED2006BF8BD /* Classes */,
+				AD3C1C1A2A4C7E850018F8D0 /* Value Transformers */,
+				AD3863872A741FE500618546 /* View Controllers */,
+				AD25B95B2AAEFF350020D1DA /* InfoPlist.strings */,
+				ADE2A3F429ED281F0038D09F /* AppDelegate.h */,
+				ADE2A3F529ED281F0038D09F /* AppDelegate.m */,
+				AD9A51612A52CE7F00601849 /* corp.sap.SMUDaemon.plist */,
+				AD204D592A77E0E700D0752A /* SapMachine Manager.mobileconfig */,
+				ADFBE1B32ABC8776008A8476 /* postinstall.txt */,
+				ADE2A3FA29ED28200038D09F /* Assets.xcassets */,
+				AD3F68F02AD6CD49007C1E5B /* Credits.rtf */,
+				ADE2A3FC29ED28200038D09F /* Main.storyboard */,
+				AD25B9532AAEFE260020D1DA /* Localizable.strings */,
+				ADE2A3FF29ED28200038D09F /* main.m */,
+				ADE2A40129ED28200038D09F /* SapMachine_Manager.entitlements */,
+			);
+			path = "SapMachine Manager";
+			sourceTree = "<group>";
+		};
+		ADE2A43329ED29420038D09F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ADC76FB429F8F5F700BB27DA /* MTChecksum.h */,
+				ADC76FB529F8F5F700BB27DA /* MTChecksum.m */,
+				ADE2A43429ED29B40038D09F /* MTJavaHome.h */,
+				ADE2A43529ED29B40038D09F /* MTJavaHome.m */,
+				ADD7702C2A70F95D003F1C9A /* MTOperationQueue.h */,
+				ADD7702B2A70F95D003F1C9A /* MTOperationQueue.m */,
+				AD1555B72A53E0E30024B0C2 /* MTSapMachine.h */,
+				AD1555B82A53E0E30024B0C2 /* MTSapMachine.m */,
+				ADE2A43C29ED49E10038D09F /* MTSapMachineAsset.h */,
+				ADE2A43D29ED49E10038D09F /* MTSapMachineAsset.m */,
+				AD094F6A2A67FD18006A1BD6 /* MTSapMachineDownload.h */,
+				AD094F692A67FD18006A1BD6 /* MTSapMachineDownload.m */,
+				AD10D1B02AAA0E6D009463D7 /* MTSapMachineUser.h */,
+				AD10D1B12AAA0E6D009463D7 /* MTSapMachineUser.m */,
+				ADFD3C5E2A49D79E001BFE61 /* MTSapMachineVersion.h */,
+				ADFD3C5D2A49D79D001BFE61 /* MTSapMachineVersion.m */,
+				ADB21B852A768F1600E45C2D /* MTSystemInfo.h */,
+				ADB21B862A768F1600E45C2D /* MTSystemInfo.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		ADF0AA3E2A52B5AD006DB834 /* SMUDaemon */ = {
+			isa = PBXGroup;
+			children = (
+				ADF0AA3F2A52B5AD006DB834 /* main.m */,
+				AD6EF05F2A52D3BE006E8325 /* SMUDaemon-Info.plist */,
+				ADA87FA92A56B0AF00DEAFBB /* SMUDaemon.h */,
+				ADA87FAA2A56B0AF00DEAFBB /* SMUDaemon.m */,
+				AD9A515C2A52C4D300601849 /* SMUDaemonProtocol.h */,
+			);
+			path = SMUDaemon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD70CC5C2A4ED37B00C48A93 /* SapMachineXPC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD70CC6A2A4ED37C00C48A93 /* Build configuration list for PBXNativeTarget "SapMachineXPC" */;
+			buildPhases = (
+				AD70CC592A4ED37B00C48A93 /* Sources */,
+				AD70CC5A2A4ED37B00C48A93 /* Frameworks */,
+				AD70CC5B2A4ED37B00C48A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SapMachineXPC;
+			productName = SapMachineJVMChecker;
+			productReference = AD70CC5D2A4ED37B00C48A93 /* SapMachineXPC.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+		ADE2A3F029ED281F0038D09F /* SapMachine Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADE2A40429ED28200038D09F /* Build configuration list for PBXNativeTarget "SapMachine Manager" */;
+			buildPhases = (
+				ADE2A3ED29ED281F0038D09F /* Sources */,
+				ADE2A3EE29ED281F0038D09F /* Frameworks */,
+				ADE2A3EF29ED281F0038D09F /* Resources */,
+				ADE0D4CA2AB9B87E008015C2 /* Copy Daemon */,
+				ADE2A41B29ED28670038D09F /* Embed XPC Services */,
+				AD0286022A4DD28000DB339E /* Embed Daemon Plist */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADF0AA452A52B5D9006DB834 /* PBXTargetDependency */,
+				AD70CC682A4ED37B00C48A93 /* PBXTargetDependency */,
+			);
+			name = "SapMachine Manager";
+			productName = "SapMachine Install Manager";
+			productReference = ADE2A3F129ED281F0038D09F /* SapMachine Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADF0AA3C2A52B5AD006DB834 /* SMUDaemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADF0AA432A52B5AD006DB834 /* Build configuration list for PBXNativeTarget "SMUDaemon" */;
+			buildPhases = (
+				ADF0AA392A52B5AD006DB834 /* Sources */,
+				ADF0AA3A2A52B5AD006DB834 /* Frameworks */,
+				ADF0AA3B2A52B5AD006DB834 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMUDaemon;
+			productName = SMUDaemon;
+			productReference = ADF0AA3D2A52B5AD006DB834 /* SMUDaemon */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADE2A3E929ED281F0038D09F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AD70CC5C2A4ED37B00C48A93 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					ADE2A3F029ED281F0038D09F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					ADF0AA3C2A52B5AD006DB834 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = ADE2A3EC29ED281F0038D09F /* Build configuration list for PBXProject "SapMachine Manager" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = ADE2A3E829ED281F0038D09F;
+			productRefGroup = ADE2A3F229ED281F0038D09F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADE2A3F029ED281F0038D09F /* SapMachine Manager */,
+				AD70CC5C2A4ED37B00C48A93 /* SapMachineXPC */,
+				ADF0AA3C2A52B5AD006DB834 /* SMUDaemon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD70CC5B2A4ED37B00C48A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD1C65A42AC809A300E36DF0 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE2A3EF29ED281F0038D09F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD25B9592AAEFF350020D1DA /* InfoPlist.strings in Resources */,
+				ADE2A3FB29ED28200038D09F /* Assets.xcassets in Resources */,
+				ADFBE1B42ABC8776008A8476 /* postinstall.txt in Resources */,
+				AD25B9512AAEFE260020D1DA /* Localizable.strings in Resources */,
+				ADE2A3FE29ED28200038D09F /* Main.storyboard in Resources */,
+				AD3F68EE2AD6CD49007C1E5B /* Credits.rtf in Resources */,
+				AD204D5A2A77E0E700D0752A /* SapMachine Manager.mobileconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD70CC592A4ED37B00C48A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD70CC642A4ED37B00C48A93 /* main.m in Sources */,
+				AD70CC612A4ED37B00C48A93 /* SapMachineXPC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE2A3ED29ED281F0038D09F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD32E2DA2A7420D2003770AF /* MTSettingsGeneralController.m in Sources */,
+				AD2A0A732A793E1C006DB604 /* MTLogLevelValueTransformer.m in Sources */,
+				AD204D582A77DD3000D0752A /* MTLogController.m in Sources */,
+				AD5FA6732A7B9D58006BF8BD /* MTToolbarItem.m in Sources */,
+				ADB21B872A768F1600E45C2D /* MTSystemInfo.m in Sources */,
+				AD8C00142A815EEF00C9B0A1 /* MTStoryboardSegue.m in Sources */,
+				ADD4D2762A82869A005C1798 /* MTPackageBuildController.m in Sources */,
+				AD192AA92A531161001C4E63 /* MTButtonTitleTransformer.m in Sources */,
+				ADD4D2702A825E24005C1798 /* MTPackageArchSelectController.m in Sources */,
+				AD92189C2A546025001F3963 /* MTLabelTextTransformer.m in Sources */,
+				ADABBA5F2A554AFD005FD105 /* MTReleaseStatusTransformer.m in Sources */,
+				AD8C00132A815EEF00C9B0A1 /* MTStoryboardAnimator.m in Sources */,
+				AD6079922A9F7D15006BE22E /* MTInstallController.m in Sources */,
+				AD3863882A74207600618546 /* MTJavaHome.m in Sources */,
+				AD0E46982A83772A00F79152 /* MTPackageIntroController.m in Sources */,
+				ADD7702D2A70F95D003F1C9A /* MTOperationQueue.m in Sources */,
+				ADABBA622A554F55005FD105 /* MTReleaseImageTransformer.m in Sources */,
+				ADE2A43F29ED87CF0038D09F /* MTSapMachineAsset.m in Sources */,
+				ADCF37172A7CFA0B00CD3886 /* MTDaemonConnection.m in Sources */,
+				AD5509B72A7D4D1800C44CE8 /* MTMainWindowController.m in Sources */,
+				AD0285F12A4DBDC600DB339E /* MTSettingsTabViewController.m in Sources */,
+				AD1555B92A53E0E30024B0C2 /* MTSapMachine.m in Sources */,
+				AD094F6B2A67FD18006A1BD6 /* MTSapMachineDownload.m in Sources */,
+				AD9E88722AA784BC007A0D55 /* MTTableView.m in Sources */,
+				AD92189F2A5463CB001F3963 /* MTReleaseNameTransformer.m in Sources */,
+				ADFD3C5F2A49D79E001BFE61 /* MTSapMachineVersion.m in Sources */,
+				ADE2A3F929ED281F0038D09F /* MTMainViewController.m in Sources */,
+				ADB21B8A2A769CDD00E45C2D /* MTChecksum.m in Sources */,
+				AD10D1B22AAA0E6D009463D7 /* MTSapMachineUser.m in Sources */,
+				ADC326272A822ACF0072FEF5 /* MTPackageReleaseSelectController.m in Sources */,
+				ADBDF9B42A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.m in Sources */,
+				AD60A45C2A9E29B500C57284 /* MTInstallIntroController.m in Sources */,
+				ADE2A40029ED28200038D09F /* main.m in Sources */,
+				ADE2A3F629ED281F0038D09F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADF0AA392A52B5AD006DB834 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD70853A2A7D350D00392389 /* MTDaemonConnection.m in Sources */,
+				AD9A515F2A52C71900601849 /* MTSapMachineVersion.m in Sources */,
+				ADD7702E2A70F95D003F1C9A /* MTOperationQueue.m in Sources */,
+				AD9A51602A52C71F00601849 /* MTJavaHome.m in Sources */,
+				ADF0AA402A52B5AD006DB834 /* main.m in Sources */,
+				AD094F6D2A67FD18006A1BD6 /* MTSapMachineDownload.m in Sources */,
+				AD10D1B32AAA0E6D009463D7 /* MTSapMachineUser.m in Sources */,
+				ADA87FAB2A56B0AF00DEAFBB /* SMUDaemon.m in Sources */,
+				ADA87FAC2A56B3EC00DEAFBB /* MTChecksum.m in Sources */,
+				AD1555BA2A53E0E30024B0C2 /* MTSapMachine.m in Sources */,
+				AD9A515E2A52C71600601849 /* MTSapMachineAsset.m in Sources */,
+				ADB21B882A768F1600E45C2D /* MTSystemInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD70CC682A4ED37B00C48A93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD70CC5C2A4ED37B00C48A93 /* SapMachineXPC */;
+			targetProxy = AD70CC672A4ED37B00C48A93 /* PBXContainerItemProxy */;
+		};
+		ADF0AA452A52B5D9006DB834 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADF0AA3C2A52B5AD006DB834 /* SMUDaemon */;
+			targetProxy = ADF0AA442A52B5D9006DB834 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD25B9532AAEFE260020D1DA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD25B9522AAEFE260020D1DA /* en */,
+				AD25B9542AAEFE840020D1DA /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AD25B95B2AAEFF350020D1DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD25B95A2AAEFF350020D1DA /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AD3F68F02AD6CD49007C1E5B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD3F68EF2AD6CD49007C1E5B /* Base */,
+				AD3F68F12AD6CD4D007C1E5B /* de */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		ADE0D4EC2AB9FB9E008015C2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADE0D4ED2AB9FB9E008015C2 /* en */,
+				ADE0D4EE2AB9FB9E008015C2 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		ADE2A3FC29ED28200038D09F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADE2A3FD29ED28200038D09F /* Base */,
+				ADE3BB552AAF388B0016C1F2 /* de */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD70CC6B2A4ED37C00C48A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 49;
+				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SapMachineXPC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SapMachineXPC;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 SAP SE. All rights reserved.";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		AD70CC6C2A4ED37C00C48A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 49;
+				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SapMachineXPC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SapMachineXPC;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 SAP SE. All rights reserved.";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		ADE2A40229ED28200038D09F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ADE2A40329ED28200038D09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ADE2A40529ED28200038D09F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SapMachine Manager/SapMachine_Manager.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 528;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SapMachine Manager/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		ADE2A40629ED28200038D09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SapMachine Manager/SapMachine_Manager.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 528;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SapMachine Manager/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		ADF0AA412A52B5AD006DB834 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 253;
+				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				INFOPLIST_FILE = "$(SRCROOT)/SapMachine/SMUDaemon/SMUDaemon-Info.plist";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		ADF0AA422A52B5AD006DB834 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 253;
+				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				INFOPLIST_FILE = "$(SRCROOT)/SapMachine/SMUDaemon/SMUDaemon-Info.plist";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD70CC6A2A4ED37C00C48A93 /* Build configuration list for PBXNativeTarget "SapMachineXPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD70CC6B2A4ED37C00C48A93 /* Debug */,
+				AD70CC6C2A4ED37C00C48A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADE2A3EC29ED281F0038D09F /* Build configuration list for PBXProject "SapMachine Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADE2A40229ED28200038D09F /* Debug */,
+				ADE2A40329ED28200038D09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADE2A40429ED28200038D09F /* Build configuration list for PBXNativeTarget "SapMachine Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADE2A40529ED28200038D09F /* Debug */,
+				ADE2A40629ED28200038D09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADF0AA432A52B5AD006DB834 /* Build configuration list for PBXNativeTarget "SMUDaemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADF0AA412A52B5AD006DB834 /* Debug */,
+				ADF0AA422A52B5AD006DB834 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADE2A3E929ED281F0038D09F /* Project object */;
+}

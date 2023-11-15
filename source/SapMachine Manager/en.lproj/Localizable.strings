@@ -1,0 +1,104 @@
+/*
+     Localizable.strings
+     Copyright 2023 SAP SE
+     
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+     
+     http://www.apache.org/licenses/LICENSE-2.0
+     
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+*/
+
+"installOneButtonTitle" = "Install update";
+"installMultipleButtonTitle" = "Install available updates";
+"checkButtonTitle" = "Check for updates";
+
+"noUpdatesAvailable" = "SapMachine is up-to-date on your Mac.";
+"oneUpdateAvailable" = "There is an update available.";
+"multipleUpdatesAvailable" = "There are %ld updates available.";
+
+"statusUpdateAvailable" = "The installed version %@ can be updated to version %@.";
+"statusUpToDate" = "The installed version %@ is the current version.";
+"statusToolTipUpdateAvailable" = "Update available";
+"statusToolTipUpToDate" = "Current version installed";
+
+"dialogNoAssetsTitle" = "Would you like to install SapMachine?";
+"dialogNoAssetsMessage" = "SapMachine is not installed on your Mac. If you want to install SapMachine, please click the appropriate button below.";
+"dialogNoAssetsCheckbox" = "Install recommended version of SapMachine";
+"dialogNoAssetsNoAvailableTitle" = "SapMachine is not installed!";
+"dialogNoAssetsNoAvailableMessage" = "SapMachine is not installed on your Mac. Please install any SapMachine release and run this application again.";
+
+"dialogOneUpdateFailedTitle" = "An update could not be applied!";
+"dialogOneUpdateFailedMessage" = "An error occurred while installing a SapMachine update. Please check the log for details.";
+"dialogMultipleUpdatesFailedTitle" = "Some updates could not be applied!";
+"dialogMultipleUpdatesFailedMessage" = "Some errors occurred while installing SapMachine updates. Please check the log for details.";
+
+"dialogFailedToSaveLogTitle" = "The log could not be saved!";
+"dialogFailedToSaveLogMessage" = "An error occurred while writing the log to file. Please check if the location you selected is writable and try again.";
+
+"dialogXPCConnectionFailedTitle" = "Failed to connect to daemon!";
+"dialogXPCConnectionFailedMessage" = "For this application to work correctly, it must connect to a daemon. Unfortunately, this connection has failed, so the application must now quit.";
+"dialogXPCConnectionFailedLoginItemMessage" = "For this application to work correctly, it must connect to a daemon. Therefore this application's login item needs to be enabled in System Settings which is currently not the case. Please enable the login item and try again.";
+
+"dialogLoginItemDisabledTitle" = "Login item not enabled!";
+"dialogLoginItemDisabledMessage" = "This application's login item needs to be enabled in System Settings for this application to work correctly. Please enable the login item and try again.";
+
+"packageBuildReleaseSelect" = "Please select the release and type of SapMachine you want to package:";
+"installReleaseSelect" = "Please select the release and type of SapMachine you want to install:";
+
+"packageBuildPrepare" = "Preparing package…";
+"packageBuildNoScript2Pkg" = "Your package has been prepared but could not be passed to Script2Pkg for package creation. Please check if Script2Pkg is installed in your Mac's Applications folder and try again. As the source folder of the package is displayed in the Finder, you can use it to create the package manually after installing Script2Pkg.";
+"packageBuildFinish" = "Successfully prepared package \"%@\".";
+
+"preRelease" = "Pre-Release";
+"logFileName" = "SapMachine Manager.log";
+
+"dialogDeleteOneTitle" = "Are you sure you want to delete \"%@\" from your Mac?";
+"dialogDeleteMultipleTitle" = "Are you sure you want to delete the %ld selected SapMachines from your Mac?";
+"dialogDeleteMessage" = "You can't undo this action.";
+"dialogDeletionOneFailedTitle" = "SapMachine could not be deleted!";
+"dialogDeletionOneFailedMessage" = "An error occurred while deleting the SapMachine from your Mac. Please check the log for details.";
+"dialogDeletionMultipleFailedTitle" = "Some of the selected SapMachines could not be deleted!";
+"dialogDeletionMultipleFailedMessage" = "An error occurred while deleting the selected SapMachines from your Mac. Please check the log for details.";
+
+"dialogNothingToInstallTitle" = "No further SapMachine releases available!";
+"dialogNothingToInstallMessage" = "There are currently no further SapMachine releases available to install on your Mac.";
+
+"dialogNothingToPackageTitle" = "No SapMachine releases available!";
+"dialogNothingToPackageMessage" = "There are currently no SapMachine releases available. Please try again later.";
+
+"deleteOneMenuEntry" = "Delete this SapMachine";
+"deleteSelectedMenuEntry" = "Delete selected SapMachines (%ld items)";
+
+"deleteOneMainMenuEntry" = "Delete Selected SapMachine";
+"deleteMultipleMainMenuEntry" = "Delete Selected SapMachines (%ld Items)";
+
+"showInFinderMenuEntry" = "Show in Finder";
+
+// buttons
+"quitButton" = "Quit";
+"okButton" = "OK";
+"showLogButton" = "Show Log…";
+"tryAgainButton" = "Try Again";
+"openSettingsButton" = "Open System Settings";
+"installButton" = "Install";
+"cancelButton" = "Cancel";
+"deleteButton" = "Delete";
+
+// errors
+"errorAssetInUse" = "Could not update SapMachine because it was in use";
+"errorUnpackingUnexpected" = "Unpacked downloaded file with unexpected results";
+"errorUnpackingFailed" = "Failed to unpack downloaded file";
+"errorChecksum" = "The checksum of the downloaded file could not be successfully verified";
+"errorUnknown" = "An unknown error occurred";
+"errorUserNotAuthorizedInstall" = "The current user is not authorized to install SapMachine";
+"errorOperationInProgress" = "Another operation is already in progress";
+"errorNoAssets" = "No assets provided";
+"errorNoInstallURL" = "No install url provided";
+"errorUserNotAuthorizedDelete" = "The current user is not authorized to delete SapMachine releases";

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>SMUDaemon.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>SapMachine Agent.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SapMachine Manager.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>SapMachineDownloader.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SapMachineJVMChecker.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SapMachineXPC.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AD0285F52A4DD0C000DB339E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADE0D4D42AB9F65F008015C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADE2A3F029ED281F0038D09F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADE2A41F29ED28A90038D09F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADF0AA3C2A52B5AD006DB834</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

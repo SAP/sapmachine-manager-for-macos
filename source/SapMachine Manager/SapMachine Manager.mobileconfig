@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<!--
+     Copyright 2023 SAP SE
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>corp.sap.SMUDaemon</key>
+				<dict>
+					<key>Forced</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+							
+                                <!--
+                                    key:     AutomaticUpdatesEnabled
+                                    value:   boolean
+                                    
+                                    Forces automatic download and installation of all
+                                    available SapMachine updates. Once this setting has 
+                                    been configured, it cannot be changed anymore
+                                    by the user.
+                                -->
+                                <key>AutomaticUpdatesEnabled</key>
+                                <true/>
+                                
+							</dict>						
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadDescription</key>
+			<string/>
+			<key>PayloadDisplayName</key>
+			<string>SMUDaemon configuration</string>
+			<key>PayloadEnabled</key>
+			<true/>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.ManagedClient.preferences.9C2A1DA6-FC14-493F-8569-5CBD642E219A</string>
+			<key>PayloadOrganization</key>
+			<string>SAP SE</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>9C2A1DA6-FC14-493F-8569-5CBD642E219A</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+        
+        <dict>
+            <key>PayloadContent</key>
+            <dict>
+                <key>corp.sap.SapMachineManager</key>
+                <dict>
+                    <key>Forced</key>
+                    <array>
+                        <dict>
+                            <key>mcx_preference_settings</key>
+                            <dict>
+                            
+                                <!--
+                                    key:     DontRequireAdminUser
+                                    value:   boolean
+                                    
+                                    If set to true, allows non-admin users to install
+                                    and delete SapMachine releases. If not set of if
+                                    set to false, an admin user is required in order
+                                    to install or delete SapMachine releases.
+                                -->
+                                <key>DontRequireAdminUser</key>
+                                <true/>
+                                
+                            </dict>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+            <key>PayloadDescription</key>
+            <string/>
+            <key>PayloadDisplayName</key>
+            <string>SapMachine Manager configuration</string>
+            <key>PayloadEnabled</key>
+            <true/>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.ManagedClient.preferences.62D23088-81E1-4E45-96BD-B7E71CEEDDF6</string>
+            <key>PayloadOrganization</key>
+            <string>SAP SE</string>
+            <key>PayloadType</key>
+            <string>com.apple.ManagedClient.preferences</string>
+            <key>PayloadUUID</key>
+            <string>6B0A1013-C3C5-4D2C-A797-8D125364FD4A</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures the SapMachine Manager.</string>
+	<key>PayloadDisplayName</key>
+	<string>SapMachine Manager configuration</string>
+	<key>PayloadIdentifier</key>
+	<string>20C5AE10-BC67-462C-9363-02A89BAC23FC</string>
+	<key>PayloadOrganization</key>
+	<string>SAP SE</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>D7D4F8FC-A838-40B2-94C6-3FFD9A3728B4</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

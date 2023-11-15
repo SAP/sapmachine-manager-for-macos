@@ -1,0 +1,102 @@
+/*
+     Localizable.strings
+     Copyright 2023 SAP SE
+     
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+     
+     http://www.apache.org/licenses/LICENSE-2.0
+     
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+*/
+
+"installOneButtonTitle" = "Update installieren";
+"installMultipleButtonTitle" = "Updates installieren";
+"checkButtonTitle" = "Nach Updates suchen";
+
+"noUpdatesAvailable" = "SapMachine ist auf Ihrem Mac auf dem aktuellen Stand.";
+"oneUpdateAvailable" = "Es ist ein Update verfügbar.";
+"multipleUpdatesAvailable" = "Es sind %ld Updates verfügbar.";
+
+"statusUpdateAvailable" = "Die installierte Version %@ kann auf die Version %@ aktualisiert werden.";
+"statusUpToDate" = "Die installierte Version %@ ist aktuell.";
+"statusToolTipUpdateAvailable" = "Update verfügbar";
+"statusToolTipUpToDate" = "Aktuelle Version installiert";
+
+"dialogNoAssetsTitle" = "Möchten Sie SapMachine installieren?";
+"dialogNoAssetsMessage" = "SapMachine ist momentan nicht auf Ihrem Mac installiert. Wenn Sie SapMachine installieren möchten, klicken Sie bitte auf die entsprechende untenstehende Taste.";
+"dialogNoAssetsCheckbox" = "Empfohlene Version von SapMachine installieren";
+"dialogNoAssetsNoAvailableTitle" = "SapMachine ist nicht installiert!";
+"dialogNoAssetsNoAvailableMessage" = "SapMachine ist momentan nicht auf Ihrem Mac installiert. Bitte installieren Sie eine beliebige SapMachine-Version und starten Sie dann dieses Programm erneut.";
+
+"dialogOneUpdateFailedTitle" = "Ein Update konnte nicht durchgeführt werden!";
+"dialogOneUpdateFailedMessage" = "Bei der Installation eines SapMachine Updates ist ein Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll.";
+"dialogMultipleUpdatesFailedTitle" = "Einige Updates konnten nicht durchgeführt werden!";
+"dialogMultipleUpdatesFailedMessage" = "Bei der Installation mehrerer SapMachine Updates sind Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll..";
+
+"dialogFailedToSaveLogTitle" = "Das Protokoll konnte nicht gespeichert werden!";
+"dialogFailedToSaveLogMessage" = "Beim Schreiben der Protokolldatei ist ein Fehler aufgetreten. Bitte überprüfen Sie, ob der ausgewählte Speicherort korrekt ist und versuchen Sie es erneut.";
+
+"dialogXPCConnectionFailedTitle" = "Verbindung zum Daemon fehlgeschlagen!";
+"dialogXPCConnectionFailedMessage" = "Damit dieses Programm korrekt funktionieren kann, muss es sich mit einem Daemon verbinden. Leider ist diese Verbindung fehlgeschlagen, sodass das Programm jetzt beendet werden muss.";
+"dialogXPCConnectionFailedLoginItemMessage" = "Damit dieses Programm korrekt funktionieren kann, muss es sich mit einem Daemon verbinden. Dafür muss das Anmeldeobjekt dieses Programms in den Systemeinstellungen aktiviert sein, was derzeit nicht der Fall ist. Bitte aktivieren Sie das Anmeldeobjekt und versuchen Sie es erneut.";
+
+"dialogLoginItemDisabledTitle" = "Anmeldeobjekt ist nicht aktiviert!";
+"dialogLoginItemDisabledMessage" = "Das Anmeldeobjekt dieses Programms muss in den Systemeinstellungen aktiviert werden, damit das Programm korrekt funktionieren kann. Bitte aktivieren Sie das Anmeldeobjekt und versuchen Sie es erneut.";
+
+"packageBuildReleaseSelect" = "Bitte wählen Sie die Version und den Typ der SapMachine, die Sie paketieren möchten:";
+"installReleaseSelect" = "Bitte wählen Sie die Version und den Typ der SapMachine, die Sie installieren möchten:";
+
+"packageBuildPrepare" = "Paket wird vorbereitet …";
+"packageBuildNoScript2Pkg" = "Ihr Paket wurde vorbereitet, konnte jedoch nicht an Script2Pkg zur Paketerstellung übergeben werden. Bitte überprüfen Sie, ob Script2Pkg im Programme-Ordner Ihres Macs installiert ist und versuchen Sie es erneut. Der Quellordner des Pakets wird im Finder angezeigt und kann nach der Installation von Script2Pkg verwendet werden, um das Paket manuell zu erstellen.";
+"packageBuildFinish" = "Das Paket \"%@\" wurde erfolgreich vorbereitet.";
+
+"preRelease" = "Vorabversion";
+"logFileName" = "SapMachine Manager.log";
+
+"dialogDeleteOneTitle" = "Sind Sie sicher, dass Sie \"%@\" von Ihrem Mac löschen wollen?";
+"dialogDeleteMultipleTitle" = "Sind Sie sicher, dass Sie die %ld ausgewählten SapMachine-Versionen von Ihrem Mac löschen wollen?";
+"dialogDeleteMessage" = "Diese Aktion kann nicht rückgänging gemacht werden.";
+"dialogDeletionOneFailedTitle" = "SapMachine konnte nicht gelöscht werden!";
+"dialogDeletionOneFailedMessage" = "Beim Versuch, SapMachine von Ihrem Mac zu löschen, ist ein Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll.";
+"dialogDeletionMultipleFailedTitle" = "Einige der ausgewählten SapMachine-Versionen konnten nicht gelöscht werden!";
+"dialogDeletionMultipleFailedMessage" = "Beim Versuch, die ausgewählten SapMachine-Versionen von Ihrem Mac zu löschen, ist ein Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll.";
+
+"dialogNothingToInstallTitle" = "Keine weiteren SapMachine-Versionen verfügbar!";
+"dialogNothingToInstallMessage" = "Derzeit sind keine weiteren SapMachine-Versionen für die Installation auf Ihrem Mac verfügbar.";
+
+"dialogNothingToPackageTitle" = "Keine SapMachine-Versionen verfügbar!";
+"dialogNothingToPackageMessage" = "Derzeit sind keine SapMachine-Versionen verfügbar. Bitte versuchen Sie es später noch einmal.";
+
+"deleteOneMenuEntry" = "Diese SapMachine löschen";
+"deleteSelectedMenuEntry" = "Ausgewählte SapMachine-Versionen löschen (%ld Objekte)";
+
+"deleteOneMainMenuEntry" = "Ausgewählte SapMachine löschen";
+"deleteMultipleMainMenuEntry" = "Ausgewählte SapMachine-Versionen löschen (%ld Objekte)";
+
+// buttons
+"quitButton" = "Beenden";
+"okButton" = "OK";
+"showLogButton" = "Protokoll anzeigen …";
+"tryAgainButton" = "Erneut versuchen";
+"openSettingsButton" = "Systemeinstellungen öffnen";
+"installButton" = "Installieren";
+"cancelButton" = "Abbrechen";
+"deleteButton" = "Löschen";
+
+// errors
+"errorAssetInUse" = "SapMachine konnte nicht aktualisiert werden, weil sie in Benutzung war";
+"errorUnpackingUnexpected" = "Das Entpacken der heruntergeladenen Datei lieferte ein unerwartetes Ergebnis";
+"errorUnpackingFailed" = "Die heruntergeladene Datei konnte nicht entpackt werden";
+"errorChecksum" = "Die Prüfsumme der heruntergeladenen Datei konnte nicht erfolgreich überprüft werden";
+"errorUnknown" = "Ein unbekannter Fehler ist aufgetreten";
+"errorUserNotAuthorizedInstall" = "Der aktuelle Benutzer ist nicht berechtigt, SapMachine zu installieren";
+"errorOperationInProgress" = "Ein anderer Vorgang ist bereits in Gange";
+"errorNoAssets" = "Es wurden keine Objekte angegeben";
+"errorNoInstallURL" = "Es wurde kein Installationspfad angegeben";
+"errorUserNotAuthorizedDelete" = "Der aktuelle Benutzer ist nicht berechtigt, SapMachine zu löschen";
