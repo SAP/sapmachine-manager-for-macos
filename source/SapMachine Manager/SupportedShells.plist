@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>/bin/bash</key>
+	<dict>
+		<key>system</key>
+		<array>
+			<string>/etc/profile</string>
+		</array>
+		<key>user</key>
+		<array>
+			<string>.bash_profile</string>
+			<string>.bashrc</string>
+			<string>.profile</string>
+			<string>.bash_login</string>
+		</array>
+	</dict>
+	<key>/bin/zsh</key>
+	<dict>
+		<key>system</key>
+		<array>
+			<string>/etc/zshenv</string>
+			<string>/etc/zprofile</string>
+			<string>/etc/zshrc</string>
+		</array>
+		<key>user</key>
+		<array>
+			<string>.zshenv</string>
+			<string>.zprofile</string>
+			<string>.zshrc</string>
+		</array>
+	</dict>
+</dict>
+</plist>

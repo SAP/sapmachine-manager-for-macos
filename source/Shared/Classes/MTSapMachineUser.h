@@ -47,6 +47,13 @@
 - (instancetype)initWithUserID:(uid_t)userID;
 
 /*!
+ @property      userName
+ @abstract      A read-only property that returns the user name of the receiver.
+ @discussion    The value of this property is string.
+*/
+@property (nonatomic, strong, readonly) NSString *userName;
+
+/*!
  @method        isPrivileged
  @abstract      Determine if the user is allowed to run privileged tasks.
  @discussion    Returns YES if the user is either and admin user or the user is a

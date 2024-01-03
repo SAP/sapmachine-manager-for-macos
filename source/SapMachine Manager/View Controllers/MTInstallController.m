@@ -41,13 +41,12 @@
 
     _operationQueue = [[NSOperationQueue alloc] init];
     _daemonConnection = [[MTDaemonConnection alloc] init];
-    
-    MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserName:NSUserName()];
-                        
+                            
     NSBlockOperation *authOperation = [[NSBlockOperation alloc] init];
     [authOperation addExecutionBlock:^{
         
         self->_authData = nil;
+        MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserName:NSUserName()];
         
         if (![user isPrivileged]) {
             

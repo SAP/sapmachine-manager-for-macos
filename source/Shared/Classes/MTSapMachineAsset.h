@@ -70,6 +70,13 @@ typedef enum {
 @property (nonatomic, strong, readwrite) NSURL *installURL;
 
 /*!
+ @property      javaHomeURL
+ @abstract      A property to store the home url of the installed asset.
+ @discussion    This propery might be used to set the @c JAVA_HOME environment variable. The value of this property is NSURL.
+*/
+@property (nonatomic, strong, readwrite) NSURL *javaHomeURL;
+
+/*!
  @property      downloadURLs
  @abstract      A property to store the available download urls (for the Mac platform) for the asset.
  @discussion    The value of this property is NSDictionary.
@@ -103,6 +110,21 @@ typedef enum {
  @discussion    The value of this property is double.
 */
 @property (assign) double updateProgress;
+
+/*!
+ @property      isVerified
+ @abstract      A property to specify if the existence of the asset has been verified via Internet.
+ @discussion    The value of this property is boolean.
+*/
+@property (assign) BOOL isVerified;
+
+/*!
+ @property      javaHomeConfigFilePaths
+ @abstract      A property to specify the shell config files (like .zshenv or .bash_profile) that use the asset
+                to set the @c JAVA_HOME environment variable.
+ @discussion             The value of this property is array.
+*/
+@property (nonatomic, strong, readwrite) NSDictionary *javaHomeConfigFilePaths;
 
 /*!
  @method        init

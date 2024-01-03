@@ -1,0 +1,1206 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "allUsersButton" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für alle Benutzer"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All Users"
+          }
+        }
+      }
+    },
+    "cancelButton" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "checkButtonTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach Updates suchen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check for updates"
+          }
+        }
+      }
+    },
+    "currentUserOnlyButton" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für den aktuellen Benutzer"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current User"
+          }
+        }
+      }
+    },
+    "deleteButton" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "deleteMultipleMainMenuEntry" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausgewählte SapMachine-Versionen löschen (%ld Objekte)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Selected SapMachines (%ld Items)"
+          }
+        }
+      }
+    },
+    "deleteOneMainMenuEntry" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausgewählte SapMachine löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Selected SapMachine"
+          }
+        }
+      }
+    },
+    "deleteOneMenuEntry" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese SapMachine löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete this SapMachine"
+          }
+        }
+      }
+    },
+    "deleteSelectedMenuEntry" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausgewählte SapMachine-Versionen löschen (%ld Objekte)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete selected SapMachines (%ld items)"
+          }
+        }
+      }
+    },
+    "dialogDeleteMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Aktion kann nicht rückgänging gemacht werden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can't undo this action."
+          }
+        }
+      }
+    },
+    "dialogDeleteMultipleTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sind Sie sicher, dass Sie die %ld ausgewählten SapMachine-Versionen von Ihrem Mac löschen wollen?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to delete the %ld selected SapMachines from your Mac?"
+          }
+        }
+      }
+    },
+    "dialogDeleteOneTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sind Sie sicher, dass Sie \"%@\" von Ihrem Mac löschen wollen?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to delete \"%@\" from your Mac?"
+          }
+        }
+      }
+    },
+    "dialogDeletionMultipleFailedMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Versuch, die ausgewählten SapMachine-Versionen von Ihrem Mac zu löschen, ist ein Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An error occurred while deleting the selected SapMachines from your Mac. Please check the log for details."
+          }
+        }
+      }
+    },
+    "dialogDeletionMultipleFailedTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einige der ausgewählten SapMachine-Versionen konnten nicht gelöscht werden!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some of the selected SapMachines could not be deleted!"
+          }
+        }
+      }
+    },
+    "dialogDeletionOneFailedMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Versuch, SapMachine von Ihrem Mac zu löschen, ist ein Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An error occurred while deleting the SapMachine from your Mac. Please check the log for details."
+          }
+        }
+      }
+    },
+    "dialogDeletionOneFailedTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine konnte nicht gelöscht werden!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine could not be deleted!"
+          }
+        }
+      }
+    },
+    "dialogFailedToSaveLogMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Schreiben der Protokolldatei ist ein Fehler aufgetreten. Bitte überprüfen Sie, ob der ausgewählte Speicherort korrekt ist und versuchen Sie es erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An error occurred while writing the log to file. Please check if the location you selected is writable and try again."
+          }
+        }
+      }
+    },
+    "dialogFailedToSaveLogTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Protokoll konnte nicht gespeichert werden!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The log could not be saved!"
+          }
+        }
+      }
+    },
+    "dialogLoginItemDisabledMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Anmeldeobjekt dieses Programms muss in den Systemeinstellungen aktiviert werden, damit das Programm korrekt funktionieren kann. Bitte aktivieren Sie das Anmeldeobjekt und versuchen Sie es erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This application's login item needs to be enabled in System Settings for this application to work correctly. Please enable the login item and try again."
+          }
+        }
+      }
+    },
+    "dialogLoginItemDisabledTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anmeldeobjekt ist nicht aktiviert!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Login item not enabled!"
+          }
+        }
+      }
+    },
+    "dialogMultipleUpdatesFailedMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bei der Installation mehrerer SapMachine Updates sind Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll.."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some errors occurred while installing SapMachine updates. Please check the log for details."
+          }
+        }
+      }
+    },
+    "dialogMultipleUpdatesFailedTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einige Updates konnten nicht durchgeführt werden!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some updates could not be applied!"
+          }
+        }
+      }
+    },
+    "dialogNoAssetsCheckbox" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfohlene Version von SapMachine installieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install recommended version of SapMachine"
+          }
+        }
+      }
+    },
+    "dialogNoAssetsMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine ist momentan nicht auf Ihrem Mac installiert. Wenn Sie SapMachine installieren möchten, klicken Sie bitte auf die entsprechende untenstehende Taste."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine is not installed on your Mac. If you want to install SapMachine, please click the appropriate button below."
+          }
+        }
+      }
+    },
+    "dialogNoAssetsNoAvailableMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine ist momentan nicht auf Ihrem Mac installiert. Bitte installieren Sie eine beliebige SapMachine-Version und starten Sie dann dieses Programm erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine is not installed on your Mac. Please install any SapMachine release and run this application again."
+          }
+        }
+      }
+    },
+    "dialogNoAssetsNoAvailableTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine ist nicht installiert!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine is not installed!"
+          }
+        }
+      }
+    },
+    "dialogNoAssetsTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möchten Sie SapMachine installieren?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Would you like to install SapMachine?"
+          }
+        }
+      }
+    },
+    "dialogNothingToInstallMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Derzeit sind keine weiteren SapMachine-Versionen für die Installation auf Ihrem Mac verfügbar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There are currently no further SapMachine releases available to install on your Mac."
+          }
+        }
+      }
+    },
+    "dialogNothingToInstallTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine weiteren SapMachine-Versionen verfügbar!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No further SapMachine releases available!"
+          }
+        }
+      }
+    },
+    "dialogNothingToPackageMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Derzeit sind keine SapMachine-Versionen verfügbar. Bitte versuchen Sie es später noch einmal."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There are currently no SapMachine releases available. Please try again later."
+          }
+        }
+      }
+    },
+    "dialogNothingToPackageTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine SapMachine-Versionen verfügbar!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No SapMachine releases available!"
+          }
+        }
+      }
+    },
+    "dialogOneUpdateFailedMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bei der Installation eines SapMachine Updates ist ein Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An error occurred while installing a SapMachine update. Please check the log for details."
+          }
+        }
+      }
+    },
+    "dialogOneUpdateFailedTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Update konnte nicht durchgeführt werden!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An update could not be applied!"
+          }
+        }
+      }
+    },
+    "dialogSetJavaHomeMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie können die Standardumgebung entweder für den aktuellen Benutzer oder für alle Benutzer dieses Macs setzen. Individuelle Konfigurationen anderer Benutzer sind von den Änderungen nicht betroffen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can set the default environment either for the current user or for all users of this Mac. Individual configurations of other users are not affected by the changes."
+          }
+        }
+      }
+    },
+    "dialogSetJavaHomeTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für welche Benutzer soll diese SapMachine-Version als Standardumgebung verwendet werden?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For which users should this SapMachine release be used as the default environment?"
+          }
+        }
+      }
+    },
+    "dialogUnsetJavaHomeMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie können die Standardumgebung entweder für den aktuellen Benutzer oder für alle Benutzer dieses Macs zurücksetzen. Individuelle Konfigurationen anderer Benutzer sind von den Änderungen nicht betroffen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can reset the default environment either for the current user or for all users of this Mac. Individual configurations of other users are not affected by the changes."
+          }
+        }
+      }
+    },
+    "dialogUnsetJavaHomeTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für welche Benutzer soll die Standardumgebung zurückgesetzt werden?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For which users should the default environment be reset?"
+          }
+        }
+      }
+    },
+    "dialogXPCConnectionFailedLoginItemMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Damit dieses Programm korrekt funktionieren kann, muss es sich mit einem Daemon verbinden. Dafür muss das Anmeldeobjekt dieses Programms in den Systemeinstellungen aktiviert sein, was derzeit nicht der Fall ist. Bitte aktivieren Sie das Anmeldeobjekt und versuchen Sie es erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For this application to work correctly, it must connect to a daemon. Therefore this application's login item needs to be enabled in System Settings which is currently not the case. Please enable the login item and try again."
+          }
+        }
+      }
+    },
+    "dialogXPCConnectionFailedMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Damit dieses Programm korrekt funktionieren kann, muss es sich mit einem Daemon verbinden. Leider ist diese Verbindung fehlgeschlagen, sodass das Programm jetzt beendet werden muss."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For this application to work correctly, it must connect to a daemon. Unfortunately, this connection has failed, so the application must now quit."
+          }
+        }
+      }
+    },
+    "dialogXPCConnectionFailedTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verbindung zum Daemon fehlgeschlagen!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to connect to daemon!"
+          }
+        }
+      }
+    },
+    "errorAssetInUse" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine konnte nicht aktualisiert werden, weil sie in Benutzung war"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not update SapMachine because it was in use"
+          }
+        }
+      }
+    },
+    "errorChecksum" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Prüfsumme der heruntergeladenen Datei konnte nicht erfolgreich überprüft werden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The checksum of the downloaded file could not be successfully verified"
+          }
+        }
+      }
+    },
+    "errorNoAssets" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es wurden keine Objekte angegeben"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No assets provided"
+          }
+        }
+      }
+    },
+    "errorNoInstallURL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es wurde kein Installationspfad angegeben"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No install url provided"
+          }
+        }
+      }
+    },
+    "errorOperationInProgress" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein anderer Vorgang ist bereits in Gange"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Another operation is already in progress"
+          }
+        }
+      }
+    },
+    "errorUnknown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein unbekannter Fehler ist aufgetreten"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An unknown error occurred"
+          }
+        }
+      }
+    },
+    "errorUnpackingFailed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die heruntergeladene Datei konnte nicht entpackt werden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to unpack downloaded file"
+          }
+        }
+      }
+    },
+    "errorUnpackingUnexpected" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Entpacken der heruntergeladenen Datei lieferte ein unerwartetes Ergebnis"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unpacked downloaded file with unexpected results"
+          }
+        }
+      }
+    },
+    "errorUserNotAuthorizedDelete" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der aktuelle Benutzer ist nicht berechtigt, SapMachine zu löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The current user is not authorized to delete SapMachine releases"
+          }
+        }
+      }
+    },
+    "errorUserNotAuthorizedInstall" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der aktuelle Benutzer ist nicht berechtigt, SapMachine zu installieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The current user is not authorized to install SapMachine"
+          }
+        }
+      }
+    },
+    "installButton" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install"
+          }
+        }
+      }
+    },
+    "installMultipleButtonTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updates installieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install available updates"
+          }
+        }
+      }
+    },
+    "installOneButtonTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update installieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install update"
+          }
+        }
+      }
+    },
+    "installReleaseSelect" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte wählen Sie die Version und den Typ der SapMachine, die Sie installieren möchten:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please select the release and type of SapMachine you want to install:"
+          }
+        }
+      }
+    },
+    "javaHomeToolTipSystem" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese SapMachine-Version wird als Standardumgebung für alle Benutzer verwendet. Sollte ein Benutzer für sich eine individuelle Standardumgebung festgelegt haben, würde für diesen Benutzer die individuelle Standardumgebung verwendet werden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This SapMachine release is used as the default environment for all users. If a user has defined an individual default environment for themselves, the individual default environment would be used for this user."
+          }
+        }
+      }
+    },
+    "javaHomeToolTipUser" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese SapMachine-Version wird als Standardumgebung nur für den aktuellen Benutzer verwendet. Sollte auch eine Standardumgebung festgelegt worden sein, die für alle Benutzer verwendet wird, würde diese für den aktuellen Benutzer ignoriert werden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This SapMachine release is used as the default environment for the current user only. If a default environment has also been defined that is used for all users, this would be ignored for the current user."
+          }
+        }
+      }
+    },
+    "logFileName" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine Manager.log"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine Manager.log"
+          }
+        }
+      }
+    },
+    "multipleUpdatesAvailable" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es sind %ld Updates verfügbar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There are %ld updates available."
+          }
+        }
+      }
+    },
+    "noUpdatesAvailable" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine ist auf Ihrem Mac auf dem aktuellen Stand."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine is up-to-date on your Mac."
+          }
+        }
+      }
+    },
+    "okButton" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "oneUpdateAvailable" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es ist ein Update verfügbar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There is an update available."
+          }
+        }
+      }
+    },
+    "openSettingsButton" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Systemeinstellungen öffnen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open System Settings"
+          }
+        }
+      }
+    },
+    "packageBuildFinish" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Paket \"%@\" wurde erfolgreich vorbereitet."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Successfully prepared package \"%@\"."
+          }
+        }
+      }
+    },
+    "packageBuildNoScript2Pkg" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihr Paket wurde vorbereitet, konnte jedoch nicht an Script2Pkg zur Paketerstellung übergeben werden. Bitte überprüfen Sie, ob Script2Pkg im Programme-Ordner Ihres Macs installiert ist und versuchen Sie es erneut. Der Quellordner des Pakets wird im Finder angezeigt und kann nach der Installation von Script2Pkg verwendet werden, um das Paket manuell zu erstellen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your package has been prepared but could not be passed to Script2Pkg for package creation. Please check if Script2Pkg is installed in your Mac's Applications folder and try again. As the source folder of the package is displayed in the Finder, you can use it to create the package manually after installing Script2Pkg."
+          }
+        }
+      }
+    },
+    "packageBuildPrepare" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paket wird vorbereitet …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preparing package…"
+          }
+        }
+      }
+    },
+    "packageBuildReleaseSelect" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte wählen Sie die Version und den Typ der SapMachine, die Sie paketieren möchten:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please select the release and type of SapMachine you want to package:"
+          }
+        }
+      }
+    },
+    "preRelease" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorabversion"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pre-Release"
+          }
+        }
+      }
+    },
+    "quitButton" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit"
+          }
+        }
+      }
+    },
+    "showLogButton" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Protokoll anzeigen …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Log…"
+          }
+        }
+      }
+    },
+    "statusToolTipUpdateAvailable" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es ist ein Update verfügbar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There's an update available."
+          }
+        }
+      }
+    },
+    "statusToolTipUpToDate" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die aktuelle Version ist installiert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The current version is installed."
+          }
+        }
+      }
+    },
+    "statusUpdateAvailable" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die installierte Version %@ kann auf die Version %@ aktualisiert werden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The installed version %@ can be updated to version %@."
+          }
+        }
+      }
+    },
+    "statusUpToDate" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die installierte Version %@ ist aktuell."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The installed version %@ is the current version."
+          }
+        }
+      }
+    },
+    "tryAgainButton" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erneut versuchen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try Again"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

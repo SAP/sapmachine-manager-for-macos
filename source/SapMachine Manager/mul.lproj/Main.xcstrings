@@ -1,0 +1,2256 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "1Xt-HY-uBw.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"SapMachine Manager\"; ObjectID = \"1Xt-HY-uBw\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "SapMachine Manager"
+          }
+        }
+      }
+    },
+    "4sb-4s-VLi.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Quit SapMachine Manager\"; ObjectID = \"4sb-4s-VLi\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine Manager beenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Quit SapMachine Manager"
+          }
+        }
+      }
+    },
+    "5kV-Vb-QxS.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"About SapMachine Manager\"; ObjectID = \"5kV-Vb-QxS\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Über SapMachine Manager"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "About SapMachine Manager"
+          }
+        }
+      }
+    },
+    "5L3-9R-Xa8.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"5L3-9R-Xa8\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Text Cell"
+          }
+        }
+      }
+    },
+    "6cr-S6-yAI.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Edit\"; ObjectID = \"6cr-S6-yAI\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Edit"
+          }
+        }
+      }
+    },
+    "6Po-YA-208.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Close\"; ObjectID = \"6Po-YA-208\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Close"
+          }
+        }
+      }
+    },
+    "6S1-Xc-Mx1.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Downloading SapMachine…\"; ObjectID = \"6S1-Xc-Mx1\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine wird heruntergeladen …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Downloading SapMachine…"
+          }
+        }
+      }
+    },
+    "6TW-Qd-kUU.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Copy\"; ObjectID = \"6TW-Qd-kUU\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Copy"
+          }
+        }
+      }
+    },
+    "7mM-OL-eIi.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Please select for which type of Macs you want to create the package:\"; ObjectID = \"7mM-OL-eIi\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte wählen Sie aus, für welche Art von Macs Sie das Paket erstellen möchten:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Please select for which type of Macs you want to create the package:"
+          }
+        }
+      }
+    },
+    "7yS-tA-2Pe.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Installation failed.\"; ObjectID = \"7yS-tA-2Pe\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installation fehlgeschlagen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Installation failed."
+          }
+        }
+      }
+    },
+    "8Co-aE-5UD.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Undo\"; ObjectID = \"8Co-aE-5UD\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widerrufen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Undo"
+          }
+        }
+      }
+    },
+    "8Ex-Xb-dAT.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"The package will contain versions of SapMachine for Macs with Apple silicon as well as for Intel-based Macs. So this package can be installed on any Mac.\"; ObjectID = \"8Ex-Xb-dAT\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Paket wird Versionen von SapMachine für Macs mit Apple-Chip und für Intel-basierte Macs enthalten. Somit kann dieses Paket auf jedem Mac installiert werden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The package will contain versions of SapMachine for Macs with Apple silicon as well as for Intel-based Macs. So this package can be installed on any Mac."
+          }
+        }
+      }
+    },
+    "9x9-cM-4tY.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Delete Selected SapMachine\"; ObjectID = \"9x9-cM-4tY\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausgewählte SapMachine löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Delete Selected SapMachine"
+          }
+        }
+      }
+    },
+    "39f-Nl-bpn.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Previous\"; ObjectID = \"39f-Nl-bpn\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Previous"
+          }
+        }
+      }
+    },
+    "68H-6r-bLE.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Delete\"; ObjectID = \"68H-6r-bLE\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "aBe-Ta-doU.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"The Java Runtime Environment is needed for running java applications. It is smaller than the JDK so it needs less disk space.\"; ObjectID = \"aBe-Ta-doU\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Java-Laufzeitumgebung wird für die Ausführung von Java-Anwendungen benötigt. Sie ist kleiner als das JDK und benötigt daher weniger Speicherplatz."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The Java Runtime Environment is needed for running java applications. It is smaller than the JDK so it needs less disk space."
+          }
+        }
+      }
+    },
+    "Aft-wB-7bF.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"SapMachine Manager on GitHub\"; ObjectID = \"Aft-wB-7bF\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine Manager auf GitHub"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "SapMachine Manager on GitHub"
+          }
+        }
+      }
+    },
+    "AMM-Hd-TA7.headerCell.title" : {
+      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Type\"; ObjectID = \"AMM-Hd-TA7\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Type"
+          }
+        }
+      }
+    },
+    "aPX-ys-ERk.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Next\"; ObjectID = \"aPX-ys-ERk\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Next"
+          }
+        }
+      }
+    },
+    "Aqt-2I-aN7.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Status\"; ObjectID = \"Aqt-2I-aN7\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Status"
+          }
+        }
+      }
+    },
+    "aUF-d1-5bR.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Window\"; ObjectID = \"aUF-d1-5bR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Window"
+          }
+        }
+      }
+    },
+    "AYu-sK-qS6.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"Main Menu\"; ObjectID = \"AYu-sK-qS6\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Main Menu"
+          }
+        }
+      }
+    },
+    "aZ2-oV-hI1.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Checking for updates…\"; ObjectID = \"aZ2-oV-hI1\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suche nach Updates …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Checking for updates…"
+          }
+        }
+      }
+    },
+    "aZl-r6-7nr.title" : {
+      "comment" : "Class = \"NSWindow\"; title = \"SapMachine Manager Log\"; ObjectID = \"aZl-r6-7nr\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine Manager Protokoll"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "SapMachine Manager Log"
+          }
+        }
+      }
+    },
+    "B3y-ul-1Wb.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"B3y-ul-1Wb\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "BOF-NM-1cW.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Preferences…\"; ObjectID = \"BOF-NM-1cW\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Preferences…"
+          }
+        }
+      }
+    },
+    "bVT-mM-dnh.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Previous\"; ObjectID = \"bVT-mM-dnh\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Previous"
+          }
+        }
+      }
+    },
+    "C6w-1e-311.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Label\"; ObjectID = \"C6w-1e-311\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "CcC-Kn-cmL.label" : {
+      "comment" : "Class = \"NSToolbarItem\"; label = \"Reload\"; ObjectID = \"CcC-Kn-cmL\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neu laden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reload"
+          }
+        }
+      }
+    },
+    "CcC-Kn-cmL.paletteLabel" : {
+      "comment" : "Class = \"NSToolbarItem\"; paletteLabel = \"Reload\"; ObjectID = \"CcC-Kn-cmL\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neu laden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reload"
+          }
+        }
+      }
+    },
+    "CcC-Kn-cmL.toolTip" : {
+      "comment" : "Class = \"NSToolbarItem\"; toolTip = \"Reload content\"; ObjectID = \"CcC-Kn-cmL\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inhalt erneut laden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reload content"
+          }
+        }
+      }
+    },
+    "CHq-KL-Z6v.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"CHq-KL-Z6v\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Table View Cell"
+          }
+        }
+      }
+    },
+    "D62-Jq-xex.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Close\"; ObjectID = \"D62-Jq-xex\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Close"
+          }
+        }
+      }
+    },
+    "DvK-Wb-IXS.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"DvK-Wb-IXS\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "dZn-Z3-UP8.headerCell.title" : {
+      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Time\"; ObjectID = \"dZn-Z3-UP8\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uhrzeit"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Time"
+          }
+        }
+      }
+    },
+    "eFE-hB-i7T.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Next\"; ObjectID = \"eFE-hB-i7T\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Next"
+          }
+        }
+      }
+    },
+    "eGF-gK-nPT.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Install SapMachine…\"; ObjectID = \"eGF-gK-nPT\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine installieren …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Install SapMachine…"
+          }
+        }
+      }
+    },
+    "ekz-y7-6pf.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Cut\"; ObjectID = \"ekz-y7-6pf\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausschneiden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cut"
+          }
+        }
+      }
+    },
+    "eVd-9s-0Gt.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Item 2\"; ObjectID = \"eVd-9s-0Gt\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Item 2"
+          }
+        }
+      }
+    },
+    "EVt-qD-lTh.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Close\"; ObjectID = \"EVt-qD-lTh\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Close"
+          }
+        }
+      }
+    },
+    "F2S-fz-NVQ.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"Help\"; ObjectID = \"F2S-fz-NVQ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hilfe"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Help"
+          }
+        }
+      }
+    },
+    "ff7-bD-juR.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"ff7-bD-juR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Text Cell"
+          }
+        }
+      }
+    },
+    "fuc-kP-N1k.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Next\"; ObjectID = \"fuc-kP-N1k\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Next"
+          }
+        }
+      }
+    },
+    "fxS-Iv-NO6.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"fxS-Iv-NO6\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "gaV-vg-EFC.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"This assistant helps you to build a SapMachine installer package for macOS. Just select the options that fit your needs and the package will be prepared. On success, the prepared package is passed to Script2Pkg for package creation.\"; ObjectID = \"gaV-vg-EFC\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Assistent unterstützt Sie dabei, ein SapMachine-Installationspaket für macOS zu erstellen. Wählen Sie einfach die Optionen, die Ihren Anforderungen entsprechen, und das Paket wird vorbereitet. Bei Erfolg wird das vorbereitete Paket an Script2Pkg zur Paketerstellung übergeben."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "This assistant helps you to build a SapMachine installer package for macOS. Just select the options that fit your needs and the package will be prepared. On success, the prepared package is passed to Script2Pkg for package creation."
+          }
+        }
+      }
+    },
+    "GjT-nM-E08.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Build SapMachine Installer Package…\"; ObjectID = \"GjT-nM-E08\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine Installationspaket erstellen …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Build SapMachine Installer Package…"
+          }
+        }
+      }
+    },
+    "h2g-db-7bi.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Java Development Kit (JDK)\"; ObjectID = \"h2g-db-7bi\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Java-Entwicklungspaket (JDK)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Java Development Kit (JDK)"
+          }
+        }
+      }
+    },
+    "hz9-B4-Xy5.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"Services\"; ObjectID = \"hz9-B4-Xy5\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Services"
+          }
+        }
+      }
+    },
+    "IQv-IB-iLA.title" : {
+      "comment" : "Class = \"NSWindow\"; title = \"SapMachine Manager\"; ObjectID = \"IQv-IB-iLA\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine Manager"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "SapMachine Manager"
+          }
+        }
+      }
+    },
+    "ITm-a6-dFB.title" : {
+      "comment" : "Class = \"NSWindow\"; title = \"Settings\"; ObjectID = \"ITm-a6-dFB\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "IuM-cQ-vO2.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"IuM-cQ-vO2\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "jFK-Ij-bbO.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Automatically download and install updates\"; ObjectID = \"jFK-Ij-bbO\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updates automatisch herunterladen und installieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Automatically download and install updates"
+          }
+        }
+      }
+    },
+    "JGh-aE-0pw.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Processing\"; ObjectID = \"JGh-aE-0pw\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Bearbeitung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Processing"
+          }
+        }
+      }
+    },
+    "jkY-pu-SfJ.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Processing\"; ObjectID = \"jkY-pu-SfJ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Bearbeitung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Processing"
+          }
+        }
+      }
+    },
+    "jNX-Jk-He0.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Your package has been prepared and has been passsed to Script2Pkg for package creation. The source folder of the package is displayed in the Finder, so you can move, change or delete it as you wish.\"; ObjectID = \"jNX-Jk-He0\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihr Paket wurde vorbereitet und an Script2Pkg zur Paketerstellung übergeben. Der Quellordner des Pakets wird im Finder angezeigt, so dass Sie ihn nach Belieben verschieben, ändern oder löschen können."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Your package has been prepared and has been passsed to Script2Pkg for package creation. The source folder of the package is displayed in the Finder, so you can move, change or delete it as you wish."
+          }
+        }
+      }
+    },
+    "ka0-70-UxS.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Previous\"; ObjectID = \"ka0-70-UxS\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Previous"
+          }
+        }
+      }
+    },
+    "Kd2-mp-pUS.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Show All\"; ObjectID = \"Kd2-mp-pUS\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle einblenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Show All"
+          }
+        }
+      }
+    },
+    "Kle-MX-Kj4.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Next\"; ObjectID = \"Kle-MX-Kj4\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Next"
+          }
+        }
+      }
+    },
+    "KmT-rW-98g.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"File\"; ObjectID = \"KmT-rW-98g\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ablage"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "File"
+          }
+        }
+      }
+    },
+    "kSc-GL-WDQ.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Java Runtime Environment (JRE)\"; ObjectID = \"kSc-GL-WDQ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Java-Laufzeitumgebung (JRE)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Java Runtime Environment (JRE)"
+          }
+        }
+      }
+    },
+    "Kvc-MX-eQ6.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"Kvc-MX-eQ6\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Text Cell"
+          }
+        }
+      }
+    },
+    "KWF-lY-QSf.headerCell.title" : {
+      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Message\"; ObjectID = \"KWF-lY-QSf\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mitteilung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Message"
+          }
+        }
+      }
+    },
+    "L6P-o6-xFh.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Macs with Intel processor\"; ObjectID = \"L6P-o6-xFh\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macs mit Intel-Prozessor"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Macs with Intel processor"
+          }
+        }
+      }
+    },
+    "LE2-aR-0XJ.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Bring All to Front\"; ObjectID = \"LE2-aR-0XJ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle nach vorne bringen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Bring All to Front"
+          }
+        }
+      }
+    },
+    "LiE-Hw-PWa.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Downloading and installing SapMachine…\"; ObjectID = \"LiE-Hw-PWa\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine herunterladen und installieren …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Downloading and installing SapMachine…"
+          }
+        }
+      }
+    },
+    "lsh-ll-eRM.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"lsh-ll-eRM\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Table View Cell"
+          }
+        }
+      }
+    },
+    "lYP-yB-UPB.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"lYP-yB-UPB\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Text Cell"
+          }
+        }
+      }
+    },
+    "m4C-ax-VaY.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Failed to prepare package.\"; ObjectID = \"m4C-ax-VaY\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Vorbereitung des Pakets ist fehlgeschlagen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Failed to prepare package."
+          }
+        }
+      }
+    },
+    "M8N-Vf-Hdj.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Paste\"; ObjectID = \"M8N-Vf-Hdj\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einsetzen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Paste"
+          }
+        }
+      }
+    },
+    "MEd-Ec-9RC.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Previous\"; ObjectID = \"MEd-Ec-9RC\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Previous"
+          }
+        }
+      }
+    },
+    "MhM-ye-4CD.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"headline\"; ObjectID = \"MhM-ye-4CD\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "headline"
+          }
+        }
+      }
+    },
+    "mJV-yH-AcK.label" : {
+      "comment" : "Class = \"NSToolbarItem\"; label = \"Filter\"; ObjectID = \"mJV-yH-AcK\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Filter"
+          }
+        }
+      }
+    },
+    "mJV-yH-AcK.paletteLabel" : {
+      "comment" : "Class = \"NSToolbarItem\"; paletteLabel = \"Filter\"; ObjectID = \"mJV-yH-AcK\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Filter"
+          }
+        }
+      }
+    },
+    "mJV-yH-AcK.toolTip" : {
+      "comment" : "Class = \"NSToolbarItem\"; toolTip = \"Show only log messages beginning with \\\"SAPCorp:\\\"\"; ObjectID = \"mJV-yH-AcK\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur Mitteilungen anzeigen, die mit \"SAPCorp:\" beginnen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Show only log messages beginning with \"SAPCorp:\""
+          }
+        }
+      }
+    },
+    "mWN-SN-LhH.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Item 1\"; ObjectID = \"mWN-SN-LhH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Item 1"
+          }
+        }
+      }
+    },
+    "N3P-XD-EBx.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Previous\"; ObjectID = \"N3P-XD-EBx\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Previous"
+          }
+        }
+      }
+    },
+    "Nao-6p-5K4.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Delete this SapMachine\"; ObjectID = \"Nao-6p-5K4\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Delete this SapMachine"
+          }
+        }
+      }
+    },
+    "Ncv-lg-ZnG.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Check for updates\"; ObjectID = \"Ncv-lg-ZnG\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Check for updates"
+          }
+        }
+      }
+    },
+    "NcW-WO-ZfD.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Macs with Apple silicon\"; ObjectID = \"NcW-WO-ZfD\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macs mit Apple-Chip"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Macs with Apple silicon"
+          }
+        }
+      }
+    },
+    "nHS-10-GGn.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"The Java Development Kit is needed for developing java applications. It needs more disk space as it contains the JRE along with various development tools.\"; ObjectID = \"nHS-10-GGn\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Java-Entwicklungspaket wird für die Entwicklung von Java-Anwendungen benötigt. Es benötigt mehr Speicherplatz, da es die JRE zusammen mit verschiedenen Entwicklungswerkzeugen enthält."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The Java Development Kit is needed for developing java applications. It needs more disk space as it contains the JRE along with various development tools."
+          }
+        }
+      }
+    },
+    "nlw-oG-yy1.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Item 3\"; ObjectID = \"nlw-oG-yy1\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Item 3"
+          }
+        }
+      }
+    },
+    "NMo-om-nkz.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Services\"; ObjectID = \"NMo-om-nkz\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dienste"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Services"
+          }
+        }
+      }
+    },
+    "Nsu-rU-9DR.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Release:\"; ObjectID = \"Nsu-rU-9DR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Release:"
+          }
+        }
+      }
+    },
+    "nvR-wU-gZ5.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"nvR-wU-gZ5\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "OcZ-d3-v19.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Redo\"; ObjectID = \"OcZ-d3-v19\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wiederholen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Redo"
+          }
+        }
+      }
+    },
+    "Olw-nP-bQN.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Hide SapMachine Manager\"; ObjectID = \"Olw-nP-bQN\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine Manager ausblenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Hide SapMachine Manager"
+          }
+        }
+      }
+    },
+    "ONH-ZE-lfm.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"This assistant will guide you through the steps necessary to install SapMachine on your Mac.\"; ObjectID = \"ONH-ZE-lfm\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Assistent wird Sie durch die Schritte führen, die notwendig sind, um SapMachine auf Ihrem Mac zu installieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "This assistant will guide you through the steps necessary to install SapMachine on your Mac."
+          }
+        }
+      }
+    },
+    "oWF-x3-jyj.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"The package will contain only a version of SapMachine that is running on Intel-based Macs.\"; ObjectID = \"oWF-x3-jyj\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Paket wird eine Version von SapMachine enthalten, die nur auf Intel-basierten Macs läuft."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The package will contain only a version of SapMachine that is running on Intel-based Macs."
+          }
+        }
+      }
+    },
+    "OY7-WF-poV.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Minimize\"; ObjectID = \"OY7-WF-poV\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im Dock ablegen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Minimize"
+          }
+        }
+      }
+    },
+    "pp6-fE-NHY.title" : {
+      "comment" : "Class = \"NSViewController\"; title = \"General\"; ObjectID = \"pp6-fE-NHY\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allgemein"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "General"
+          }
+        }
+      }
+    },
+    "pSn-5c-Uop.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Package creation requires SAP's open-source application Script2Pkg 1.1.0 or later. Script2Pkg can be obtained free of charge from the official SAP GitHub at https://github.com/SAP/script-to-package-tool-for-macos.\\n\\nDue to technical limitations, packages containing pre-release versions of SapMachine cannot be notarized. If you want to create a package of a SapMachine pre-release, make sure package notarization is disabled in Script2Pkg, otherwise the package creation will fail.\"; ObjectID = \"pSn-5c-Uop\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Paketerstellung benötigt das SAP Open-Source-Programm Script2Pkg in der Version 1.1.0 oder höher. Script2Pkg kann kostenlos vom offiziellen SAP GitHub unter https://github.com/SAP/script-to-package-tool-for-macos heruntergeladen werden.\n\nAufgrund technischer Einschränkungen können Installationspakete, welche Vorabversionen von SapMachine enthalten, nicht beglaubigt werden. Wenn Sie ein Installationspaket mit einer Vorabversion von SapMachine erstellen möchten, stellen Sie bitte sicher, dass die Beglaubigung von Paketen in Script2Pkg deaktiviert ist, da die Paketerstellung sonst fehlschlägt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Package creation requires SAP's open-source application Script2Pkg 1.1.0 or later. Script2Pkg can be obtained free of charge from the official SAP GitHub at https://github.com/SAP/script-to-package-tool-for-macos.\n\nDue to technical limitations, packages containing pre-release versions of SapMachine cannot be notarized. If you want to create a package of a SapMachine pre-release, make sure package notarization is disabled in Script2Pkg, otherwise the package creation will fail."
+          }
+        }
+      }
+    },
+    "qh6-AM-ta9.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Select All\"; ObjectID = \"qh6-AM-ta9\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alles auswählen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Select All"
+          }
+        }
+      }
+    },
+    "QSF-jJ-S2T.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"QSF-jJ-S2T\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Table View Cell"
+          }
+        }
+      }
+    },
+    "QWf-Qd-rEe.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Install recommended version of SapMachine\"; ObjectID = \"QWf-Qd-rEe\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfohlene Version von SapMachine installieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Install recommended version of SapMachine"
+          }
+        }
+      }
+    },
+    "r0d-dg-AJV.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"Edit\"; ObjectID = \"r0d-dg-AJV\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bearbeiten"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Edit"
+          }
+        }
+      }
+    },
+    "R4o-n2-Eq4.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Zoom\"; ObjectID = \"R4o-n2-Eq4\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoomen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Zoom"
+          }
+        }
+      }
+    },
+    "R76-Cb-xDL.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Composing log…\"; ObjectID = \"R76-Cb-xDL\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Protokoll wird erstellt …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Composing log…"
+          }
+        }
+      }
+    },
+    "rwz-gf-Nlp.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"You can either install the version of SapMachine we recommend, or decide for yourself which version you want to install. To choose the version and type of SapMachine yourself, please uncheck the option below.\"; ObjectID = \"rwz-gf-Nlp\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie können entweder die von uns empfohlene Version von SapMachine installieren, oder selbst entscheiden, welche Version Sie installieren möchten. Um die Version und den Typ von SapMachine selbst zu wählen, deaktivieren Sie bitte die untenstehende Option."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You can either install the version of SapMachine we recommend, or decide for yourself which version you want to install. To choose the version and type of SapMachine yourself, please uncheck the option below."
+          }
+        }
+      }
+    },
+    "S4Z-9F-zZU.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Use as Default Environment\"; ObjectID = \"S4Z-9F-zZU\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als Standardumgebung verwenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Use as Default Environment"
+          }
+        }
+      }
+    },
+    "seP-DA-YeL.ibShadowedDateFormat" : {
+      "comment" : "Class = \"NSDateFormatter\"; ibShadowedDateFormat = \"yyyy-MM-dd HH:mm:ss.SSSZ\"; ObjectID = \"seP-DA-YeL\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "yyyy-MM-dd HH:mm:ss.SSSZ"
+          }
+        }
+      }
+    },
+    "sNp-sm-oMJ.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Show Log\"; ObjectID = \"sNp-sm-oMJ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Protokoll anzeigen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Show Log"
+          }
+        }
+      }
+    },
+    "Td7-aD-5lo.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"Window\"; ObjectID = \"Td7-aD-5lo\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fenster"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Window"
+          }
+        }
+      }
+    },
+    "uQy-DD-JDr.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"SapMachine Manager\"; ObjectID = \"uQy-DD-JDr\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "SapMachine Manager"
+          }
+        }
+      }
+    },
+    "V3H-Cu-aRm.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Paste and Match Style\"; ObjectID = \"V3H-Cu-aRm\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einsetzen und Stil anpassen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Paste and Match Style"
+          }
+        }
+      }
+    },
+    "V6b-kE-4cb.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"SapMachine Website\"; ObjectID = \"V6b-kE-4cb\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SapMachine Webseite"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "SapMachine Website"
+          }
+        }
+      }
+    },
+    "Vdr-fp-XzO.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Hide Others\"; ObjectID = \"Vdr-fp-XzO\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Andere ausblenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Hide Others"
+          }
+        }
+      }
+    },
+    "vH5-vt-cit.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Package successfully prepared.\"; ObjectID = \"vH5-vt-cit\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Paket wurde erfolgreich vorbereitet."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Package successfully prepared."
+          }
+        }
+      }
+    },
+    "vqp-Vi-KLv.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"The package will contain only a version of SapMachine that is running on Macs with Apple Silicon.\"; ObjectID = \"vqp-Vi-KLv\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Paket wird eine Version von SapMachine enthalten, die nur auf Macs mit Apple-Chip läuft."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The package will contain only a version of SapMachine that is running on Macs with Apple Silicon."
+          }
+        }
+      }
+    },
+    "VUX-Z8-82J.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Updates for your installed SapMachine releases can be downloaded and installed automatically, so they are always up-to-date. Automatic update checks take place regularly in the background and updates are installed as soon as they are available and this application is not running. Please enable the option below if you want to activate automatic updates.\"; ObjectID = \"VUX-Z8-82J\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updates für Ihre installierten SapMachine-Versionen können automatisch heruntergeladen und installiert werden, sodass sie immer auf dem neuesten Stand sind. Automatische Update-Prüfungen finden regelmäßig im Hintergrund statt, und Updates werden installiert, sobald sie verfügbar sind und dieses Programm nicht ausgeführt wird. Bitte aktivieren Sie die untenstehende Option, wenn Sie automatische Updates aktivieren möchten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Updates for your installed SapMachine releases can be downloaded and installed automatically, so they are always up-to-date. Automatic update checks take place regularly in the background and updates are installed as soon as they are available and this application is not running. Please enable the option below if you want to activate automatic updates."
+          }
+        }
+      }
+    },
+    "W3V-d8-KbR.headerCell.title" : {
+      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Release\"; ObjectID = \"W3V-d8-KbR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Release"
+          }
+        }
+      }
+    },
+    "wm4-tc-ynf.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"wm4-tc-ynf\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Text Cell"
+          }
+        }
+      }
+    },
+    "wpr-3q-Mcd.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Help\"; ObjectID = \"wpr-3q-Mcd\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Help"
+          }
+        }
+      }
+    },
+    "wXg-UP-tIH.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"File\"; ObjectID = \"wXg-UP-tIH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "File"
+          }
+        }
+      }
+    },
+    "XfG-lQ-9wD.title" : {
+      "comment" : "Class = \"NSViewController\"; title = \"Installed Releases\"; ObjectID = \"XfG-lQ-9wD\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Installed Releases"
+          }
+        }
+      }
+    },
+    "XOy-zF-DCU.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Installation successfully finished.\"; ObjectID = \"XOy-zF-DCU\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installation erfolgreich beendet."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Installation successfully finished."
+          }
+        }
+      }
+    },
+    "Xpa-hK-Ts3.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Release\"; ObjectID = \"Xpa-hK-Ts3\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Release"
+          }
+        }
+      }
+    },
+    "xrS-zq-sSd.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Reset Default Environment\"; ObjectID = \"xrS-zq-sSd\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standardumgebung zurücksetzen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reset Default Environment"
+          }
+        }
+      }
+    },
+    "yMq-3O-vhR.label" : {
+      "comment" : "Class = \"NSToolbarItem\"; label = \"Save\"; ObjectID = \"yMq-3O-vhR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "yMq-3O-vhR.paletteLabel" : {
+      "comment" : "Class = \"NSToolbarItem\"; paletteLabel = \"Save\"; ObjectID = \"yMq-3O-vhR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "yMq-3O-vhR.toolTip" : {
+      "comment" : "Class = \"NSToolbarItem\"; toolTip = \"Save log messages fo file\"; ObjectID = \"yMq-3O-vhR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mitteilungen in Datei speichern"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Save log messages fo file"
+          }
+        }
+      }
+    },
+    "yRm-OZ-I17.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Previous\"; ObjectID = \"yRm-OZ-I17\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Previous"
+          }
+        }
+      }
+    },
+    "ysy-vb-C17.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Show in Finder\"; ObjectID = \"ysy-vb-C17\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im Finder anzeigen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Show in Finder"
+          }
+        }
+      }
+    },
+    "yuB-gC-pdh.headerCell.title" : {
+      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Process\"; ObjectID = \"yuB-gC-pdh\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prozess"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Process"
+          }
+        }
+      }
+    },
+    "Zhl-QK-4Kl.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"Zhl-QK-4Kl\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "ZLE-n3-DL7.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Any Mac\"; ObjectID = \"ZLE-n3-DL7\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeder Mac"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Any Mac"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

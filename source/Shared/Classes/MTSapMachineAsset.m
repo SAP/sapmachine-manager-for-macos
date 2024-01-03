@@ -47,11 +47,14 @@
         _installedVersion = [aDecoder decodeObjectOfClass:[MTSapMachineVersion class] forKey:@"installedVersion"];
         _currentVersion = [aDecoder decodeObjectOfClass:[MTSapMachineVersion class] forKey:@"currentVersion"];
         _installURL = [aDecoder decodeObjectOfClass:[NSURL class] forKey:@"installURL"];
+        _javaHomeURL = [aDecoder decodeObjectOfClass:[NSURL class] forKey:@"javaHomeURL"];
         _downloadURLs = [aDecoder decodeObjectOfClasses:[NSSet setWithObjects:[NSDictionary class], [NSString class], [NSURL class], nil] forKey:@"downloadURLs"];
         _isEA = [aDecoder decodeBoolForKey:@"isEA"];
         _isLTS = [aDecoder decodeBoolForKey:@"isLTS"];
         _isUpdating = [aDecoder decodeBoolForKey:@"isUpdating"];
         _updateProgress = [aDecoder decodeDoubleForKey:@"updateProgress"];
+        _isVerified = [aDecoder decodeBoolForKey:@"isVerified"];
+        _javaHomeConfigFilePaths = [aDecoder decodeObjectOfClasses:[NSSet setWithObjects:[NSDictionary class], [NSArray class], [NSString class], nil] forKey:@"javaHomeConfigFilePaths"];
    }
     
    return self;
@@ -64,11 +67,14 @@
     [aCoder encodeObject:_installedVersion forKey:@"installedVersion"];
     [aCoder encodeObject:_currentVersion forKey:@"currentVersion"];
     [aCoder encodeObject:_installURL forKey:@"installURL"];
+    [aCoder encodeObject:_javaHomeURL forKey:@"javaHomeURL"];
     [aCoder encodeObject:_downloadURLs forKey:@"downloadURLs"];
     [aCoder encodeBool:_isEA forKey:@"isEA"];
     [aCoder encodeBool:_isLTS forKey:@"isLTS"];
     [aCoder encodeBool:_isUpdating forKey:@"isUpdating"];
     [aCoder encodeDouble:_updateProgress forKey:@"updateProgress"];
+    [aCoder encodeBool:_isVerified forKey:@"isVerified"];
+    [aCoder encodeObject:_javaHomeConfigFilePaths forKey:@"javaHomeConfigFilePaths"];
 }
 
 + (BOOL)supportsSecureCoding
@@ -86,11 +92,14 @@
         [newAsset setInstalledVersion:[_installedVersion copyWithZone:zone]];
         [newAsset setCurrentVersion:[_currentVersion copyWithZone:zone]];
         [newAsset setInstallURL:[_installURL copyWithZone:zone]];
+        [newAsset setJavaHomeURL:[_javaHomeURL copyWithZone:zone]];
         [newAsset setDownloadURLs:[_downloadURLs copyWithZone:zone]];
         [newAsset setEA:_isEA];
         [newAsset setLTS:_isLTS];
         [newAsset setIsUpdating:_isUpdating];
         [newAsset setUpdateProgress:_updateProgress];
+        [newAsset setIsVerified:_isVerified];
+        [newAsset setJavaHomeConfigFilePaths:_javaHomeConfigFilePaths];
     }
     
     return newAsset;

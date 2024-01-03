@@ -112,4 +112,33 @@
 */
 - (void)logEntriesSinceDate:(NSDate*)date completionHandler:(void (^)(NSArray<OSLogEntry*> *entries))completionHandler;
 
+/*!
+ @method        setJavaHomeEnvironmentVariableUsingAsset:userOnly:authorization:completionHandler:
+ @abstract      Set the @c JAVA_HOME environment variable.
+ @param         userOnly If set to YES, the environment variable is only set for the current user, otherwise it is set system-wide.
+ @param         authData The authorization data. May be nil.
+ @param         completionHandler The handler to call when the request is complete.
+ @discussion    Returns YES if on success, otherwise returns NO. If an error occurred
+                the NSError object might provide information about the error that caused
+                the operation to fail.
+*/
+- (void)setJavaHomeEnvironmentVariableUsingAsset:(MTSapMachineAsset*)asset 
+                                        userOnly:(BOOL)userOnly
+                                   authorization:(NSData *)authData
+                               completionHandler:(void (^)(BOOL success, NSError *error))completionHandler;
+
+/*!
+ @method        unsetJavaHomeEnvironmentVariableForUserOnly:authorization:completionHandler:
+ @abstract      Unset the @c JAVA_HOME environment variable.
+ @param         userOnly If set to YES, the environment variable is only unset for the current user, otherwise it is unset system-wide.
+ @param         authData The authorization data. May be nil.
+ @param         completionHandler The handler to call when the request is complete.
+ @discussion    Returns an NSArray containing the paths to the files that have been changed.
+                If an error occurred the NSError object might provide information about the error
+                that caused the operation to fail.
+*/
+- (void)unsetJavaHomeEnvironmentVariableForUserOnly:(BOOL)userOnly
+                                      authorization:(NSData *)authData
+                                  completionHandler:(void (^)(NSArray *changedFiles, NSError *error))completionHandler;
+
 @end

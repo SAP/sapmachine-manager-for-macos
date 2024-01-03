@@ -157,6 +157,7 @@
                                 [asset setEA:[[majorDict valueForKey:@"ea"] boolValue]];
                                 [asset setLTS:[[majorDict valueForKey:@"lts"] boolValue]];
                                 [asset setDownloadURLs:downloadDict];
+                                [asset setIsVerified:YES];
                                 
                                 // now let's check if the version is installed and add
                                 // the corresponding information to the asset object. to
@@ -168,9 +169,11 @@
                                 if ([filteredArray count] > 0) {
                                     
                                     MTSapMachineAsset *installedAsset = [filteredArray firstObject];
-                                    if ([installedAsset installURL]) { [asset setInstallURL:[installedAsset installURL]]; }
-                                    if ([installedAsset installedVersion]) { [asset setInstalledVersion:[installedAsset installedVersion]]; }
-                                    
+                                    [asset setInstallURL:[installedAsset installURL]];
+                                    [asset setInstalledVersion:[installedAsset installedVersion]];
+                                    [asset setJavaHomeURL:[installedAsset javaHomeURL]];
+                                    [asset setJavaHomeConfigFilePaths:[installedAsset javaHomeConfigFilePaths]];
+
                                     [installedAssetsMutable removeObjectsInArray:filteredArray];
                                 }
                                 
@@ -210,9 +213,13 @@
             
             NSMutableArray *allAssetArray = [[NSMutableArray alloc] init];
             
+            // get a list of configuration files for our supported shells
+            NSString *userName = ([self->_effectiveUserName length] > 0) ? self->_effectiveUserName : NSUserName();
+            NSDictionary *javaHomeConfigFiles = [MTJavaHome configFilesWithUserName:userName userOnly:NO recommendedOnly:NO];
+
             // create MTSapMachineAsset objects from the data returned
             for (NSDictionary *jvmDict in installedJVMs) {
-                
+                                
                 // type
                 NSString *jvmBundleID = [jvmDict objectForKey:@"JVMBundleID"];
                 MTSapMachineJVMType type = -1;
@@ -233,11 +240,14 @@
                     
                     if (jvmHomePath) {
                         
+                        NSURL *fileURL = [NSURL fileURLWithPath:jvmHomePath];
+                        [asset setJavaHomeURL:fileURL];
+                        
                         NSString *jvmPath = jvmHomePath;
                         NSRange range = [jvmHomePath rangeOfString:@"/Contents"];
                         if (range.location != NSNotFound) { jvmPath = [jvmHomePath substringToIndex:range.location]; }
                         
-                        NSURL *fileURL = [NSURL fileURLWithPath:jvmPath];
+                        fileURL = [NSURL fileURLWithPath:jvmPath];
                         [asset setInstallURL:fileURL];
                     }
                     
@@ -257,7 +267,30 @@
                         MTSapMachineVersion *installedVersion = [[MTSapMachineVersion alloc] initWithVersionString:jvmVersionString];
                         [asset setInstalledVersion:installedVersion];
                         [asset setCurrentVersion:installedVersion];
+
+                        // is this asset set as JAVA_HOME for one of the supported shells?
+                        NSMutableDictionary *allUsedConfigFiles = [[NSMutableDictionary alloc] init];
                         
+                        for (NSString *key in [javaHomeConfigFiles allKeys]) {
+                
+                            NSMutableArray *configFilesUsed = [[NSMutableArray alloc] init];
+                            
+                            for (NSString *configFilePath in [javaHomeConfigFiles valueForKey:key]) {
+                                
+                                NSString *javaHomePath = [MTJavaHome environmentVariableAtPath:configFilePath];
+                                
+                                if (javaHomePath && [javaHomePath hasPrefix:[[asset javaHomeURL] path]]) {
+                                    [configFilesUsed addObject:configFilePath];
+                                }
+                            }
+                            
+                            if ([configFilesUsed count] > 0) {
+                                [allUsedConfigFiles setValue:configFilesUsed forKey:key];
+                            }
+                        }
+
+                        [asset setJavaHomeConfigFilePaths:allUsedConfigFiles];
+
                         [allAssetArray addObject:asset];
                     }
                     
@@ -435,20 +468,41 @@
                                                            ([asset jvmType] == MTSapMachineJVMTypeJRE) ? kMTJVMTypeJRE : kMTJVMTypeJDK
                                 ];
                                 
-                                NSURL *finalURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:kMTJVMFolderPath, jvmFolderName, nil]];
+                                NSURL *finalLocation = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:kMTJVMFolderPath, jvmFolderName, nil]];
                                 
-                                if ([[NSFileManager defaultManager] fileExistsAtPath:[finalURL path]]) {
-                                    [[NSFileManager defaultManager] removeItemAtURL:finalURL error:nil];
+                                if ([[NSFileManager defaultManager] fileExistsAtPath:[finalLocation path]]) {
+                                    [[NSFileManager defaultManager] removeItemAtURL:finalLocation error:nil];
                                 }
 
                                 success = [[NSFileManager defaultManager] moveItemAtURL:[filteredFolderContents firstObject]
-                                                                                  toURL:finalURL
+                                                                                  toURL:finalLocation
                                                                                   error:&error
                                 ];
                                 
-                                // delete the old asset
-                                if (success && [asset installURL] && [[asset installURL] isNotEqualTo:finalURL]) {
-                                    [[NSFileManager defaultManager] removeItemAtURL:[asset installURL] error:nil];
+                                if (success) {
+                                    
+                                    location = finalLocation;
+                                    
+                                    // delete the old asset
+                                    if ([asset installURL] && [[asset installURL] isNotEqualTo:finalLocation]) {
+                                        [[NSFileManager defaultManager] removeItemAtURL:[asset installURL] error:nil];
+                                    }
+                                    
+                                    // set the new java home url
+                                    NSURL *homeURL = [location URLByAppendingPathComponent:@"/Contents/Home"];
+                                    [asset setJavaHomeURL:homeURL];
+                                    
+                                    // if the asset is used in config files to set the JAVA_HOME environment
+                                    //  variable, we make sure the files are updated accordingly
+                                    if ([[[asset javaHomeConfigFilePaths] allKeys] count] > 0) {
+                                        
+                                        NSMutableArray *filesToChange = [[NSMutableArray alloc] init];
+                                        for (NSArray *fileArray in [[asset javaHomeConfigFilePaths] allValues]) { [filesToChange addObjectsFromArray:fileArray]; }
+                                        
+                                        [MTJavaHome setEnvironmentVariableAtPaths:filesToChange
+                                                                     usingJVMPath:[homeURL path]
+                                                                completionHandler:nil];
+                                    }
                                 }
                                 
                             } else {
@@ -525,11 +579,9 @@
                 
                 [asset setIsUpdating:NO];
                 [asset setInstalledVersion:[asset currentVersion]];
-                
-            } else {
-                
-                [asset setInstallURL:location];
             }
+                
+            [asset setInstallURL:location];
             
             if (_updateDelegate && [_updateDelegate respondsToSelector:@selector(updateFinishedForAsset:)]) {
                 [_updateDelegate updateFinishedForAsset:asset];

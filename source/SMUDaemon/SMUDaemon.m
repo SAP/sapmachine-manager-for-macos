@@ -18,6 +18,7 @@
 #import "SMUDaemon.h"
 #import "MTSapMachine.h"
 #import "MTSapMachineUser.h"
+#import "MTJavaHome.h"
 #import <os/log.h>
 
 @interface SMUDaemon ()
@@ -173,6 +174,10 @@
         _operationInProgress = YES;
         
         MTSapMachine *sapMachine = [[MTSapMachine alloc] initWithURL:[NSURL URLWithString:kMTSapMachineReleasesURL]];
+        
+        MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserID:[[NSXPCConnection currentConnection] effectiveUserIdentifier]];
+        [sapMachine setEffectiveUserName:[user userName]];
+        
         [sapMachine assetCatalogWithCompletionHandler:^(NSArray<MTSapMachineAsset *> *assetCatalog, NSError *error) {
             
             self->_operationInProgress = NO;
@@ -207,6 +212,9 @@
         _operationInProgress = YES;
         
         MTSapMachine *sapMachine = [[MTSapMachine alloc] initWithURL:[NSURL URLWithString:kMTSapMachineReleasesURL]];
+        
+        MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserID:[[NSXPCConnection currentConnection] effectiveUserIdentifier]];
+        [sapMachine setEffectiveUserName:[user userName]];
         [sapMachine setUpdateDelegate:self];
         
         [sapMachine assetCatalogWithCompletionHandler:^(NSArray<MTSapMachineAsset *> *assetCatalog, NSError *error) {
@@ -271,6 +279,9 @@
                 _operationInProgress = YES;
                 
                 MTSapMachine *sapMachine = [[MTSapMachine alloc] initWithURL:[NSURL URLWithString:kMTSapMachineReleasesURL]];
+                
+                MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserID:[[NSXPCConnection currentConnection] effectiveUserIdentifier]];
+                [sapMachine setEffectiveUserName:[user userName]];
                 [sapMachine setUpdateDelegate:self];
                 
                 [sapMachine assetCatalogWithCompletionHandler:^(NSArray<MTSapMachineAsset *> *assetCatalog, NSError *error) {
@@ -322,13 +333,15 @@
 
 - (void)deleteAssets:(NSArray<MTSapMachineAsset*>*)assets authorization:(NSData *)authData completionHandler:(void (^)(NSArray<MTSapMachineAsset*> *deletedAssets, NSError *error))completionHandler
 {
-    NSMutableArray *deletedAssets = [[NSMutableArray alloc] init];
     NSError *error = nil;
+    NSMutableArray *deletedAssets = [[NSMutableArray alloc] init];
     
     if ([self allowedUserWithAuthorization:authData]) {
         
+        NSMutableArray *filesToChange = [[NSMutableArray alloc] init];
+        
         for (MTSapMachineAsset *asset in assets) {
-            
+                        
             if (asset && [asset installURL]) {
                 
                 // check if the given asset is in the asset catalog
@@ -343,6 +356,11 @@
                 }
                 
                 if (!error) {
+                    
+                    if ([[[asset javaHomeConfigFilePaths] allKeys] count] > 0) {
+                        
+                        for (NSArray *fileArray in [[asset javaHomeConfigFilePaths] allValues]) { [filesToChange addObjectsFromArray:fileArray]; }
+                    }
                     
                     [deletedAssets addObject:asset];
                     
@@ -363,7 +381,18 @@
             }
         }
         
-        completionHandler(deletedAssets, error);
+        // if a deleted asset was used as the default environment,
+        // we also unset JAVA_HOME
+        if ([filesToChange count] > 0) {
+
+            [MTJavaHome unsetEnvironmentVariableAtPaths:filesToChange completionHandler:^(NSArray *changedFiles) {
+                completionHandler(deletedAssets, error);
+            }];
+            
+        } else {
+            
+            completionHandler(deletedAssets, error);
+        }
         
     } else {
         
@@ -418,6 +447,85 @@
                                                                   predicate:predicate
                                                                       error:nil];
     completionHandler([logEnumerator allObjects]);
+}
+
+- (void)setJavaHomeEnvironmentVariableUsingAsset:(MTSapMachineAsset*)asset userOnly:(BOOL)userOnly authorization:(NSData *)authData completionHandler:(void (^)(BOOL success, NSError *error))completionHandler
+{
+    NSError *error = nil;
+    
+    if (userOnly || (!userOnly && [self allowedUserWithAuthorization:authData])) {
+
+        if (asset && [asset javaHomeURL]) {
+            
+            // check if the given asset is in the asset catalog
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"javaHomeURL == %@", [asset javaHomeURL]];
+            NSArray *filteredArray = [self->_assetCatalog filteredArrayUsingPredicate:predicate];
+            
+            if ([filteredArray count] > 0) {
+                
+                MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserID:[[NSXPCConnection currentConnection] effectiveUserIdentifier]];
+                NSDictionary *configFiles = [MTJavaHome configFilesWithUserName:[user userName] userOnly:userOnly recommendedOnly:YES];
+                NSMutableArray *filesToChange = [[NSMutableArray alloc] init];
+                for (NSArray *fileArray in [configFiles allValues]) { [filesToChange addObjectsFromArray:fileArray]; }
+
+                [MTJavaHome setEnvironmentVariableAtPaths:filesToChange
+                                             usingJVMPath:[[asset javaHomeURL] path]
+                                        completionHandler:^(BOOL success) {
+
+                    completionHandler(success, error);
+                }];
+                
+            } else {
+                
+                completionHandler(NO, error);
+            }
+            
+        } else {
+            
+            NSDictionary *errorDetail = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             @"No home url provided", NSLocalizedDescriptionKey,
+                                             nil
+            ];
+            error = [NSError errorWithDomain:kMTErrorDomain code:0 userInfo:errorDetail];
+            
+            completionHandler(NO, error);
+        }
+    
+    } else {
+        
+        NSDictionary *errorDetail = [NSDictionary dictionaryWithObjectsAndKeys:
+                                         @"The current user is not authorized to change the default Java environment", NSLocalizedDescriptionKey,
+                                         nil
+        ];
+        error = [NSError errorWithDomain:kMTErrorDomain code:0 userInfo:errorDetail];
+                
+        completionHandler(NO, error);
+    }
+}
+
+- (void)unsetJavaHomeEnvironmentVariableForUserOnly:(BOOL)userOnly authorization:(NSData *)authData completionHandler:(void (^)(NSArray *changedFiles, NSError *error))completionHandler
+{
+    if (userOnly || (!userOnly && [self allowedUserWithAuthorization:authData])) {
+    
+        MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserID:[[NSXPCConnection currentConnection] effectiveUserIdentifier]];
+        NSDictionary *configFiles = [MTJavaHome configFilesWithUserName:[user userName] userOnly:userOnly recommendedOnly:NO];
+        NSMutableArray *filesToChange = [[NSMutableArray alloc] init];
+        for (NSArray *fileArray in [configFiles allValues]) { [filesToChange addObjectsFromArray:fileArray]; }
+
+        [MTJavaHome unsetEnvironmentVariableAtPaths:filesToChange completionHandler:^(NSArray *changedFiles) {
+            completionHandler(changedFiles, nil);
+        }];
+        
+    } else {
+        
+        NSDictionary *errorDetail = [NSDictionary dictionaryWithObjectsAndKeys:
+                                         @"The current user is not authorized to change the default Java environment", NSLocalizedDescriptionKey,
+                                         nil
+        ];
+        NSError *error = [NSError errorWithDomain:kMTErrorDomain code:0 userInfo:errorDetail];
+                
+        completionHandler(nil, error);
+    }
 }
 
 #pragma mark MTSapMachineAssetUpdateDelegate methods

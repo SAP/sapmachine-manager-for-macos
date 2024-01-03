@@ -1,5 +1,5 @@
 /*
-     Localizable.strings
+     MTTableCellView.h
      Copyright 2023 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,4 +15,8 @@
      limitations under the License.
 */
 
-"authDialogMessage" = "SapMachine Manager wants to make changes to the SapMachine releases installed on your Mac.";
+#import <Cocoa/Cocoa.h>
+
+@interface MTTableCellView : NSTableCellView
+
+@end

@@ -1,5 +1,5 @@
 /*
-     MTReleaseNameTransformer.m
+     MTDefaultEnvironmentImageTransformer.m
      Copyright 2023 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,11 +15,10 @@
      limitations under the License.
 */
 
-#import "MTReleaseNameTransformer.h"
+#import "MTDefaultEnvironmentImageTransformer.h"
 #import "MTSapMachineAsset.h"
-#import "Constants.h"
 
-@implementation MTReleaseNameTransformer
+@implementation MTDefaultEnvironmentImageTransformer
 
 + (BOOL)allowsReverseTransformation
 {
@@ -29,13 +28,22 @@
 - (id)transformedValue:(id)value
 {
     MTSapMachineAsset *asset = (MTSapMachineAsset*)value;
-    NSString *jvmType = ([asset jvmType] == MTSapMachineJVMTypeJRE) ? kMTJVMTypeJRE : kMTJVMTypeJDK;
-    NSString *releaseName = [NSString stringWithFormat:@"%@ - %@",
-                             [asset displayName],
-                             [jvmType uppercaseString]
-                             ];
+    NSString *imageName = nil;
     
-    return releaseName;
+    if ([[asset javaHomeConfigFilePaths] objectForKey:@"system"]) {
+        
+        imageName = @"house.fill";
+        
+    } else {
+        
+        imageName = @"house";
+    }
+    
+    NSImage *statusImage = [NSImage imageWithSystemSymbolName:imageName accessibilityDescription:imageName];
+    NSImageSymbolConfiguration *config = [NSImageSymbolConfiguration configurationWithScale:NSImageSymbolScaleLarge];
+    statusImage = [statusImage imageWithSymbolConfiguration:config];
+    
+    return statusImage;
 }
 
 @end

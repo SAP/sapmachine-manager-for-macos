@@ -17,6 +17,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MTLogController : NSViewController <NSToolbarItemValidation>
+@interface MTLogController : NSViewController <NSToolbarItemValidation, NSTableViewDelegate>
 
 @end

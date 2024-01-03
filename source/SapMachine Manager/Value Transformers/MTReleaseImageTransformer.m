@@ -1,5 +1,5 @@
 /*
-     MTReleaseImageTransformer.h
+     MTReleaseImageTransformer.m
      Copyright 2023 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,17 +28,21 @@
 - (id)transformedValue:(id)value
 {
     MTSapMachineAsset *asset = (MTSapMachineAsset*)value;
-    NSImage *statusImage = nil;
+    NSString *imageName = nil;
     
     if ([[asset currentVersion] compare:[asset installedVersion]] == NSOrderedDescending) {
         
-        statusImage = [NSImage imageWithSystemSymbolName:@"exclamationmark.triangle.fill" accessibilityDescription:nil];
+        imageName = @"exclamationmark.triangle";
         
     } else {
         
-        statusImage = [NSImage imageWithSystemSymbolName:@"checkmark.circle.fill" accessibilityDescription:nil];
+        imageName = @"checkmark.circle";
     }
-        
+    
+    NSImage *statusImage = [NSImage imageWithSystemSymbolName:imageName accessibilityDescription:imageName];
+    NSImageSymbolConfiguration *config = [NSImageSymbolConfiguration configurationWithScale:NSImageSymbolScaleLarge];
+    statusImage = [statusImage imageWithSymbolConfiguration:config];
+    
     return statusImage;
 }
 

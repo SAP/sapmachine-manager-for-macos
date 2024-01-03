@@ -1,5 +1,5 @@
 /*
-     MTButtonTitleTransformer.m
+     MTTableCellView.m
      Copyright 2023 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,30 +15,22 @@
      limitations under the License.
 */
 
-#import "MTButtonTitleTransformer.h"
+#import "MTTableCellView.h"
 
-@implementation MTButtonTitleTransformer
+@implementation MTTableCellView
 
-+ (BOOL)allowsReverseTransformation
+- (void)drawRect:(NSRect)dirtyRect 
 {
-    return NO;
-}
-
-- (id)transformedValue:(id)value
-{
-    NSString *buttonText = NSLocalizedString(@"checkButtonTitle", nil);
-    NSInteger updateCount = [value integerValue];
+    [super drawRect:dirtyRect];
     
-    if (updateCount == 1) {
+    if ([[[[self imageView] image] accessibilityDescription] rangeOfString:@"checkmark"].location != NSNotFound) {
         
-        buttonText = NSLocalizedString(@"installOneButtonTitle", nil);
+        [[self imageView] setContentTintColor:[NSColor systemGreenColor]];
         
-    } else if (updateCount > 1) {
+    } else {
         
-        buttonText = NSLocalizedString(@"installMultipleButtonTitle", nil);
+        [[self imageView] setContentTintColor:[NSColor systemRedColor]];
     }
-    
-    return buttonText;
 }
 
 @end

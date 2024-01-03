@@ -28,7 +28,7 @@
 
 @property (weak) IBOutlet NSTableView *logTableView;
 @property (weak) IBOutlet NSArrayController *logController;
-@property (weak) IBOutlet NSTextField *logDetailsField;
+@property (weak) IBOutlet NSTextView *logDetailsView;
 @end
 
 @implementation MTLogController
@@ -38,6 +38,7 @@
     [super viewDidLoad];
     
     _logEntries = [[NSMutableArray alloc] init];
+    [_logDetailsView setFont:[NSFont monospacedSystemFontOfSize:11 weight:NSFontWeightRegular]];
     
     [self getLogEntriesFromDaemon];
 }
@@ -60,7 +61,14 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 self.logEntries = [NSMutableArray arrayWithArray:entries];
-                [self.logTableView scrollRowToVisible:[self.logTableView numberOfRows] - 1];
+                
+                NSInteger selectIndex = [[self->_logController arrangedObjects] count] - 1;
+                
+                if (selectIndex >= 0) {
+                    [self.logController setSelectionIndex:selectIndex];
+                    [self.logTableView scrollRowToVisible:selectIndex];
+                }
+                
                 self.logIsRefreshing = NO;
                 [[[self view] window] update];
             });
@@ -69,16 +77,18 @@
     }];
 }
 
-- (IBAction)logEntrySelected:(id)sender
+- (void)tableViewSelectionDidChange:(NSNotification *)notification
 {
-    NSArray *selectedObjects = [self.logController selectedObjects];
+    NSArray *selectedObjects = [_logController selectedObjects];
     
     if ([selectedObjects count] > 0) {
         
         OSLogEntry *entry = (OSLogEntry*)[selectedObjects firstObject];
-        [self.logDetailsField setStringValue:[entry composedMessage]];
+        [self.logDetailsView setString:[entry composedMessage]];
     }
 }
+
+#pragma mark IBActions
 
 - (IBAction)searchLogMessages:(id)sender
 {

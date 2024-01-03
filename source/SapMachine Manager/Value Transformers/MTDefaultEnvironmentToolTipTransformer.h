@@ -1,5 +1,5 @@
 /*
-     Localizable.strings
+     MTDefaultEnvironmentToolTipTransformer.h
      Copyright 2023 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,4 +15,15 @@
      limitations under the License.
 */
 
-"authDialogMessage" = "SapMachine Manager möchte Änderungen an den auf Ihrem Mac installierten SapMachine-Versionen vornehmen.";
+#import <Cocoa/Cocoa.h>
+
+/*!
+ @class         MTDefaultEnvironmentToolTipTransformer
+ @abstract      A value transformer that returns an image of a house if the given MTSapMachineAsset
+                is used as the default Java environment for the current user only. If it has been set
+                system-wide it returns an image of a filled house.
+*/
+
+@interface MTDefaultEnvironmentToolTipTransformer : NSValueTransformer
+
+@end

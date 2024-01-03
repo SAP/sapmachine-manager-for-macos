@@ -17,6 +17,7 @@
 
 #import "MTTableView.h"
 #import "MTSapMachineUser.h"
+#import "MTSapMachineAsset.h"
 #import "Constants.h"
 
 @implementation MTTableView
@@ -37,6 +38,25 @@
             [removeItem setTitle:[NSString localizedStringWithFormat:NSLocalizedString(@"deleteSelectedMenuEntry", nil), [[self selectedRowIndexes] count]]];
         } else {
             [removeItem setTitle:NSLocalizedString(@"deleteOneMenuEntry", nil)];
+        }
+        
+        NSMenuItem *javaHomeItem = [[self menu] itemWithTag:1100];
+        [javaHomeItem setAction:nil];
+        
+        if ([[self selectedRowIndexes] count] == 0 || 
+            ([[self selectedRowIndexes] count] == 1 && [[self selectedRowIndexes] containsIndex:clickedRow]) ||
+            ([[self selectedRowIndexes] count] >= 1 && ![[self selectedRowIndexes] containsIndex:clickedRow])) {
+            
+            NSTableCellView *cellView = [self viewAtColumn:0 row:clickedRow makeIfNecessary:NO];
+            
+            if (cellView) {
+                
+                MTSapMachineAsset *asset = (MTSapMachineAsset*)[cellView objectValue];
+                
+                if (asset && [[[asset javaHomeConfigFilePaths] allKeys] count] == 0) {
+                    [javaHomeItem setAction:NSSelectorFromString(@"setJavaHome:")];
+                }
+            }
         }
 
         theMenu = [self menu];

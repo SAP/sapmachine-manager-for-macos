@@ -81,6 +81,9 @@
 */
 @property (weak) id <MTSapMachineAssetUpdateDelegate> updateDelegate;
 
+
+@property (nonatomic, strong, readwrite) NSString *effectiveUserName;
+
 /*!
  @method        init
  @discussion    The init method is not available. Please use initWithURL: instead.

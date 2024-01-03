@@ -1,5 +1,5 @@
 /*
-     InfoPlist.strings
+     MTDefaultEnvironmentImageTransformer.h
      Copyright 2023 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +15,15 @@
      limitations under the License.
 */
 
-// the copyright string (for the application's info window in Finder)
-"NSHumanReadableCopyright" = "Copyright © 2023 SAP SE. Alle Rechte vorbehalten.";
+#import <Cocoa/Cocoa.h>
 
-// the localized app name
-"CFBundleDisplayName" = "SapMachine Manager";
-"CFBundleName" = "SapMachine Manager";
+/*!
+ @class         MTDefaultEnvironmentImageTransformer
+ @abstract      A value transformer that returns an image of a house if the given MTSapMachineAsset
+                is used as the default Java environment for the current user only. If it has been set
+                system-wide it returns an image of a filled house.
+*/
+
+@interface MTDefaultEnvironmentImageTransformer : NSValueTransformer
+
+@end

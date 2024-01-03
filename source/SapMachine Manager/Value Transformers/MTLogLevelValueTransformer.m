@@ -1,5 +1,5 @@
 /*
-     MTLogLevelValueTransformer.h
+     MTLogLevelValueTransformer.m
      Copyright 2023 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,7 +29,7 @@
 {
     NSImage *levelIndicator = nil;
     
-    if (value) {
+    if (value && [value isKindOfClass:[OSLogEntryLog class]]) {
         
         OSLogEntryLog *entry = (OSLogEntryLog*)value;
         

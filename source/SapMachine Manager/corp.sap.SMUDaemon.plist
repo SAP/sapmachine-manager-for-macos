@@ -9,8 +9,10 @@
 	</dict>
 	<key>Label</key>
 	<string>corp.sap.sapmachine.daemon</string>
-	<key>BundleProgram</key>
-	<string>Contents/MacOS/SMUDaemon</string>
+	<key>Program</key>
+	<string>/Applications/SapMachine Manager.app/Contents/MacOS/SMUDaemon</string>
+	<key>AssociatedBundleIdentifiers</key>
+	<string>corp.sap.SapMachineManager</string>
 	<key>StartInterval</key>
 	<integer>7200</integer>
 	<key>RunAtLoad</key>

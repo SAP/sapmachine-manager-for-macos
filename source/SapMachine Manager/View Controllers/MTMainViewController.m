@@ -276,6 +276,8 @@
             [self willChangeValueForKey:@"jvmReleases"];
             [matchingAsset setIsUpdating:NO];
             [matchingAsset setInstalledVersion:[asset currentVersion]];
+            [matchingAsset setInstallURL:[asset installURL]];
+            [matchingAsset setJavaHomeURL:[asset javaHomeURL]];
             [self didChangeValueForKey:@"jvmReleases"];
             
             // if all downloads are finished, check for updates again.
@@ -376,6 +378,7 @@
         
         enableItem = NO;
         
+    // this is for the main menu only
     } else if ([item tag] == 1500) {
         
         NSInteger itemCount = [[self.releasesController selectionIndexes] count];
@@ -509,13 +512,12 @@
             if (returnCode == NSAlertFirstButtonReturn) {
                 
                 NSArray *assets = [[self->_releasesController arrangedObjects] objectsAtIndexes:toBeDeleted];
-                
-                MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserName:NSUserName()];
                     
                 NSBlockOperation *authOperation = [[NSBlockOperation alloc] init];
                 [authOperation addExecutionBlock:^{
                     
                     self->_authData = nil;
+                    MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserName:NSUserName()];
                     
                     if (![user isPrivileged]) {
                         
@@ -548,7 +550,7 @@
                             [[self->_daemonConnection remoteObjectProxy] deleteAssets:assets
                                                                         authorization:self->_authData
                                                                     completionHandler:^(NSArray<MTSapMachineAsset *> *deletedAssets, NSError *error) {
-                                
+
                                 dispatch_async(dispatch_get_main_queue(), ^{
                                     
                                     self->_authData = nil;
@@ -614,7 +616,7 @@
                 
                 [privilegedOperation addDependency:authOperation];
                 [self->_operationQueue addOperations:[NSArray arrayWithObjects:authOperation, privilegedOperation, nil]
-                             waitUntilFinished:NO];
+                                   waitUntilFinished:NO];
                 
             }
         }];
@@ -654,6 +656,124 @@
 {
     NSString *urlString = ([sender tag] == 1000) ? kMTGitHubURL : kMTSapMachineWebsiteURL;
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
+}
+
+- (IBAction)setJavaHome:(id)sender
+{
+    BOOL setJavaHome = ([sender tag] == 1100) ? YES : NO;
+    NSInteger clickedRow = [_tableView clickedRow];
+    
+    NSAlert *theAlert = [[NSAlert alloc] init];
+    
+    if (setJavaHome) {
+        
+        [theAlert setMessageText:NSLocalizedString(@"dialogSetJavaHomeTitle", nil)];
+        [theAlert setInformativeText:NSLocalizedString(@"dialogSetJavaHomeMessage", nil)];
+        
+    } else {
+        
+        [theAlert setMessageText:NSLocalizedString(@"dialogUnsetJavaHomeTitle", nil)];
+        [theAlert setInformativeText:NSLocalizedString(@"dialogUnsetJavaHomeMessage", nil)];
+    }
+    
+    [theAlert addButtonWithTitle:NSLocalizedString(@"cancelButton", nil)];
+    [[theAlert addButtonWithTitle:NSLocalizedString(@"currentUserOnlyButton", nil)] setKeyEquivalent:@"\r"];
+    [theAlert addButtonWithTitle:NSLocalizedString(@"allUsersButton", nil)];
+    [theAlert setAlertStyle:NSAlertStyleInformational];
+    [theAlert beginSheetModalForWindow:[[self view] window] completionHandler:^(NSModalResponse returnCode) {
+        
+        if (returnCode == NSAlertSecondButtonReturn || returnCode == NSAlertThirdButtonReturn) {
+
+            BOOL userOnly = (returnCode == NSAlertSecondButtonReturn) ? YES : NO;
+            self->_authData = nil;
+            
+            NSBlockOperation *authOperation = [[NSBlockOperation alloc] init];
+            [authOperation addExecutionBlock:^{
+                
+                if (!userOnly) {
+                    
+                    MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserName:NSUserName()];
+                    
+                    if (![user isPrivileged]) {
+                        
+                        dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            
+                            [self->_daemonConnection connectToXPCServiceWithRemoteObjectProxyReply:^(id remoteObjectProxy, NSError *error) {
+                                
+                                [remoteObjectProxy authenticateWithAuthorizationReply:^(NSData *authorization) {
+                                    
+                                    self->_authData = authorization;
+                                    dispatch_semaphore_signal(semaphore);
+                                }];
+                            }];
+                        });
+                        
+                        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+                    }
+                }
+            }];
+            
+            NSBlockOperation *privilegedOperation = [[NSBlockOperation alloc] init];
+            [privilegedOperation addExecutionBlock:^{
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    if (setJavaHome) {
+                        
+                        MTSapMachineAsset *asset = [[self->_releasesController arrangedObjects] objectAtIndex:clickedRow];
+                        
+                        [self->_daemonConnection connectToDaemonWithExportedObject:nil
+                                                            andExecuteCommandBlock:^{
+                            
+                            [[self->_daemonConnection remoteObjectProxy] setJavaHomeEnvironmentVariableUsingAsset:asset
+                                                                                                         userOnly:userOnly
+                                                                                                    authorization:self->_authData
+                                                                                                completionHandler:^(BOOL success, NSError *error) {
+                                dispatch_async(dispatch_get_main_queue(), ^{
+                                    
+                                    self->_authData = nil;
+                                    
+                                    if (!success) {
+                                        os_log_with_type(OS_LOG_DEFAULT, OS_LOG_TYPE_FAULT, "SAPCorp: Failed to set JAVA_HOME environment variable (%{public}@): %{public}@", (userOnly) ? @"user" : @"system", error);
+                                    }
+
+                                    [self checkForUpdates];
+                                });
+                            }];
+                        }];
+                        
+                    } else {
+                        
+                        [self->_daemonConnection connectToDaemonWithExportedObject:nil
+                                                            andExecuteCommandBlock:^{
+                            
+                            [[self->_daemonConnection remoteObjectProxy] unsetJavaHomeEnvironmentVariableForUserOnly:userOnly
+                                                                                                       authorization:self->_authData
+                                                                                                   completionHandler:^(NSArray *changedFiles, NSError *error) {
+                                dispatch_async(dispatch_get_main_queue(), ^{
+                                    
+                                    self->_authData = nil;
+                                    
+                                    if (error) {
+                                        os_log_with_type(OS_LOG_DEFAULT, OS_LOG_TYPE_FAULT, "SAPCorp: Failed to unset JAVA_HOME environment variable (%{public}@): %{public}@", (userOnly) ? @"user" : @"system", error);
+                                    }
+                                    
+                                    [self checkForUpdates];
+                                });
+                            }];
+                        }];
+                    }
+                    
+                });
+            }];
+            
+            [privilegedOperation addDependency:authOperation];
+            [self->_operationQueue addOperations:[NSArray arrayWithObjects:authOperation, privilegedOperation, nil]
+                               waitUntilFinished:NO];
+        }
+    }];
 }
 
 #pragma mark other methods

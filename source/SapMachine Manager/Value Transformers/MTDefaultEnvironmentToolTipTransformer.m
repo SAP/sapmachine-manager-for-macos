@@ -1,5 +1,5 @@
 /*
-     MTReleaseNameTransformer.m
+     MTDefaultEnvironmentToolTipTransformer.m
      Copyright 2023 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,11 +15,10 @@
      limitations under the License.
 */
 
-#import "MTReleaseNameTransformer.h"
+#import "MTDefaultEnvironmentToolTipTransformer.h"
 #import "MTSapMachineAsset.h"
-#import "Constants.h"
 
-@implementation MTReleaseNameTransformer
+@implementation MTDefaultEnvironmentToolTipTransformer
 
 + (BOOL)allowsReverseTransformation
 {
@@ -29,13 +28,18 @@
 - (id)transformedValue:(id)value
 {
     MTSapMachineAsset *asset = (MTSapMachineAsset*)value;
-    NSString *jvmType = ([asset jvmType] == MTSapMachineJVMTypeJRE) ? kMTJVMTypeJRE : kMTJVMTypeJDK;
-    NSString *releaseName = [NSString stringWithFormat:@"%@ - %@",
-                             [asset displayName],
-                             [jvmType uppercaseString]
-                             ];
+    NSString *toolTipString = nil;
     
-    return releaseName;
+    if ([[asset javaHomeConfigFilePaths] objectForKey:@"system"]) {
+        
+        toolTipString = NSLocalizedString(@"javaHomeToolTipSystem", nil);
+        
+    } else {
+        
+        toolTipString = NSLocalizedString(@"javaHomeToolTipUser", nil);
+    }
+    
+    return toolTipString;
 }
 
 @end
