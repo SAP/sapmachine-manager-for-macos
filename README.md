@@ -1,6 +1,8 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP/sapmachine-manager-for-macos)](https://api.reuse.software/info/github.com/SAP/sapmachine-manager-for-macos)
+![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/banner.png)
 
 # SapMachine Manager
+
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/sapmachine-manager-for-macos)](https://api.reuse.software/info/github.com/SAP/sapmachine-manager-for-macos)
 
 ## About this project
 
