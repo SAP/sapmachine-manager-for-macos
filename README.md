@@ -6,7 +6,7 @@
 
 ## About this project
 
-SapMachine Manager is designed to install, uninstall and manage one or more instances of SapMachine Java on a Mac.
+SapMachine Manager allows Mac users to easily install, uninstall, and automatically keep SapMachine up to date. In addition, SapMachine Manager supports the creation of SapMachine installer packages for macOS and the definition of the default Java environment.
 
 ![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/smm_launched.png)
 
