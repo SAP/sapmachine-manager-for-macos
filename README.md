@@ -6,7 +6,7 @@
 
 ## About this project
 
-The SAPMachine install manager is designed to install, uninstall and manage one or more instances of SapMachine Java on a Mac.
+The SapMachine Manager is designed to install, uninstall and manage one or more instances of SapMachine Java on a Mac.
 
 ## Requirements and Setup
 
