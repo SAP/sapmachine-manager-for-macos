@@ -4,11 +4,55 @@
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP/sapmachine-manager-for-macos)](https://api.reuse.software/info/github.com/SAP/sapmachine-manager-for-macos)
 
-## About this project
+_SapMachine Manager_ is a handy and easy-to-use tool for Mac admins. It allows Mac users to easily install, uninstall, manage and automatically update one or more instances of SapMachine on a Mac. Additionally, the app supports the creation of SapMachine installer packages for macOS and the definition of the default Java environment.
+_SapMachine Manager_ is the standard tool within SAP to install SapMachine on macOS. 
 
-SapMachine Manager allows Mac users to easily install, uninstall, and automatically keep SapMachine up to date. In addition, SapMachine Manager supports the creation of SapMachine installer packages for macOS and the definition of the default Java environment.
+**SapMachine Manager supports the following macOS versions:**
+
+
+## Features
+
+🛠️ Easy install  
+
+✅ Automatic download and install of new SapMachine versions  
+
+📣 Update notifications  
+
+📦 Create SapMachine installer packages  
+
+⚠️ Warns users if installed releases are not supported anymore  
+
+🗃️ Log window  
+
+💻 For macOS (version) and newer
+
+## Demo
+
+
 
 ![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/smm_launched.png)
+
+## Documentation
+
+If you want to learn more about _SapMachine Manager_'s features and how to use them, make sure to take a look at our wiki or the links below:
+
+[Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation) 
+
+[How to install a new SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-install-a-new-SapMachine-release)  
+
+[How to uninstall a SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-uninstall-a-SapMachine-release)  
+
+[How to create SapMachine installer packages](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-create-SapMachine-installer-packages)  
+
+[How to deactivate automatic updates](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-deactivate-automatic-updates)  
+
+[How to turn off notifications](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-turn-off-notifications)  
+
+[How to open the log window](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-open-the-log-window)  
+
+[Legend](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Legend)  
+
+
 
 ## Requirements and Setup
 
