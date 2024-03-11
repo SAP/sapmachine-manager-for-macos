@@ -12,7 +12,7 @@ _SapMachine Manager_ is the standard tool within SAP to install SapMachine on ma
 
 🛠️ Easy install  
 
-🔓 Install and uninstall of SapMachine without admin rights  
+🔓 Install and uninstall SapMachine without admin rights  
 
 ✅ Automatic download and install of new SapMachine versions  
 
