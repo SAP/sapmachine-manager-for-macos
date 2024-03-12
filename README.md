@@ -51,12 +51,6 @@ _SapMachine Manager_ is the standard tool within SAP to install SapMachine on ma
 
 [Legend](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Legend)  
 
-
-
-## Requirements and Setup
-
-*Insert a short description what is required to get your project running...*
-
 ## Support, Feedback, Contributing
 
 This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/sapmachine-manager-for-macos/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
