@@ -41,7 +41,7 @@ _SapMachine Manager_ is the standard tool within SAP to install SapMachine on ma
 
 [Uninstall a SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-uninstall-a-SapMachine-release)  
 
-[Create SapMachine installer packages](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-create-SapMachine-installer-packages)  
+[Create SapMachine installer packages]([https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-create-SapMachine-installer-packages](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Create-SapMachine-installer-packages))  
 
 [How to deactivate automatic updates](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-deactivate-automatic-updates)  
 
