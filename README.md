@@ -4,7 +4,7 @@
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP/sapmachine-manager-for-macos)](https://api.reuse.software/info/github.com/SAP/sapmachine-manager-for-macos)
 
-_SapMachine Manager_ is a handy and easy-to-use tool for Mac admins. It allows Mac users to easily install, uninstall, manage and automatically update one or more instances of SapMachine on a Mac. Additionally, the app supports the creation of SapMachine installer packages for macOS and the definition of the default Java environment. _SapMachine Manager_ can be deployed and managed via MDM. 
+_SapMachine Manager_ is a handy and easy-to-use tool for Mac admins. It allows Mac users to easily install, uninstall, manage and automatically update one or more instances of SapMachine on a Mac, which is a version of OpenJDK maintained and supported by _SAP_. Additionally, the app supports the creation of SapMachine installer packages for macOS and the definition of the default Java environment. _SapMachine Manager_ can be deployed and managed via MDM. 
 
 _SapMachine Manager_ is the standard tool within SAP to install SapMachine on macOS. 
 
@@ -37,7 +37,7 @@ _SapMachine Manager_ is the standard tool within SAP to install SapMachine on ma
 
 ## Documentation 
 
-📚 If you want to learn more about _SapMachine Manager_'s features and how to use them, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
+📚 If you want to learn more about _SapMachine Manager_'s features, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
 
 [Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation) 
 
