@@ -19,38 +19,41 @@ _SapMachine Manager_ is the standard tool within SAP to install SapMachine on ma
 📣 Update notifications  
 
 📦 Create SapMachine installer packages  
-
-⚠️ Warns users if installed releases are not supported anymore  
-
+  
 🗃️ Log window  
 
 💻 For macOS 13 and newer  
 
 ## Demo
 
+⚡ Have a look at how quick and easy a new SapMachine release can be installed:
+
+![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/DemoInstallGif.gif)
+
+📦 Together with [_Script2Pkg_](https://github.com/SAP/script-to-package-tool-for-macos), SapMachine installer packages can be created. Take a look below to get an idea:
+
+![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/PackageGif.gif)
 
 
-![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/smm_launched.png)
+## Documentation 
 
-## Documentation
+📚 If you want to learn more about _SapMachine Manager_'s features and how to use them, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
 
-If you want to learn more about _SapMachine Manager_'s features and how to use them, make sure to take a look at our wiki or the links below:
+[Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation) 
 
-🛠️[Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation) 
+[How to install a new SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-install-a-new-SapMachine-release)  
 
-⬇️[How to install a new SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-install-a-new-SapMachine-release)  
+[How to uninstall a SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-uninstall-a-SapMachine-release)  
 
-🗑️[How to uninstall a SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-uninstall-a-SapMachine-release)  
+[How to create SapMachine installer packages](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-create-SapMachine-installer-packages)  
 
-📦[How to create SapMachine installer packages](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-create-SapMachine-installer-packages)  
+[How to deactivate automatic updates](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-deactivate-automatic-updates)  
 
-📤[How to deactivate automatic updates](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-deactivate-automatic-updates)  
+[How to turn off notifications](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-turn-off-notifications)  
 
-🔇[How to turn off notifications](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-turn-off-notifications)  
+[How to open the log window](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-open-the-log-window)  
 
-📂[How to open the log window](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-open-the-log-window)  
-
-🔣[Legend](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Legend)  
+[Legend](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Legend)  
 
 
 
