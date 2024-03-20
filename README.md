@@ -4,7 +4,7 @@
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP/sapmachine-manager-for-macos)](https://api.reuse.software/info/github.com/SAP/sapmachine-manager-for-macos)
 
-_SapMachine Manager_ is a handy and easy-to-use tool for Mac admins. It allows Mac users to easily install, uninstall, manage and automatically update one or more instances of SapMachine on a Mac. Additionally, the app supports the creation of SapMachine installer packages for macOS and the definition of the default Java environment. _SapMachine Manager_ can be deployed and managed via MDM. 
+_SapMachine Manager_ is a handy and easy-to-use tool allowing Mac users to easily install, uninstall, manage, and automatically update one or more instances of [SapMachine](https://sap.github.io/SapMachine/) on a Mac. SapMachine is a version of OpenJDK maintained and supported by _SAP_. Additionally, the app supports the creation of SapMachine installer packages for macOS and the definition of the default Java environment. _SapMachine Manager_ can be deployed and managed via MDM. 
 
 _SapMachine Manager_ is the standard tool within SAP to install SapMachine on macOS. 
 
@@ -19,44 +19,37 @@ _SapMachine Manager_ is the standard tool within SAP to install SapMachine on ma
 📣 Update notifications  
 
 📦 Create SapMachine installer packages  
-
-⚠️ Warns users if installed releases are not supported anymore  
-
+  
 🗃️ Log window  
 
 💻 For macOS 13 and newer  
 
 ## Demo
 
+⚡ Have a look at how quick and easy a new SapMachine release can be installed:
+
+![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/DemoInstallGif.gif)
 
 
-![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/smm_launched.png)
+## Documentation 
 
-## Documentation
+📚 If you want to learn more about _SapMachine Manager_'s features, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
 
-If you want to learn more about _SapMachine Manager_'s features and how to use them, make sure to take a look at our wiki or the links below:
+[Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation) 
 
-🛠️[Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation) 
+[Install a new SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Install-a-new-SapMachine-release)  
 
-⬇️[How to install a new SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-install-a-new-SapMachine-release)  
+[Uninstall a SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Uninstall-a-SapMachine-release)  
 
-🗑️[How to uninstall a SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-uninstall-a-SapMachine-release)  
+[Create SapMachine installer packages](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Create-SapMachine-installer-packages)  
 
-📦[How to create SapMachine installer packages](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-create-SapMachine-installer-packages)  
+[How to deactivate automatic updates](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-deactivate-automatic-updates)  
 
-📤[How to deactivate automatic updates](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-deactivate-automatic-updates)  
+[How to turn off notifications](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-turn-off-notifications)  
 
-🔇[How to turn off notifications](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-turn-off-notifications)  
+[How to open the log window](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-open-the-log-window)  
 
-📂[How to open the log window](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-open-the-log-window)  
-
-🔣[Legend](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Legend)  
-
-
-
-## Requirements and Setup
-
-*Insert a short description what is required to get your project running...*
+[Legend](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Legend)  
 
 ## Support, Feedback, Contributing
 
@@ -71,4 +64,4 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 ## Licensing
 
-Copyright 2023 SAP SE or an SAP affiliate company and sapmachine-manager-for-macos contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/sapmachine-manager-for-macos).
+Copyright 2024 SAP SE or an SAP affiliate company and sapmachine-manager-for-macos contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/sapmachine-manager-for-macos).
