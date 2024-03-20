@@ -19,6 +19,24 @@
         }
       }
     },
+    "2Rg-cQ-1p9.headerCell.title" : {
+      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Type\"; ObjectID = \"2Rg-cQ-1p9\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Type"
+          }
+        }
+      }
+    },
     "4sb-4s-VLi.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Quit SapMachine Manager\"; ObjectID = \"4sb-4s-VLi\";",
       "extractionState" : "extracted_with_value",
@@ -80,7 +98,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "Bearbeiten"
           }
         },
         "en" : {
@@ -303,24 +321,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "SapMachine Manager on GitHub"
-          }
-        }
-      }
-    },
-    "AMM-Hd-TA7.headerCell.title" : {
-      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Type\"; ObjectID = \"AMM-Hd-TA7\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Typ"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Type"
           }
         }
       }
@@ -559,24 +559,6 @@
         }
       }
     },
-    "CHq-KL-Z6v.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"CHq-KL-Z6v\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Table View Cell"
-          }
-        }
-      }
-    },
     "D62-Jq-xex.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Close\"; ObjectID = \"D62-Jq-xex\";",
       "extractionState" : "extracted_with_value",
@@ -595,6 +577,24 @@
         }
       }
     },
+    "drV-nY-sE5.headerCell.title" : {
+      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Message\"; ObjectID = \"drV-nY-sE5\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mitteilung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Message"
+          }
+        }
+      }
+    },
     "DvK-Wb-IXS.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"DvK-Wb-IXS\";",
       "extractionState" : "extracted_with_value",
@@ -609,24 +609,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Cancel"
-          }
-        }
-      }
-    },
-    "dZn-Z3-UP8.headerCell.title" : {
-      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Time\"; ObjectID = \"dZn-Z3-UP8\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uhrzeit"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Time"
           }
         }
       }
@@ -739,24 +721,6 @@
         }
       }
     },
-    "ff7-bD-juR.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"ff7-bD-juR\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Text Cell"
-          }
-        }
-      }
-    },
     "fuc-kP-N1k.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Next\"; ObjectID = \"fuc-kP-N1k\";",
       "extractionState" : "extracted_with_value",
@@ -811,6 +775,18 @@
         }
       }
     },
+    "Gfj-YM-ARn.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"Gfj-YM-ARn\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Text Cell"
+          }
+        }
+      }
+    },
     "GjT-nM-E08.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Build SapMachine Installer Package…\"; ObjectID = \"GjT-nM-E08\";",
       "extractionState" : "extracted_with_value",
@@ -861,6 +837,24 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Services"
+          }
+        }
+      }
+    },
+    "IIn-IZ-rre.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Don't notify me about new major releases\"; ObjectID = \"IIn-IZ-rre\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nicht über neue Hauptversionen informieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Don't notify me about new major releases"
           }
         }
       }
@@ -973,6 +967,18 @@
         }
       }
     },
+    "JML-6E-65r.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"JML-6E-65r\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Text Cell"
+          }
+        }
+      }
+    },
     "jNX-Jk-He0.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Your package has been prepared and has been passsed to Script2Pkg for package creation. The source folder of the package is displayed in the Finder, so you can move, change or delete it as you wish.\"; ObjectID = \"jNX-Jk-He0\";",
       "extractionState" : "extracted_with_value",
@@ -1005,6 +1011,24 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Previous"
+          }
+        }
+      }
+    },
+    "KcO-W0-hDN.headerCell.title" : {
+      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Time\"; ObjectID = \"KcO-W0-hDN\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uhrzeit"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Time"
           }
         }
       }
@@ -1081,42 +1105,6 @@
         }
       }
     },
-    "Kvc-MX-eQ6.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"Kvc-MX-eQ6\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Text Cell"
-          }
-        }
-      }
-    },
-    "KWF-lY-QSf.headerCell.title" : {
-      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Message\"; ObjectID = \"KWF-lY-QSf\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mitteilung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Message"
-          }
-        }
-      }
-    },
     "L6P-o6-xFh.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Macs with Intel processor\"; ObjectID = \"L6P-o6-xFh\";",
       "extractionState" : "extracted_with_value",
@@ -1167,42 +1155,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Downloading and installing SapMachine…"
-          }
-        }
-      }
-    },
-    "lsh-ll-eRM.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"lsh-ll-eRM\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Table View Cell"
-          }
-        }
-      }
-    },
-    "lYP-yB-UPB.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"lYP-yB-UPB\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Text Cell"
           }
         }
       }
@@ -1369,6 +1321,60 @@
         }
       }
     },
+    "N6G-nM-56y.label" : {
+      "comment" : "Class = \"NSToolbarItem\"; label = \"Info\"; ObjectID = \"N6G-nM-56y\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Info"
+          }
+        }
+      }
+    },
+    "N6G-nM-56y.paletteLabel" : {
+      "comment" : "Class = \"NSToolbarItem\"; paletteLabel = \"Info\"; ObjectID = \"N6G-nM-56y\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Info"
+          }
+        }
+      }
+    },
+    "N6G-nM-56y.toolTip" : {
+      "comment" : "Class = \"NSToolbarItem\"; toolTip = \"Toggle the info pane\"; ObjectID = \"N6G-nM-56y\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info-Bereich ein- und ausblenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Toggle the info pane"
+          }
+        }
+      }
+    },
     "Nao-6p-5K4.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Delete this SapMachine\"; ObjectID = \"Nao-6p-5K4\";",
       "extractionState" : "extracted_with_value",
@@ -1531,6 +1537,24 @@
         }
       }
     },
+    "OGC-9l-oSZ.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"This program can notify you when a new major release of SapMachine is available. You can then easily upgrade to this new release. If you don't want to be notified about new major releases, please activate the option below.\"; ObjectID = \"OGC-9l-oSZ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Programm kann Sie informieren, wenn eine neue Hauptversion von SapMachine zur Verfügung steht. Sie können dann bequem auf diese neue Version aktualisieren. Wenn Sie nicht über neue Hauptversionen informiert werden wollen, aktivieren Sie bitte die unten stehende Option."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "This program can notify you when a new major release of SapMachine is available. You can then easily upgrade to this new release. If you don't want to be notified about new major releases, please activate the option below."
+          }
+        }
+      }
+    },
     "Olw-nP-bQN.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Hide SapMachine Manager\"; ObjectID = \"Olw-nP-bQN\";",
       "extractionState" : "extracted_with_value",
@@ -1657,20 +1681,20 @@
         }
       }
     },
-    "QSF-jJ-S2T.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"QSF-jJ-S2T\";",
+    "qiD-3r-pIM.headerCell.title" : {
+      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Process\"; ObjectID = \"qiD-3r-pIM\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "Prozess"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Table View Cell"
+            "value" : "Process"
           }
         }
       }
@@ -1729,20 +1753,14 @@
         }
       }
     },
-    "R76-Cb-xDL.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Composing log…\"; ObjectID = \"R76-Cb-xDL\";",
+    "rob-Ej-hg1.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"rob-Ej-hg1\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Protokoll wird erstellt …"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Composing log…"
+            "value" : "Text Cell"
           }
         }
       }
@@ -1783,24 +1801,6 @@
         }
       }
     },
-    "seP-DA-YeL.ibShadowedDateFormat" : {
-      "comment" : "Class = \"NSDateFormatter\"; ibShadowedDateFormat = \"yyyy-MM-dd HH:mm:ss.SSSZ\"; ObjectID = \"seP-DA-YeL\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "yyyy-MM-dd HH:mm:ss.SSSZ"
-          }
-        }
-      }
-    },
     "sNp-sm-oMJ.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Show Log\"; ObjectID = \"sNp-sm-oMJ\";",
       "extractionState" : "extracted_with_value",
@@ -1833,6 +1833,30 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Window"
+          }
+        }
+      }
+    },
+    "tZM-xg-lyg.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"tZM-xg-lyg\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Text Cell"
+          }
+        }
+      }
+    },
+    "unv-Ri-dme.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"unv-Ri-dme\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Table View Cell"
           }
         }
       }
@@ -1981,24 +2005,6 @@
         }
       }
     },
-    "wm4-tc-ynf.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"wm4-tc-ynf\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Text Cell"
-          }
-        }
-      }
-    },
     "wpr-3q-Mcd.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Help\"; ObjectID = \"wpr-3q-Mcd\";",
       "extractionState" : "extracted_with_value",
@@ -2017,6 +2023,18 @@
         }
       }
     },
+    "wV2-vo-j5l.ibShadowedDateFormat" : {
+      "comment" : "Class = \"NSDateFormatter\"; ibShadowedDateFormat = \"yyyy-MM-dd HH:mm:ss.SSSZ\"; ObjectID = \"wV2-vo-j5l\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "yyyy-MM-dd HH:mm:ss.SSSZ"
+          }
+        }
+      }
+    },
     "wXg-UP-tIH.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"File\"; ObjectID = \"wXg-UP-tIH\";",
       "extractionState" : "extracted_with_value",
@@ -2031,6 +2049,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "File"
+          }
+        }
+      }
+    },
+    "xDM-lC-pe3.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"xDM-lC-pe3\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Table View Cell"
           }
         }
       }
@@ -2179,6 +2209,36 @@
         }
       }
     },
+    "YsB-KO-71W.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Composing log…\"; ObjectID = \"YsB-KO-71W\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Protokoll wird erstellt …"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Composing log…"
+          }
+        }
+      }
+    },
+    "ysS-WH-Odr.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"ysS-WH-Odr\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Table View Cell"
+          }
+        }
+      }
+    },
     "ysy-vb-C17.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Show in Finder\"; ObjectID = \"ysy-vb-C17\";",
       "extractionState" : "extracted_with_value",
@@ -2193,24 +2253,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Show in Finder"
-          }
-        }
-      }
-    },
-    "yuB-gC-pdh.headerCell.title" : {
-      "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Process\"; ObjectID = \"yuB-gC-pdh\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prozess"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Process"
           }
         }
       }

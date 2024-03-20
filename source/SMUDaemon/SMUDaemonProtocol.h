@@ -1,6 +1,6 @@
 /*
      SMUDaemonProtocol.h
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -98,7 +98,8 @@
  @method        automaticUpdatesEnabledWithReply:
  @abstract      Returns the current status of automatic updates.
  @param         reply The reply block to call when the request is complete.
- @discussion    Returns YES if automatic updates are enabled, otherwise returns NO.
+ @discussion    Returns YES if automatic updates are enabled, otherwise returns NO.  The second argument is set to YES, if the
+                setting is managed (via configuration profile), otherwise returns NO.
 */
 - (void)automaticUpdatesEnabledWithReply:(void (^)(BOOL enabled, BOOL forced))reply;
 

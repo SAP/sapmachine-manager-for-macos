@@ -1,6 +1,6 @@
 /*
      MTLogController.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@
 #import "MTLogController.h"
 #import "MTDaemonConnection.h"
 #import "MTSystemInfo.h"
+#import "Constants.h"
 
 @interface MTLogController ()
 @property (nonatomic, strong, readwrite) MTDaemonConnection *daemonConnection;
@@ -28,7 +29,6 @@
 
 @property (weak) IBOutlet NSTableView *logTableView;
 @property (weak) IBOutlet NSArrayController *logController;
-@property (weak) IBOutlet NSTextView *logDetailsView;
 @end
 
 @implementation MTLogController
@@ -38,8 +38,10 @@
     [super viewDidLoad];
     
     _logEntries = [[NSMutableArray alloc] init];
-    [_logDetailsView setFont:[NSFont monospacedSystemFontOfSize:11 weight:NSFontWeightRegular]];
+    NSSortDescriptor *initialSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES selector:@selector(compare:)];
+    [self.logController setSortDescriptors:[NSArray arrayWithObject:initialSortDescriptor]];
     
+    [self toggleLogDetail:nil];
     [self getLogEntriesFromDaemon];
 }
 
@@ -75,17 +77,6 @@
             
         }];
     }];
-}
-
-- (void)tableViewSelectionDidChange:(NSNotification *)notification
-{
-    NSArray *selectedObjects = [_logController selectedObjects];
-    
-    if ([selectedObjects count] > 0) {
-        
-        OSLogEntry *entry = (OSLogEntry*)[selectedObjects firstObject];
-        [self.logDetailsView setString:[entry composedMessage]];
-    }
 }
 
 #pragma mark IBActions
@@ -140,102 +131,141 @@
     return predicate;
 }
 
+- (IBAction)toggleLogDetail:(id)sender
+{
+    NSSplitViewController *splitViewController = (NSSplitViewController*)[self parentViewController];
+    
+    if (splitViewController) {
+
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        
+        if ([userDefaults boolForKey:kMTDefaultsLogDetailsEnabledKey]) {
+
+            // get saved divider position
+            float position = [userDefaults floatForKey:kMTDefaultsLogDividerPositionKey];
+            [[[splitViewController splitViewItems] lastObject] setCollapsed:NO];
+            
+            if (position > 0) {
+                [[splitViewController splitView] setPosition:position ofDividerAtIndex:0];
+            }
+            
+        } else {
+            
+            // save the divider position
+            if (sender) {
+                
+                float position = NSHeight([[self view] frame]);
+                
+                if (position > 0) {
+                    [userDefaults setFloat:position forKey:kMTDefaultsLogDividerPositionKey];
+                }
+            }
+
+            [[[splitViewController splitViewItems] lastObject] setCollapsed:YES];
+        }
+    }
+}
+
 - (IBAction)saveLog:(id)sender
 {
     NSSavePanel *panel = [NSSavePanel savePanel];
     [panel setNameFieldStringValue:NSLocalizedString(@"logFileName", nil)];
-    [panel beginSheetModalForWindow:[[self view] window] completionHandler:^(NSModalResponse result) {
+    [panel beginSheetModalForWindow:[[self view] window] completionHandler:^(NSModalResponse returnCode) {
         
-        if (result == NSModalResponseOK) {
+        if (returnCode == NSModalResponseOK) {
             
-            dispatch_async(dispatch_get_main_queue(), ^{
+            NSError *error = nil;
+            NSMutableString *logString = [[NSMutableString alloc] init];
+                                
+            for (OSLogEntryLog *logEntry in [self->_logController arrangedObjects]) {
+                
+                // create the timestamp
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSSZ"];
+                NSString *dateString = [dateFormatter stringFromDate:[logEntry date]];
+                
+                // create the level string
+                NSString *levelString = nil;
+                switch ([logEntry level]) {
+                        
+                    case OSLogEntryLogLevelDebug:
+                        levelString = @"DEBUG";
+                        break;
+                        
+                    case OSLogEntryLogLevelInfo:
+                        levelString = @"INFO";
+                        break;
+                        
+                    case OSLogEntryLogLevelNotice:
+                        levelString = @"NOTICE";
+                        break;
+                        
+                    case OSLogEntryLogLevelError:
+                        levelString = @"ERROR";
+                        break;
+                        
+                    case OSLogEntryLogLevelFault:
+                        levelString = @"FAULT";
+                        break;
+                        
+                    default:
+                        levelString = @"UNDEFINED";
+                        break;
+                }
+                
+                NSString *logEntryString = [NSString stringWithFormat:@"%@   %@ %@[%d]: %@\n", 
+                                            dateString,
+                                            [levelString stringByPaddingToLength:11 withString:@" " startingAtIndex:0],
+                                            [logEntry process],
+                                            [logEntry processIdentifier],
+                                            [logEntry composedMessage]
+                ];
+                [logString appendString:logEntryString];
+            }
             
-                NSError *error = nil;
+            [logString writeToURL:[panel URL] atomically:YES encoding:NSUTF8StringEncoding error:&error];
+            
+            if (error) {
                 
-                if ([[NSFileManager defaultManager] fileExistsAtPath:[[panel URL] path]]) {
-                    [[NSFileManager defaultManager] removeItemAtURL:[panel URL] error:&error];
-                }
+                os_log_with_type(OS_LOG_DEFAULT, OS_LOG_TYPE_ERROR, "SAPCorp: Unable to save log file: %{public}@", error);
                 
-                if (!error) {
-                    
-                    NSFileHandle *fileHandle = nil;
-                    
-                    for (OSLogEntryLog *logEntry in [self->_logController arrangedObjects]) {
-                        
-                        // create the timestamp
-                        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-                        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSSZ"];
-                        NSString *dateString = [dateFormatter stringFromDate:[logEntry date]];
-                        
-                        // create the level string
-                        NSString *levelString = nil;
-                        switch ([logEntry level]) {
-                                
-                            case OSLogEntryLogLevelDebug:
-                                levelString = @"DEBUG";
-                                break;
-                                
-                            case OSLogEntryLogLevelInfo:
-                                levelString = @"INFO";
-                                break;
-                                
-                            case OSLogEntryLogLevelNotice:
-                                levelString = @"NOTICE";
-                                break;
-                                
-                            case OSLogEntryLogLevelError:
-                                levelString = @"ERROR";
-                                break;
-                                
-                            case OSLogEntryLogLevelFault:
-                                levelString = @"FAULT";
-                                break;
-                                
-                            default:
-                                levelString = @"UNDEFINED";
-                                break;
-                        }
-                        
-                        NSString *logString = [NSString stringWithFormat:@"%@   %@ %@[%d]: %@\n", dateString, [levelString stringByPaddingToLength:11 withString:@" " startingAtIndex:0], [logEntry process], [logEntry processIdentifier], [logEntry composedMessage]];
-                        
-                        if ([[NSFileManager defaultManager] fileExistsAtPath:[[panel URL] path]]) {
-                            
-                            fileHandle = [NSFileHandle fileHandleForWritingToURL:[panel URL] error:&error];
-                            [fileHandle seekToEndOfFile];
-                            [fileHandle writeData:[logString dataUsingEncoding:NSUTF8StringEncoding]];
-                            
-                        } else {
-
-                            [logString writeToURL:[panel URL] atomically:YES encoding:NSUTF8StringEncoding error:&error];
-                        }
-                        
-                        if (error) { break; }
-                    }
-                    
-                    if (fileHandle) { [fileHandle closeFile]; }
-                }
-                
-                if (error) {
-                    
-                    os_log_with_type(OS_LOG_DEFAULT, OS_LOG_TYPE_ERROR, "SAPCorp: Unable to save log file: %{public}@", error);
-                    
-                    NSAlert *theAlert = [[NSAlert alloc] init];
-                    [theAlert setMessageText:NSLocalizedString(@"dialogFailedToSaveLogTitle", nil)];
-                    [theAlert setInformativeText:NSLocalizedString(@"dialogFailedToSaveLogMessage", nil)];
-                    [theAlert addButtonWithTitle:NSLocalizedString(@"okButton", nil)];
-                    [theAlert setAlertStyle:NSAlertStyleCritical];
-                    [theAlert beginSheetModalForWindow:[[self view] window] completionHandler:nil];
-                }
-                
-            });
+                NSAlert *theAlert = [[NSAlert alloc] init];
+                [theAlert setMessageText:NSLocalizedString(@"dialogFailedToSaveLogTitle", nil)];
+                [theAlert setInformativeText:NSLocalizedString(@"dialogFailedToSaveLogMessage", nil)];
+                [theAlert addButtonWithTitle:NSLocalizedString(@"okButton", nil)];
+                [theAlert setAlertStyle:NSAlertStyleCritical];
+                [theAlert beginSheetModalForWindow:[[self view] window] completionHandler:nil];
+            }
         }
-        
     }];
+}
+
+#pragma mark NSTableViewDelegate
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification
+{
+    NSArray *selectedObjects = [_logController selectedObjects];
+    
+    if ([selectedObjects count] > 0) {
+        
+        OSLogEntry *entry = (OSLogEntry*)[selectedObjects firstObject];
+        NSString *logMessage = [entry composedMessage];
+        
+        if (logMessage) {
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:kMTNotificationNameLogMessage
+                                                                object:nil
+                                                              userInfo:[NSDictionary dictionaryWithObject:logMessage
+                                                                                                   forKey:kMTNotificationKeyLogMessage
+                                                                       ]
+            ];
+        }
+    }
 }
 
 #pragma mark NSToolbarItemValidation
 
-- (BOOL)validateToolbarItem:(NSToolbarItem *)item
+- (BOOL)enableToolbarItem:(NSToolbarItem *)item
 {
     BOOL enable = NO;
     

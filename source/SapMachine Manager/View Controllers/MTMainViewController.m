@@ -1,6 +1,6 @@
 /*
      MTMainViewController.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -21,20 +21,19 @@
 #import "MTPackageIntroController.h"
 #import "MTInstallIntroController.h"
 #import "MTInstallController.h"
-#import <ServiceManagement/ServiceManagement.h>
+#import <ServiceManagement/SMAppService.h>
 
 @interface MTMainViewController ()
 @property (nonatomic, strong, readwrite) MTDaemonConnection *daemonConnection;
-@property (nonatomic, strong, readwrite) NSWindowController *settingsController;
 @property (nonatomic, strong, readwrite) NSWindowController *logController;
 @property (nonatomic, strong, readwrite) NSMutableArray *jvmReleases;
+@property (nonatomic, strong, readwrite) NSArray *assetsToDeleted;
 @property (nonatomic, strong, readwrite) NSUserDefaults *userDefaults;
-@property (nonatomic, strong, readwrite) NSRunningApplication *runningSystemSettings;
-@property (nonatomic, strong, readwrite) NSOperationQueue *operationQueue;
 @property (atomic, copy, readwrite) NSData *authData;
 @property (assign) BOOL updateCheckInProgress;
 @property (assign) BOOL installInProgress;
 @property (assign) BOOL skipRecommendedInstall;
+@property (assign) BOOL upgradeCheckDone;
 @property (assign) NSInteger updatesAvailable;
 @property (assign) NSInteger updatesFailed;
 
@@ -49,9 +48,7 @@
     [super viewDidLoad];
         
     _userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    _operationQueue = [[NSOperationQueue alloc] init];
-        
+            
     _daemonConnection = [[MTDaemonConnection alloc] init];
     [_daemonConnection setDelegate:self];
     
@@ -88,29 +85,11 @@
                    });
                    
                } else if (returnCode == NSAlertSecondButtonReturn) {
-                   
-                   [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"x-apple.systempreferences:com.apple.LoginItems-Settings.extension"]
-                                            configuration:[NSWorkspaceOpenConfiguration configuration]
-                                        completionHandler:^(NSRunningApplication *app, NSError *error) {
                        
-                       if (app && ![app isFinishedLaunching]) {
-                           
-                           // notification
-                           self->_runningSystemSettings = app;
-                           [self->_runningSystemSettings addObserver:self
-                                                          forKeyPath:@"isFinishedLaunching"
-                                                             options:NSKeyValueObservingOptionNew
-                                                             context:nil
-                           ];
-                           
-                       } else {
-                           [app activateWithOptions:0];
-                       }
-                       
-                       dispatch_async(dispatch_get_main_queue(), ^{
-                           [self checkForLoginItem];
-                       });
-                   }];
+                   dispatch_async(dispatch_get_main_queue(), ^{
+                       [SMAppService openSystemSettingsLoginItems];
+                       [self checkForLoginItem];
+                   });
                    
                } else {
                    
@@ -120,8 +99,12 @@
         
     } else {
         
-        _settingsController = [[self storyboard] instantiateControllerWithIdentifier:@"corp.sap.SapMachineManager.SettingsController"];
-        [_settingsController loadWindow];
+        // register for notifications to show the log window
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(showLog)
+                                                     name:kMTNotificationNameShowLog
+                                                   object:nil
+        ];
         
         // we check for updates at launch
         [self checkForUpdates];
@@ -154,10 +137,92 @@
                     
                     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"installURL != nil"];
                     [self.releasesController addObjects:availableAssets];
-                    [self.releasesController setFilterPredicate:predicate];                    
+                    [self.releasesController setFilterPredicate:predicate];
                     
                     self.updatesAvailable = [self numberOfAvailableUpdates];
                     self.installInProgress = [self updateInProgress];
+                    
+                    if (![self->_userDefaults boolForKey:kMTDefaultsNoUpgradeAlertsKey] && !self.installInProgress && !self.upgradeCheckDone) {
+                        
+                        self.upgradeCheckDone = YES;
+                        
+                        // get all installed lts releases
+                        predicate = [NSPredicate predicateWithFormat:@"installURL != nil AND isLTS == %@ AND isEA == %@", [NSNumber numberWithBool:YES], [NSNumber numberWithBool:NO]];
+                        NSArray *installedLTS = [availableAssets filteredArrayUsingPredicate:predicate];
+                        
+                        if ([installedLTS count] > 0) {
+                            
+                            // get the highest major version of the installed lts releases
+                            NSInteger highestInstalledLTS = [[installedLTS valueForKeyPath:@"@max.currentVersion.majorVersion"] integerValue];
+                            
+                            // get the major version of the latest available lts release
+                            predicate = [NSPredicate predicateWithFormat:@"isLTS == %@ AND isEA == %@", [NSNumber numberWithBool:YES], [NSNumber numberWithBool:NO]];
+                            NSArray *availableLTS = [availableAssets filteredArrayUsingPredicate:predicate];
+                            NSInteger highestAvailableLTS = [[availableLTS valueForKeyPath:@"@max.currentVersion.majorVersion"] integerValue];
+                            
+                            // is the latest major lts release is not installed
+                            // we inform the user about the updated version
+                            if (highestAvailableLTS > highestInstalledLTS) {
+                                
+                                NSAlert *theAlert = [[NSAlert alloc] init];
+                                [theAlert setMessageText:[NSString localizedStringWithFormat:NSLocalizedString(@"dialogLTSUpgradeTitle", nil), highestAvailableLTS]];
+                                
+                                if ([installedLTS count] == 1) {
+                                    [theAlert setInformativeText:NSLocalizedString(@"dialogLTSUpgradeOneMessage", nil)];
+                                    [[theAlert suppressionButton] setTitle:NSLocalizedString(@"dialogLTSUpgradeDeleteOne", nil)];
+                                } else {
+                                    [theAlert setInformativeText:NSLocalizedString(@"dialogLTSUpgradeMultipleMessage", nil)];
+                                    [[theAlert suppressionButton] setTitle:NSLocalizedString(@"dialogLTSUpgradeDeleteMultiple", nil)];
+                                }
+                                
+                                [theAlert addButtonWithTitle:NSLocalizedString(@"upgradeButton", nil)];
+                                [theAlert addButtonWithTitle:NSLocalizedString(@"cancelButton", nil)];
+                                
+                                [[theAlert suppressionButton] setState:([self->_userDefaults boolForKey:kMTDefaultsNoUpgradeDeleteKey]) ? NSControlStateValueOff : NSControlStateValueOn];
+                                [theAlert setShowsSuppressionButton:YES];
+                                
+                                [theAlert setAlertStyle:NSAlertStyleInformational];
+                                [theAlert beginSheetModalForWindow:[[self view] window]
+                                                 completionHandler:^(NSModalResponse returnCode) {
+                                    
+                                    [self->_userDefaults setBool:([[theAlert suppressionButton] state] == NSControlStateValueOn) ? NO : YES
+                                                          forKey:kMTDefaultsNoUpgradeDeleteKey];
+                                    
+                                    if (returnCode == NSAlertFirstButtonReturn) {
+                                        
+                                        // get the types of the installed lts releases. if they are all of
+                                        // type jre, we install the jre of the new version, otherwise we
+                                        // we install the jdk.
+                                        MTSapMachineJVMType type = MTSapMachineJVMTypeJDK;
+                                        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"jvmType == %ld", MTSapMachineJVMTypeJRE];
+                                        if ([[installedLTS filteredArrayUsingPredicate:predicate] count] == [installedLTS count]) {
+                                            type = MTSapMachineJVMTypeJRE;
+                                        }
+                                        
+                                        // get the asset to upgrade to
+                                        predicate = [NSPredicate predicateWithFormat:@"currentVersion.majorVersion == %ld AND jvmType == %ld", highestAvailableLTS, type];
+                                        NSArray *highestLTS = [availableLTS filteredArrayUsingPredicate:predicate];
+                                        
+                                        // if we got more than one asset back,
+                                        // there is something wrong
+                                        if ([highestLTS count] == 1) {
+                                            
+                                            if ([self->_userDefaults boolForKey:kMTDefaultsNoUpgradeDeleteKey]) {
+                                                self->_assetsToDeleted = nil;
+                                            } else {
+                                                self->_assetsToDeleted = [NSArray arrayWithArray:installedLTS];
+                                            }
+                                            
+                                            dispatch_async(dispatch_get_main_queue(), ^{
+                                                MTSapMachineAsset *upgradeAsset = (MTSapMachineAsset*)[highestLTS firstObject];
+                                                [self installSapMachine:upgradeAsset];
+                                            });
+                                        }
+                                    }
+                                }];
+                            }
+                        }
+                    }
                 }
                 
                 if ([[self.releasesController arrangedObjects] count] == 0) {
@@ -244,6 +309,90 @@
         // wo don't use the completion handler here but the delegate methods
         // instead. this allows to quit the app during the update process.
         [[self->_daemonConnection remoteObjectProxy] updateAllAssetsWithCompletionHandler:^(BOOL success) {}];
+    }];
+}
+
+- (void)deleteAssetsPermanently:(NSArray<MTSapMachineAsset*>*)assets 
+           allowUserInteraction:(BOOL)interaction
+              completionHandler:(void (^)(NSError *error))completionHandler
+{
+    [self authenticateUserWithCompletionHandler:^{
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self->_daemonConnection connectToDaemonWithExportedObject:nil
+                                                andExecuteCommandBlock:^{
+                
+                [[self->_daemonConnection remoteObjectProxy] deleteAssets:assets
+                                                            authorization:self->_authData
+                                                        completionHandler:^(NSArray<MTSapMachineAsset *> *deletedAssets, NSError *error) {
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        self->_authData = nil;
+                        
+                        if (error) {
+                            
+                            os_log_with_type(OS_LOG_DEFAULT, OS_LOG_TYPE_FAULT, "SAPCorp: Failed to delete asset: %{public}@", error);
+                            
+                            if (interaction) {
+                                
+                                NSAlert *theAlert = [[NSAlert alloc] init];
+                                
+                                if ([assets count] > 1) {
+                                    
+                                    [theAlert setMessageText:NSLocalizedString(@"dialogDeletionMultipleFailedTitle", nil)];
+                                    [theAlert setInformativeText:NSLocalizedString(@"dialogDeletionMultipleFailedMessage", nil)];
+                                    
+                                } else {
+                                    
+                                    [theAlert setMessageText:NSLocalizedString(@"dialogDeletionOneFailedTitle", nil)];
+                                    [theAlert setInformativeText:NSLocalizedString(@"dialogDeletionOneFailedMessage", nil)];
+                                }
+                                
+                                [theAlert addButtonWithTitle:NSLocalizedString(@"okButton", nil)];
+                                [theAlert addButtonWithTitle:NSLocalizedString(@"showLogButton", nil)];
+                                [theAlert setAlertStyle:NSAlertStyleWarning];
+                                [theAlert beginSheetModalForWindow:[[self view] window] completionHandler:^(NSModalResponse returnCode) {
+                                    
+                                    if (returnCode == NSAlertSecondButtonReturn) {
+                                        
+                                        // show log window
+                                        [self showLog];
+                                    }
+                                }];
+                            }
+                            
+                        } else {
+                            
+                            // remove the deleted assets from our array
+                            // controller and set their install url to nil
+                            [self willChangeValueForKey:@"jvmReleases"];
+                            
+                            for (MTSapMachineAsset *deletedAsset in deletedAssets) {
+                                
+                                MTSapMachineAsset *asset = [self matchingAssetForAsset:deletedAsset];
+                                if (asset) { [asset setInstallURL:nil]; }
+                            }
+                            
+                            [self didChangeValueForKey:@"jvmReleases"];
+                            
+                            if ([[self.releasesController arrangedObjects] count] == 0) {
+                                
+                                [self checkForUpdates];
+                                
+                            } else {
+                                
+                                self.updatesAvailable = [self numberOfAvailableUpdates];
+                            }
+                        }
+                        
+                        if (completionHandler) { completionHandler(error); }
+                    });
+                    
+                }];
+            }];
+        });
     }];
 }
 
@@ -413,22 +562,6 @@
     }
 }
 
-- (IBAction)showSettingsWindow:(id)sender
-{
-    [[_settingsController window] makeKeyAndOrderFront:nil];
-}
-
-- (IBAction)showLogWindow:(id)sender
-{
-    if (!_logController) {
-        
-        _logController = [[self storyboard] instantiateControllerWithIdentifier:@"corp.sap.SapMachineManager.LogController"];
-        [_logController loadWindow];
-    }
-    
-    [[_logController window] makeKeyAndOrderFront:nil];
-}
-
 - (IBAction)installSapMachine:(id)sender
 {
     // check if we have any assets for installation
@@ -440,6 +573,12 @@
                                                  selector:@selector(installSheetDidClose)
                                                      name:NSWindowDidEndSheetNotification
                                                    object:[[self view] window]
+        ];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(installHasFinished:)
+                                                     name:kMTNotificationNameInstallFinished
+                                                   object:nil
         ];
         
         if (sender && [[sender class] isEqualTo:[MTSapMachineAsset class]]) {
@@ -512,112 +651,7 @@
             if (returnCode == NSAlertFirstButtonReturn) {
                 
                 NSArray *assets = [[self->_releasesController arrangedObjects] objectsAtIndexes:toBeDeleted];
-                    
-                NSBlockOperation *authOperation = [[NSBlockOperation alloc] init];
-                [authOperation addExecutionBlock:^{
-                    
-                    self->_authData = nil;
-                    MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserName:NSUserName()];
-                    
-                    if (![user isPrivileged]) {
-                        
-                        dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-                        
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            
-                            [self->_daemonConnection connectToXPCServiceWithRemoteObjectProxyReply:^(id remoteObjectProxy, NSError *error) {
-                                
-                                [remoteObjectProxy authenticateWithAuthorizationReply:^(NSData *authorization) {
-                                   
-                                    self->_authData = authorization;
-                                    dispatch_semaphore_signal(semaphore);
-                                }];
-                            }];
-                        });
-                        
-                        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-                    }
-                }];
-                    
-                NSBlockOperation *privilegedOperation = [[NSBlockOperation alloc] init];
-                [privilegedOperation addExecutionBlock:^{
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        
-                        [self->_daemonConnection connectToDaemonWithExportedObject:nil
-                                                            andExecuteCommandBlock:^{
-                            
-                            [[self->_daemonConnection remoteObjectProxy] deleteAssets:assets
-                                                                        authorization:self->_authData
-                                                                    completionHandler:^(NSArray<MTSapMachineAsset *> *deletedAssets, NSError *error) {
-
-                                dispatch_async(dispatch_get_main_queue(), ^{
-                                    
-                                    self->_authData = nil;
-                                    
-                                    if (error) {
-                                        
-                                        os_log_with_type(OS_LOG_DEFAULT, OS_LOG_TYPE_FAULT, "SAPCorp: Failed to delete asset: %{public}@", error);
-                                        
-                                        NSAlert *theAlert = [[NSAlert alloc] init];
-                                        
-                                        if ([toBeDeleted count] > 1) {
-                                            
-                                            [theAlert setMessageText:NSLocalizedString(@"dialogDeletionMultipleFailedTitle", nil)];
-                                            [theAlert setInformativeText:NSLocalizedString(@"dialogDeletionMultipleFailedMessage", nil)];
-                                            
-                                        } else {
-                                            
-                                            [theAlert setMessageText:NSLocalizedString(@"dialogDeletionOneFailedTitle", nil)];
-                                            [theAlert setInformativeText:NSLocalizedString(@"dialogDeletionOneFailedMessage", nil)];
-                                        }
-                                        
-                                        [theAlert addButtonWithTitle:NSLocalizedString(@"okButton", nil)];
-                                        [theAlert addButtonWithTitle:NSLocalizedString(@"showLogButton", nil)];
-                                        [theAlert setAlertStyle:NSAlertStyleWarning];
-                                        [theAlert beginSheetModalForWindow:[[self view] window] completionHandler:^(NSModalResponse returnCode) {
-                                            
-                                            if (returnCode == NSAlertSecondButtonReturn) {
-                                                
-                                                // show log window
-                                                [self showLogWindow:nil];
-                                            }
-                                        }];
-                                        
-                                    } else {
-                                        
-                                        // remove the deleted assets from our array
-                                        // controller and set their install url to nil
-                                        [self willChangeValueForKey:@"jvmReleases"];
-
-                                        for (MTSapMachineAsset *deletedAsset in deletedAssets) {
-
-                                            MTSapMachineAsset *asset = [self matchingAssetForAsset:deletedAsset];
-                                            if (asset) { [asset setInstallURL:nil]; }
-                                        }
-                                        
-                                        [self didChangeValueForKey:@"jvmReleases"];
-                                        
-                                        if ([[self.releasesController arrangedObjects] count] == 0) {
-                                            
-                                            [self checkForUpdates];
-                                            
-                                        } else {
-                                            
-                                            self.updatesAvailable = [self numberOfAvailableUpdates];
-                                        }
-                                    }
-                                    
-                                });
-                            }];
-                        }];
-                    });
-                }];
-                
-                [privilegedOperation addDependency:authOperation];
-                [self->_operationQueue addOperations:[NSArray arrayWithObjects:authOperation, privilegedOperation, nil]
-                                   waitUntilFinished:NO];
-                
+                [self deleteAssetsPermanently:assets allowUserInteraction:YES completionHandler:nil];
             }
         }];
     }
@@ -652,12 +686,6 @@
     }
 }
 
-- (IBAction)openWebsite:(id)sender
-{
-    NSString *urlString = ([sender tag] == 1000) ? kMTGitHubURL : kMTSapMachineWebsiteURL;
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
-}
-
 - (IBAction)setJavaHome:(id)sender
 {
     BOOL setJavaHome = ([sender tag] == 1100) ? YES : NO;
@@ -685,38 +713,8 @@
         if (returnCode == NSAlertSecondButtonReturn || returnCode == NSAlertThirdButtonReturn) {
 
             BOOL userOnly = (returnCode == NSAlertSecondButtonReturn) ? YES : NO;
-            self->_authData = nil;
             
-            NSBlockOperation *authOperation = [[NSBlockOperation alloc] init];
-            [authOperation addExecutionBlock:^{
-                
-                if (!userOnly) {
-                    
-                    MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserName:NSUserName()];
-                    
-                    if (![user isPrivileged]) {
-                        
-                        dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-                        
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            
-                            [self->_daemonConnection connectToXPCServiceWithRemoteObjectProxyReply:^(id remoteObjectProxy, NSError *error) {
-                                
-                                [remoteObjectProxy authenticateWithAuthorizationReply:^(NSData *authorization) {
-                                    
-                                    self->_authData = authorization;
-                                    dispatch_semaphore_signal(semaphore);
-                                }];
-                            }];
-                        });
-                        
-                        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-                    }
-                }
-            }];
-            
-            NSBlockOperation *privilegedOperation = [[NSBlockOperation alloc] init];
-            [privilegedOperation addExecutionBlock:^{
+            [self authenticateUserWithCompletionHandler:^{
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
@@ -768,10 +766,6 @@
                     
                 });
             }];
-            
-            [privilegedOperation addDependency:authOperation];
-            [self->_operationQueue addOperations:[NSArray arrayWithObjects:authOperation, privilegedOperation, nil]
-                               waitUntilFinished:NO];
         }
     }];
 }
@@ -843,12 +837,47 @@
                     if (returnCode == NSAlertSecondButtonReturn) {
                         
                         // show log window
-                        [self showLogWindow:nil];
+                        [self showLog];
                     }
                 }];
             }
         }
     });
+}
+
+- (void)authenticateUserWithCompletionHandler:(void (^)(void))completionHandler
+{
+    self->_authData = nil;
+    MTSapMachineUser *user = [[MTSapMachineUser alloc] initWithUserName:NSUserName()];
+
+    if (![user isPrivileged]) {
+                
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self->_daemonConnection connectToXPCServiceWithRemoteObjectProxyReply:^(id remoteObjectProxy, NSError *error) {
+                
+                [remoteObjectProxy authenticateWithAuthorizationReply:^(NSData *authorization) {
+                    
+                    self->_authData = authorization;
+                    if (completionHandler) { completionHandler(); }
+                }];
+            }];
+        });
+        
+    } else if (completionHandler) {
+        completionHandler();
+    }
+}
+
+- (void)showLog
+{
+    if (!_logController) {
+        
+        _logController = [[self storyboard] instantiateControllerWithIdentifier:@"corp.sap.SapMachineManager.LogController"];
+        [_logController loadWindow];
+    }
+    
+    [[_logController window] makeKeyAndOrderFront:nil];
 }
 
 - (void)installSheetDidClose
@@ -858,21 +887,53 @@
                                                   object:[[self view] window]
     ];
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:kMTDefaultsInstallFinished] || [[_releasesController arrangedObjects] count] == 0) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:kMTDefaultsInstallErrorKey] || [[_releasesController arrangedObjects] count] == 0) {
         
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMTDefaultsInstallFinished];
-        [self checkForUpdates];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self checkForUpdates];
+        });
     }
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMTDefaultsInstallErrorKey];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+- (void)installHasFinished:(NSNotification*)notification
 {
-    if (object == _runningSystemSettings && [keyPath isEqualToString:@"isFinishedLaunching"]) {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:kMTNotificationNameInstallFinished
+                                                  object:nil
+    ];
+                                    
+    // if we successfully installed an asset as part of an upgrade,
+    // we check if there are any assets to delete
+    BOOL installError = [[[notification userInfo] objectForKey:kMTNotificationKeyInstallError] boolValue];
+
+    if (installError) {
+
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kMTDefaultsInstallErrorKey];
         
-        [_runningSystemSettings removeObserver:self forKeyPath:@"isFinishedLaunching"];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self->_runningSystemSettings activateWithOptions:0];
-        });
+    } else {
+        
+        if (self->_assetsToDeleted) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self deleteAssetsPermanently:self->_assetsToDeleted allowUserInteraction:NO completionHandler:^(NSError *error) {
+                    
+                    self->_assetsToDeleted = nil;
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self checkForUpdates];
+                    });
+                }];
+            });
+            
+        } else {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self checkForUpdates];
+            });
+        }
     }
 }
 

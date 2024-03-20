@@ -1,6 +1,6 @@
 /*
      MTSapMachineAsset.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -99,7 +99,7 @@
         [newAsset setIsUpdating:_isUpdating];
         [newAsset setUpdateProgress:_updateProgress];
         [newAsset setIsVerified:_isVerified];
-        [newAsset setJavaHomeConfigFilePaths:_javaHomeConfigFilePaths];
+        [newAsset setJavaHomeConfigFilePaths:[_javaHomeConfigFilePaths copyWithZone:zone]];
     }
     
     return newAsset;
@@ -136,6 +136,32 @@
     NSURL *url = [_downloadURLs valueForKeyPath:[NSString stringWithFormat:@"%@.url", arch]];
     
     return url;
+}
+
+- (NSDictionary*)dictionaryRepresentation
+{
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+
+    unsigned count = 0;
+    objc_property_t *properties = class_copyPropertyList([self class], &count);
+    
+    if (properties) {
+        
+        for (int i = 0; i < count; i++) {
+            
+            NSString *propertyKey = [NSString stringWithUTF8String:property_getName(properties[i])];
+            id value = [self valueForKey:propertyKey];
+            
+            // make sure custom objects (like MTSapMachineVersion) appear correctly
+            if ([value respondsToSelector:@selector(dictionaryRepresentation)]) { value = [value dictionaryRepresentation]; }
+            
+            [dict setObject:(value) ? value : @"" forKey:propertyKey];
+        }
+        
+        free(properties);
+    }
+
+    return dict;
 }
 
 @end

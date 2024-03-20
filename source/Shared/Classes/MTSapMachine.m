@@ -1,6 +1,6 @@
 /*
      MTSapMachine.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@
 #import "Constants.h"
 #import "MTSapMachineDownload.h"
 #import "MTOperationQueue.h"
+#import "MTSystemInfo.h"
 
 @interface MTSapMachine ()
 @property (nonatomic, strong, readwrite) NSURL *url;
@@ -81,6 +82,7 @@
 - (void)assetCatalogWithCompletionHandler:(void (^) (NSArray<MTSapMachineAsset*> *assetCatalog, NSError *error))completionHandler
 {
     NSMutableArray *allAssetArray = [[NSMutableArray alloc] init];
+    NSString *currentArchitecture = ([[MTSystemInfo hardwareArchitecture] isEqualToString:@"x86_64"]) ? kMTSapMachineArchIntel : kMTSapMachineArchApple;
     
     // get the data of the available releases
     [self requestReleaseDataWithCompletionHandler:^(NSDictionary *releaseData, NSError *error) {
@@ -94,96 +96,91 @@
             if ([installedAssets count] > 0) { [installedAssetsMutable addObjectsFromArray:installedAssets]; }
             
             // create MTSapMachineAsset objects from the release data returned.
-            // the "assets" dictionary contains dictionaries for each release.
-            NSDictionary *allAssets = [releaseData objectForKey:@"assets"];
-            
-            // the "majors" array contains the asset name and information
-            // about if the asses is an "ea" or "lts" release
-            NSArray *allMajors = [releaseData objectForKey:@"majors"];
-            
-            for (NSString *releaseVersion in [allAssets allKeys]) {
+            for (NSString *releaseVersion in [releaseData allKeys]) {
                 
-                // jvm dict contains an array with name "releases"
-                // containing a single dictionary
+                // get all data of the particular release
+                NSDictionary *assetDict = [releaseData objectForKey:releaseVersion];
+                
+                // get basic asset information
+                NSString *assetName = [assetDict valueForKey:@"label"];
+                BOOL isEA = [[assetDict valueForKey:@"ea"] boolValue];
+                BOOL isLTS = [[assetDict valueForKey:@"lts"] boolValue];
+                    
+                // release dict contains dictionaries for each jvm type
                 for (NSString *typeString in [NSArray arrayWithObjects:kMTJVMTypeJRE, kMTJVMTypeJDK, nil]) {
                     
-                    NSString *currentVersionString = [[allAssets valueForKeyPath:[NSString stringWithFormat:@"%@.releases.tag", releaseVersion]] firstObject];
                     NSMutableDictionary *downloadDict = [[NSMutableDictionary alloc] init];
                     
-                    for (NSString *arch in [NSArray arrayWithObjects:kMTSapMachineArchApple, kMTSapMachineArchIntel, nil]) {
-                        
-                        NSString *downloadURLString = [[allAssets valueForKeyPath:[NSString stringWithFormat:@"%@.releases.%@.%@", releaseVersion, typeString, arch]] firstObject];
-                        NSString *downloadChecksumString = [[allAssets valueForKeyPath:[NSString stringWithFormat:@"%@.checksums.%@.%@", releaseVersion, typeString, arch]] firstObject];
-                        
-                        if (![downloadURLString isEqual:[NSNull null]] && ![downloadChecksumString isEqual:[NSNull null]]) {
-                            
-                            NSRange range = [downloadChecksumString rangeOfString:@" "];
-                            if (range.location != NSNotFound) { downloadChecksumString = [downloadChecksumString substringFromIndex:range.location + 1]; }
-                            
-                            NSDictionary *downloadArchDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                                              [NSURL URLWithString:downloadURLString], @"url",
-                                                              downloadChecksumString, @"checksum",
-                                                              nil];
-                            
-                            [downloadDict setValue:downloadArchDict forKey:arch];
-                        }
-                    }
+                    NSString *currentVersionString = @"";
+                    MTSapMachineJVMType type = ([typeString isEqualToString:kMTJVMTypeJRE]) ? MTSapMachineJVMTypeJRE : MTSapMachineJVMTypeJDK;
                     
-                    if (![currentVersionString isEqual:[NSNull null]] && [[downloadDict allKeys] count] > 0) {
+                    // process the "releases" array
+                    for (NSDictionary *releaseDict in [assetDict objectForKey:@"releases"]) {
                         
-                        MTSapMachineJVMType type = -1;
-                        
-                        if ([typeString rangeOfString:kMTJVMTypeJRE].location != NSNotFound) {
-                            type = MTSapMachineJVMTypeJRE;
-                        } else if ([typeString rangeOfString:kMTJVMTypeJDK].location != NSNotFound) {
-                            type = MTSapMachineJVMTypeJDK;
-                        }
-                        
-                        if (type >= 0) {
+                        for (NSString *arch in [NSArray arrayWithObjects:kMTSapMachineArchApple, kMTSapMachineArchIntel, nil]) {
+                                                        
+                            NSString *downloadURLString = [releaseDict valueForKeyPath:[NSString stringWithFormat:@"%@.%@.url", typeString, arch]];
+                            NSString *downloadChecksumString = [releaseDict valueForKeyPath:[NSString stringWithFormat:@"%@.%@.checksum", typeString, arch]];
                             
-                            MTSapMachineAsset *asset = [[MTSapMachineAsset alloc] initWithType:type];
-                            
-                            MTSapMachineVersion *currentVersion = [[MTSapMachineVersion alloc] initWithVersionString:currentVersionString];
-                            [asset setCurrentVersion:currentVersion];
-                            
-                            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id == %@", releaseVersion];
-                            NSArray *filteredMajors = [allMajors filteredArrayUsingPredicate:predicate];
-                            
-                            if ([filteredMajors count] == 1) {
+                            if (downloadURLString && downloadChecksumString) {
                                 
-                                NSDictionary *majorDict = [filteredMajors firstObject];
-                                
-                                [asset setName:[majorDict valueForKey:@"label"]];
-                                [asset setEA:[[majorDict valueForKey:@"ea"] boolValue]];
-                                [asset setLTS:[[majorDict valueForKey:@"lts"] boolValue]];
-                                [asset setDownloadURLs:downloadDict];
-                                [asset setIsVerified:YES];
-                                
-                                // now let's check if the version is installed and add
-                                // the corresponding information to the asset object. to
-                                // identify a release we use the major version, the jvm
-                                // type and the "isEA" property
-                                predicate = [NSPredicate predicateWithFormat:@"installedVersion.majorVersion == %ld AND isEA == %@ AND jvmType == %ld", [[asset currentVersion] majorVersion], [NSNumber numberWithBool:[asset isEA]], [asset jvmType]];
-                                NSArray *filteredArray = [installedAssetsMutable filteredArrayUsingPredicate:predicate];
-                                
-                                if ([filteredArray count] > 0) {
-                                    
-                                    MTSapMachineAsset *installedAsset = [filteredArray firstObject];
-                                    [asset setInstallURL:[installedAsset installURL]];
-                                    [asset setInstalledVersion:[installedAsset installedVersion]];
-                                    [asset setJavaHomeURL:[installedAsset javaHomeURL]];
-                                    [asset setJavaHomeConfigFilePaths:[installedAsset javaHomeConfigFilePaths]];
+                                // we set the current version for the current architecture
+                                if ([arch isEqualToString:currentArchitecture]) { currentVersionString = [releaseDict valueForKey:@"tag"]; }
 
-                                    [installedAssetsMutable removeObjectsInArray:filteredArray];
-                                }
+                                NSRange range = [downloadChecksumString rangeOfString:@" "];
+                                if (range.location != NSNotFound) { downloadChecksumString = [downloadChecksumString substringFromIndex:range.location + 1]; }
                                 
-                                [allAssetArray addObject:asset];
+                                NSDictionary *downloadArchDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                                                  [NSURL URLWithString:downloadURLString], @"url",
+                                                                  downloadChecksumString, @"checksum",
+                                                                  nil];
+                                
+                                [downloadDict setValue:downloadArchDict forKey:arch];
                             }
                         }
                     }
+                        
+                    if ([[downloadDict allKeys] count] > 0) {
+                        
+                        // create the MTSapMachineAsset object
+                        MTSapMachineAsset *asset = [[MTSapMachineAsset alloc] initWithType:type];
+                        
+                        MTSapMachineVersion *currentVersion = [[MTSapMachineVersion alloc] initWithVersionString:currentVersionString];
+                        [asset setCurrentVersion:currentVersion];
+                        
+                        [asset setName:assetName];
+                        [asset setEA:isEA];
+                        [asset setLTS:isLTS];
+                        [asset setDownloadURLs:downloadDict];
+                        [asset setIsVerified:YES];
+                        
+                        // now let's check if the version is installed and add
+                        // the corresponding information to the asset object. to
+                        // identify a release we use the major version, the jvm
+                        // type and the "isEA" property
+                        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"installedVersion.majorVersion == %ld AND isEA == %@ AND jvmType == %ld",
+                                                  [[asset currentVersion] majorVersion],
+                                                  [NSNumber numberWithBool:[asset isEA]],
+                                                  [asset jvmType]
+                        ];
+                        NSArray *filteredArray = [installedAssetsMutable filteredArrayUsingPredicate:predicate];
+                        
+                        if ([filteredArray count] > 0) {
+                            
+                            MTSapMachineAsset *installedAsset = [filteredArray firstObject];
+                            [asset setInstallURL:[installedAsset installURL]];
+                            [asset setInstalledVersion:[installedAsset installedVersion]];
+                            [asset setJavaHomeURL:[installedAsset javaHomeURL]];
+                            [asset setJavaHomeConfigFilePaths:[installedAsset javaHomeConfigFilePaths]];
+                            
+                            [installedAssetsMutable removeObjectsInArray:filteredArray];
+                        }
+                        
+                        [allAssetArray addObject:asset];
+                    }
                 }
             }
-            
+                                    
             // if there are still installed assets left which did not
             // match any asset in our release data (e.g. older and
             // unsupported releases), we add them as well.

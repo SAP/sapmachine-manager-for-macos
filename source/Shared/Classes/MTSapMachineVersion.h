@@ -1,6 +1,6 @@
 /*
      MTSapMachineVersion.h
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 */
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 /*!
  @class         MTSapMachineVersion
@@ -66,5 +67,11 @@
                 if the receiver's normalizedVersionString follows the given object's normalizedVersionString.
 */
 - (NSComparisonResult)compare:(MTSapMachineVersion*)version;
+
+/*!
+ @method        dictionaryRepresentation
+ @abstract      Returns a dictionary representation of the MTSapMachineVersion object.
+*/
+- (NSDictionary*)dictionaryRepresentation;
 
 @end

@@ -1,6 +1,6 @@
 /*
      MTSapMachineVersion.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -128,6 +128,29 @@
     NSComparisonResult result = [[self normalizedVersionString] compare:[version normalizedVersionString] options:NSNumericSearch];
 
     return result;
+}
+
+- (NSDictionary*)dictionaryRepresentation
+{
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+
+    unsigned count = 0;
+    objc_property_t *properties = class_copyPropertyList([self class], &count);
+    
+    if (properties) {
+        
+        for (int i = 0; i < count; i++) {
+            
+            NSString *propertyKey = [NSString stringWithUTF8String:property_getName(properties[i])];
+            [dict setObject:([self valueForKey:propertyKey]) ? [self valueForKey:propertyKey] : @""
+                     forKey:propertyKey
+            ];
+        }
+        
+        free(properties);
+    }
+
+    return dict;
 }
 
 @end

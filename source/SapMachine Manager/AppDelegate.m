@@ -1,6 +1,6 @@
 /*
      AppDelegate.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@
 #import "Constants.h"
 
 @interface AppDelegate ()
-@property (nonatomic, strong, readwrite) NSWindowController *mainWindowController;
+@property (nonatomic, strong, readwrite) NSWindowController *settingsController;
 @end
 
 @implementation AppDelegate
@@ -28,6 +28,10 @@
 {
     // make sure we start with an empty temporary folder
     [self deleteTemporaryItems];
+    
+    NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
+    _settingsController = [storyboard instantiateControllerWithIdentifier:@"corp.sap.SapMachineManager.SettingsController"];
+    [_settingsController loadWindow];
 }
 
 - (NSError*)deleteTemporaryItems
@@ -48,12 +52,32 @@
     return error;
 }
 
+- (IBAction)openWebsite:(id)sender
+{
+    NSString *urlString = ([sender tag] == 1000) ? kMTGitHubURL : kMTSapMachineWebsiteURL;
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
+}
+
+- (IBAction)showSettingsWindow:(id)sender
+{
+    [[_settingsController window] makeKeyAndOrderFront:nil];
+}
+
+- (IBAction)showLogWindow:(id)sender
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kMTNotificationNameShowLog
+                                                        object:nil
+                                                      userInfo:nil
+    ];
+}
+
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
     
 }
 
-- (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app {
+- (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app 
+{
     return YES;
 }
 

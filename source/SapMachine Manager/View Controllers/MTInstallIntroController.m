@@ -1,6 +1,6 @@
 /*
      MTInstallIntroController.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -33,8 +33,8 @@
 {
     [super viewDidLoad];
 
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMTDefaultsInstallFinished];
-        
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMTDefaultsInstallErrorKey];
+    
     // get the JDK of the latest LTS release for the current architecture…
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"jvmType == %ld AND isLTS == %@ AND isEA == %@ AND downloadURLForCurrentArchitecture != nil", MTSapMachineJVMTypeJDK, [NSNumber numberWithBool:YES], [NSNumber numberWithBool:NO]];
     NSArray *ltsJDKs = [_assetCatalog filteredArrayUsingPredicate:predicate];

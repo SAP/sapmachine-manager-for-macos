@@ -1,6 +1,6 @@
 /*
      MTToolbarItem.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -23,19 +23,20 @@
 {
     BOOL enabled = YES;
     
-    NSViewController *viewController = [[[self view] window] contentViewController];
+    // get the content controller…
+    NSSplitViewController *consoleSplitViewController = (NSSplitViewController*)[[[self view] window] contentViewController];
 
-    if (viewController && [viewController respondsToSelector:@selector(validateToolbarItem:)]) {
-        
-        NSInvocationOperation *invocation = [[NSInvocationOperation alloc] initWithTarget:viewController
+    if (consoleSplitViewController && [consoleSplitViewController respondsToSelector:@selector(validateToolbarItem:)]) {
+
+        NSInvocationOperation *invocation = [[NSInvocationOperation alloc] initWithTarget:consoleSplitViewController
                                                                                  selector:@selector(validateToolbarItem:)
                                                                                    object:self
         ];
         [invocation start];
         [[invocation result] getValue:&enabled];
-    }
     
-    [self setEnabled:enabled];
+        [self setEnabled:enabled];
+    }
 }
 
 @end

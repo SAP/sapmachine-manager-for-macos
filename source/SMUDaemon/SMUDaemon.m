@@ -1,6 +1,6 @@
 /*
      SMUDaemon.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -107,7 +107,7 @@
 {
     NSDate *lastDate = [NSDate distantPast];
     
-    CFPropertyListRef property = CFPreferencesCopyValue(kMTPrefsLastCheckSuccess, kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
+    CFPropertyListRef property = CFPreferencesCopyValue(kMTPrefsLastCheckSuccessKey, kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
     
     if (property) {
         lastDate = (__bridge NSDate *)(property);
@@ -191,7 +191,7 @@
                 self->_assetCatalog = assetCatalog;
                 reply(assetCatalog);
                 
-                CFPreferencesSetValue(kMTPrefsLastCheckSuccess, (__bridge CFPropertyListRef)([NSDate date]), kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
+                CFPreferencesSetValue(kMTPrefsLastCheckSuccessKey, (__bridge CFPropertyListRef)([NSDate date]), kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
             }
         }];
         
@@ -228,7 +228,7 @@
                 
                 self->_operationInProgress = NO;
                 
-                CFPreferencesSetValue(kMTPrefsLastUpdateSuccess, (__bridge CFPropertyListRef)([NSDate date]), kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
+                CFPreferencesSetValue(kMTPrefsLastUpdateSuccessKey, (__bridge CFPropertyListRef)([NSDate date]), kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
                 
                 completionHandler(success);
             }];
@@ -410,7 +410,7 @@
 - (void)setAutomaticUpdatesEnabled:(BOOL)enabled completionHandler:(void (^)(BOOL success))completionHandler
 {
     // set the value
-    CFPreferencesSetValue(kMTPrefsEnableAutoUpdate, (__bridge CFPropertyListRef)([NSNumber numberWithBool:enabled]), kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
+    CFPreferencesSetValue(kMTPrefsEnableAutoUpdateKey, (__bridge CFPropertyListRef)([NSNumber numberWithBool:enabled]), kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
         
     // read the value and compare it
     // with the value we set
@@ -423,9 +423,9 @@
 - (void)automaticUpdatesEnabledWithReply:(void (^)(BOOL enabled, BOOL forced))reply
 {
     BOOL isEnabled = NO;
-    BOOL isForced = CFPreferencesAppValueIsForced(kMTPrefsEnableAutoUpdate, kMTDaemonPreferenceDomain);
+    BOOL isForced = CFPreferencesAppValueIsForced(kMTPrefsEnableAutoUpdateKey, kMTDaemonPreferenceDomain);
     
-    CFPropertyListRef property = CFPreferencesCopyValue(kMTPrefsEnableAutoUpdate, kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
+    CFPropertyListRef property = CFPreferencesCopyValue(kMTPrefsEnableAutoUpdateKey, kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
     
     if (property) {
         isEnabled = CFBooleanGetValue(property);

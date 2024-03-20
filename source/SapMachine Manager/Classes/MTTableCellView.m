@@ -1,6 +1,6 @@
 /*
      MTTableCellView.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -23,14 +23,19 @@
 {
     [super drawRect:dirtyRect];
     
-    if ([[[[self imageView] image] accessibilityDescription] rangeOfString:@"checkmark"].location != NSNotFound) {
+    NSString *imageName = [[[self imageView] image] accessibilityDescription];
+    NSColor *tintColor = [NSColor systemRedColor];
+    
+    if ([imageName isEqualToString:@"checkmark.circle"]) {
         
-        [[self imageView] setContentTintColor:[NSColor systemGreenColor]];
+        tintColor = [NSColor systemGreenColor];
         
-    } else {
+    } else if ([imageName isEqualToString:@"questionmark.square"]) {
         
-        [[self imageView] setContentTintColor:[NSColor systemRedColor]];
+        tintColor = [NSColor systemOrangeColor];
     }
+    
+    [[self imageView] setContentTintColor:tintColor];
 }
 
 @end

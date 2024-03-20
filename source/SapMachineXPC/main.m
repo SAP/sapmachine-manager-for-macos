@@ -1,6 +1,6 @@
 /*
      main.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -25,8 +25,8 @@
 
 - (BOOL)listener:(NSXPCListener *)listener shouldAcceptNewConnection:(NSXPCConnection *)newConnection
 {
-    newConnection.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(SapMachineXPCProtocol)];
-    newConnection.exportedObject = [[SapMachineXPC alloc] init];
+    [newConnection setExportedInterface:[NSXPCInterface interfaceWithProtocol:@protocol(SapMachineXPCProtocol)]];
+    [newConnection setExportedObject:[[SapMachineXPC alloc] init]];
     [newConnection resume];
 
     return YES;
@@ -39,13 +39,12 @@ int main(int argc, const char *argv[])
 #pragma unused(argc)
 #pragma unused(argv)
     
-    // Create the delegate for the service.
-    ServiceDelegate *delegate = [ServiceDelegate new];
+    ServiceDelegate *delegate = [[ServiceDelegate alloc] init];
     
-    // Set up the one NSXPCListener for this service. It will handle all incoming connections.
+    // set up the NSXPCListener
     NSXPCListener *listener = [NSXPCListener serviceListener];
     [listener setDelegate:delegate];
     [listener resume];
     
-    return 0;
+    return EXIT_SUCCESS;
 }

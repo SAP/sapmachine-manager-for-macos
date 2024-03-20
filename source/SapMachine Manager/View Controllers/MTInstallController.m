@@ -1,6 +1,6 @@
 /*
      MTInstallController.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.installInProgress = YES;
     self.installSuccess = NO;
 
@@ -83,6 +83,7 @@
                     self->_authData = nil;
                     
                     if (error) {
+                        
                         os_log_with_type(OS_LOG_DEFAULT, OS_LOG_TYPE_FAULT, "SAPCorp: Failed to install asset: %{public}@", error);
                         
                         if ([error helpAnchor] && NSLocalizedString([error helpAnchor], nil)) {
@@ -92,8 +93,13 @@
                         }
                     }
                     
-                    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kMTDefaultsInstallFinished];
-                    
+                    [[NSNotificationCenter defaultCenter] postNotificationName:kMTNotificationNameInstallFinished
+                                                                        object:nil
+                                                                      userInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:!success]
+                                                                                                           forKey:kMTNotificationKeyInstallError
+                                                                               ]
+                    ];
+                                        
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         self.installSuccess = success;
                         self.installInProgress = NO;

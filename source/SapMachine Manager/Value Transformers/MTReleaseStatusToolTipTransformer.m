@@ -1,6 +1,6 @@
 /*
      MTReleaseStatusToolTipTransformer.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -33,13 +33,20 @@
     
     NSString *statusString = nil;
     
-    if ([currentVersion compare:installedVersion] == NSOrderedDescending) {
+    if ([asset downloadURLs]) {
         
-        statusString = [NSString localizedStringWithFormat:NSLocalizedString(@"statusToolTipUpdateAvailable", nil), [installedVersion versionString], [currentVersion versionString]];
+        if ([currentVersion compare:installedVersion] == NSOrderedDescending) {
+            
+            statusString = [NSString localizedStringWithFormat:NSLocalizedString(@"statusToolTipUpdateAvailable", nil), [installedVersion versionString], [currentVersion versionString]];
+            
+        } else {
+            
+            statusString = [NSString localizedStringWithFormat:NSLocalizedString(@"statusToolTipUpToDate", nil), [installedVersion versionString]];
+        }
         
     } else {
         
-        statusString = [NSString localizedStringWithFormat:NSLocalizedString(@"statusToolTipUpToDate", nil), [installedVersion versionString]];
+        statusString = NSLocalizedString(@"statusToolTipUnsupported", nil);
     }
     
     return statusString;

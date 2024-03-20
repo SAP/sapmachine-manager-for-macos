@@ -1,6 +1,6 @@
 /*
      MTSapMachineUser.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -70,8 +70,8 @@
         userDefaults = [[NSUserDefaults alloc] initWithSuiteName:kMTAppBundleIdentifier];
     }
         
-    if ([userDefaults objectIsForcedForKey:kMTDefaultsDontRequireAdmin] &&
-        [userDefaults boolForKey:kMTDefaultsDontRequireAdmin]) {
+    if ([userDefaults objectIsForcedForKey:kMTDefaultsDontRequireAdminKey] &&
+        [userDefaults boolForKey:kMTDefaultsDontRequireAdminKey]) {
 
         privilegedUser = YES;
         

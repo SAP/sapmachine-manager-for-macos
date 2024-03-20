@@ -323,6 +323,86 @@
         }
       }
     },
+    "dialogLTSUpgradeDeleteMultiple" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alte Versionen löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete old releases"
+          }
+        }
+      }
+    },
+    "dialogLTSUpgradeDeleteOne" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alte Version löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete old release"
+          }
+        }
+      }
+    },
+    "dialogLTSUpgradeMultipleMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine neue Hauptversion von SapMachine ist verfügbar. Es wird empfohlen, Ihre installierten Versionen auf die neue Version zu aktualisieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A new major release of SapMachine is available. It's recommended to upgrade your installed releases to the new version."
+          }
+        }
+      }
+    },
+    "dialogLTSUpgradeOneMessage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine neue Hauptversion von SapMachine ist verfügbar. Es wird empfohlen, Ihre installierte Version auf die neue Version zu aktualisieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A new major release of SapMachine is available. It's recommended to upgrade your installed release to the new version."
+          }
+        }
+      }
+    },
+    "dialogLTSUpgradeTitle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möchten Sie auf SapMachine %ld aktualisieren?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Would you like to upgrade to SapMachine %ld?"
+          }
+        }
+      }
+    },
     "dialogMultipleUpdatesFailedMessage" : {
       "localizations" : {
         "de" : {
@@ -1121,6 +1201,22 @@
         }
       }
     },
+    "statusToolTipUnsupported" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Version wird nicht mehr unterstützt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This version is not supported anymore."
+          }
+        }
+      }
+    },
     "statusToolTipUpdateAvailable" : {
       "localizations" : {
         "de" : {
@@ -1153,18 +1249,34 @@
         }
       }
     },
-    "statusUpdateAvailable" : {
+    "statusUnsupported" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Die installierte Version %@ kann auf die Version %@ aktualisiert werden."
+            "value" : "Diese Version wird nicht mehr unterstützt und sollte von Ihrem Mac gelöscht werden."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The installed version %@ can be updated to version %@."
+            "value" : "This version is not supported anymore and should be deleted from your Mac."
+          }
+        }
+      }
+    },
+    "statusUpdateAvailable" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die installierte Version %1$@ kann auf die Version %2$@ aktualisiert werden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The installed version %1$@ can be updated to version %2$@."
           }
         }
       }
@@ -1197,6 +1309,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Try Again"
+          }
+        }
+      }
+    },
+    "upgradeButton" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualisieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade"
           }
         }
       }

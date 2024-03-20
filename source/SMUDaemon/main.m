@@ -1,6 +1,6 @@
 /*
      main.m
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -74,7 +74,6 @@ int main(int argc, const char * argv[])
 #pragma unused(argc)
 #pragma unused(argv)
 
-    // Create the delegate for the service.
     Main *m = [[Main alloc] init];
     m.smuDaemon = [[SMUDaemon alloc] init];
         

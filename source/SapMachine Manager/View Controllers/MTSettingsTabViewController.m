@@ -41,7 +41,7 @@
     [super viewDidLoad];
     
     // select the last tab the user selected
-    NSInteger selectedTabIndex = [[NSUserDefaults standardUserDefaults] integerForKey:kMTDefaultsSettingsSelectedTab];
+    NSInteger selectedTabIndex = [[NSUserDefaults standardUserDefaults] integerForKey:kMTDefaultsSettingsSelectedTabKey];
     
     if (selectedTabIndex >= 0 && selectedTabIndex < [[self tabViewItems] count]) {
         [self setSelectedTabViewItemIndex:selectedTabIndex];
@@ -68,7 +68,7 @@
         
     } else {
         
-        [[NSUserDefaults standardUserDefaults] setInteger:[tabView indexOfTabViewItem:[tabView selectedTabViewItem]] forKey:kMTDefaultsSettingsSelectedTab];
+        [[NSUserDefaults standardUserDefaults] setInteger:[tabView indexOfTabViewItem:[tabView selectedTabViewItem]] forKey:kMTDefaultsSettingsSelectedTabKey];
     }
 }
 

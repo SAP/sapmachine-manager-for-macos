@@ -1,6 +1,6 @@
 /*
      MTSapMachineAsset.h
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -26,8 +26,10 @@
 @interface MTSapMachineAsset : NSObject <NSSecureCoding, NSCopying>
 
 /*!
-  @enum         MTSapMachineJVMType
-  @discussion   Specifies a jvm of type jre or jdk.
+ @enum          MTSapMachineJVMType
+ @abstract      Specifies a jvm of type jre or jdk.
+ @constant      MTSapMachineJVMTypeJRE Specifies a Java Runtime Environment (JRE)
+ @constant      MTSapMachineJVMTypeJDK Specifies a Java Development Kit (JDK)
 */
 typedef enum {
     MTSapMachineJVMTypeJRE = 0,
@@ -161,5 +163,11 @@ typedef enum {
  @discussion    Returns a NSURL object or nil, if there's no install url for the current architecture.
 */
 - (NSURL*)downloadURLForCurrentArchitecture;
+
+/*!
+ @method        dictionaryRepresentation
+ @abstract      Returns a dictionary representation of the MTSapMachineAsset object.
+*/
+- (NSDictionary*)dictionaryRepresentation;
 
 @end

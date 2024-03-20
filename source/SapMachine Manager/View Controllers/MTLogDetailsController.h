@@ -1,5 +1,5 @@
 /*
-     MTButtonTitleTransformer.m
+     MTLogDetailsController.h
      Copyright 2023-2024 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,30 +15,8 @@
      limitations under the License.
 */
 
-#import "MTButtonTitleTransformer.h"
+#import <Cocoa/Cocoa.h>
 
-@implementation MTButtonTitleTransformer
-
-+ (BOOL)allowsReverseTransformation
-{
-    return NO;
-}
-
-- (id)transformedValue:(id)value
-{
-    NSString *buttonText = NSLocalizedString(@"checkButtonTitle", nil);
-    NSInteger updateCount = [value integerValue];
-    
-    if (updateCount == 1) {
-        
-        buttonText = NSLocalizedString(@"installOneButtonTitle", nil);
-        
-    } else if (updateCount > 1) {
-        
-        buttonText = NSLocalizedString(@"installMultipleButtonTitle", nil);
-    }
-    
-    return buttonText;
-}
+@interface MTLogDetailsController : NSViewController
 
 @end
