@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 
 <!--
-     Copyright 2023 SAP SE
+     Copyright 2023-2024 SAP SE
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -70,7 +70,7 @@
         <dict>
             <key>PayloadContent</key>
             <dict>
-                <key>corp.sap.SapMachineInstallManager</key>
+                <key>corp.sap.SapMachineManager</key>
                 <dict>
                     <key>Forced</key>
                     <array>
@@ -98,7 +98,7 @@
             <key>PayloadDescription</key>
             <string/>
             <key>PayloadDisplayName</key>
-            <string>SapMachine Install Manager configuration</string>
+            <string>SapMachine Manager configuration</string>
             <key>PayloadEnabled</key>
             <true/>
             <key>PayloadIdentifier</key>
@@ -114,9 +114,9 @@
         </dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Configures the SapMachine Install Manager.</string>
+	<string>Configures the SapMachine Manager.</string>
 	<key>PayloadDisplayName</key>
-	<string>SapMachine Install Manager configuration</string>
+	<string>SapMachine Manager configuration</string>
 	<key>PayloadIdentifier</key>
 	<string>20C5AE10-BC67-462C-9363-02A89BAC23FC</string>
 	<key>PayloadOrganization</key>
