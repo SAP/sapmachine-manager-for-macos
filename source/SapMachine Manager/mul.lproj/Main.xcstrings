@@ -75,7 +75,7 @@
     },
     "5L3-9R-Xa8.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"5L3-9R-Xa8\";",
-      "extractionState" : "extracted_with_value",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -775,18 +775,6 @@
         }
       }
     },
-    "Gfj-YM-ARn.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"Gfj-YM-ARn\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Text Cell"
-          }
-        }
-      }
-    },
     "GjT-nM-E08.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Build SapMachine Installer Package…\"; ObjectID = \"GjT-nM-E08\";",
       "extractionState" : "extracted_with_value",
@@ -963,18 +951,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Processing"
-          }
-        }
-      }
-    },
-    "JML-6E-65r.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"JML-6E-65r\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Text Cell"
           }
         }
       }
@@ -1753,18 +1729,6 @@
         }
       }
     },
-    "rob-Ej-hg1.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"rob-Ej-hg1\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Text Cell"
-          }
-        }
-      }
-    },
     "rwz-gf-Nlp.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"You can either install the version of SapMachine we recommend, or decide for yourself which version you want to install. To choose the version and type of SapMachine yourself, please uncheck the option below.\"; ObjectID = \"rwz-gf-Nlp\";",
       "extractionState" : "extracted_with_value",
@@ -1833,30 +1797,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Window"
-          }
-        }
-      }
-    },
-    "tZM-xg-lyg.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"tZM-xg-lyg\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Text Cell"
-          }
-        }
-      }
-    },
-    "unv-Ri-dme.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"unv-Ri-dme\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Table View Cell"
           }
         }
       }
@@ -2033,7 +1973,8 @@
             "value" : "yyyy-MM-dd HH:mm:ss.SSSZ"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "wXg-UP-tIH.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"File\"; ObjectID = \"wXg-UP-tIH\";",
@@ -2049,18 +1990,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "File"
-          }
-        }
-      }
-    },
-    "xDM-lC-pe3.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"xDM-lC-pe3\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Table View Cell"
           }
         }
       }
@@ -2223,18 +2152,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Composing log…"
-          }
-        }
-      }
-    },
-    "ysS-WH-Odr.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Table View Cell\"; ObjectID = \"ysS-WH-Odr\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Table View Cell"
           }
         }
       }

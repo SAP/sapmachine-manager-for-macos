@@ -643,7 +643,8 @@
         }
         
         [theAlert setInformativeText:NSLocalizedString(@"dialogDeleteMessage", nil)];
-        [theAlert addButtonWithTitle:NSLocalizedString(@"deleteButton", nil)];
+        NSButton *deleteButton = [theAlert addButtonWithTitle:NSLocalizedString(@"deleteButton", nil)];
+        [deleteButton setHasDestructiveAction:YES];
         [theAlert addButtonWithTitle:NSLocalizedString(@"cancelButton", nil)];
         [theAlert setAlertStyle:NSAlertStyleInformational];
         [theAlert beginSheetModalForWindow:[[self view] window] completionHandler:^(NSModalResponse returnCode) {

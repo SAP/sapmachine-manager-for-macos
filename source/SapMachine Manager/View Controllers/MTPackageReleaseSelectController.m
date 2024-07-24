@@ -45,86 +45,76 @@
         [_headlineText setStringValue:NSLocalizedString(@"packageBuildReleaseSelect", nil)];
     }
     
-    _releasesArray = [[NSMutableArray alloc] init];
-    [self.releasesArrayController addObjects:_assetCatalog];
+    // build an array with release names for our popup button
+    NSMutableArray *uniqueReleases = [[NSMutableArray alloc] init];
     
-    // make sure the popup button contains the correct information
-    // we use a predicate to initially select all JREs. if the jvm
-    // should be installed, we select only JREs that are suitable
-    // for the current platform and are not already installed.
-    // if now jre or jdk is available, we disable the corresponding
-    // checkboxes.
-    
-    // we start with a predicate that no assets can match
-    NSPredicate *filterPredicate = [NSPredicate predicateWithFormat:@"jvmType < 0"];
-    
-    if (_isInstall) {
+    for (MTSapMachineAsset *asset in _assetCatalog) {
         
-        NSPredicate *jrePredicate = [NSPredicate predicateWithFormat:@"jvmType == %ld AND installURL == nil AND downloadURLForCurrentArchitecture != nil", MTSapMachineJVMTypeJRE];
-        self.enableJREButton = ([[_assetCatalog filteredArrayUsingPredicate:jrePredicate] count] > 0) ? YES : NO;
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"displayName == %@", [asset displayName]];
         
-        NSPredicate *jdkPredicate = [NSPredicate predicateWithFormat:@"jvmType == %ld AND installURL == nil AND downloadURLForCurrentArchitecture != nil", MTSapMachineJVMTypeJDK];
-        self.enableJDKButton = ([[_assetCatalog filteredArrayUsingPredicate:jdkPredicate] count] > 0) ? YES : NO;
-        
-        if (_enableJREButton) {
-            
-            filterPredicate = jrePredicate;
-            [_typeJREButton setState:NSControlStateValueOn];
-            
-        } else if (_enableJDKButton) {
-            
-            filterPredicate = jdkPredicate;
-            [_typeJDKButton setState:NSControlStateValueOn];
-        }
-                
-    } else {
-        
-        NSPredicate *jrePredicate = [NSPredicate predicateWithFormat:@"jvmType == %ld", MTSapMachineJVMTypeJRE];
-        self.enableJREButton = ([[_assetCatalog filteredArrayUsingPredicate:jrePredicate] count] > 0) ? YES : NO;
-        
-        NSPredicate *jdkPredicate = [NSPredicate predicateWithFormat:@"jvmType == %ld", MTSapMachineJVMTypeJDK];
-        self.enableJDKButton = ([[_assetCatalog filteredArrayUsingPredicate:jdkPredicate] count] > 0) ? YES : NO;
-        
-        if (_enableJREButton) {
-            
-            filterPredicate = jrePredicate;
-            [_typeJREButton setState:NSControlStateValueOn];
-            
-        } else if (_enableJDKButton) {
-            
-            filterPredicate = jdkPredicate;
-            [_typeJDKButton setState:NSControlStateValueOn];
+        if ([[uniqueReleases filteredArrayUsingPredicate:predicate] count] == 0) {
+            [uniqueReleases addObject:asset];
         }
     }
     
-    [self.releasesArrayController setFilterPredicate:filterPredicate];
+    _releasesArray = [[NSMutableArray alloc] init];
+    [self.releasesArrayController addObjects:uniqueReleases];
     
     // initially select the newest release
     NSInteger indexOfLatestRelease = 0;
-    filterPredicate = [NSPredicate predicateWithFormat:@"isEA == %@", [NSNumber numberWithBool:NO]];
-    NSArray *filteredArray = [[self.releasesArrayController arrangedObjects] filteredArrayUsingPredicate:filterPredicate];
+    NSPredicate *filterPredicate = [NSPredicate predicateWithFormat:@"isEA == %@", [NSNumber numberWithBool:NO]];
+    NSArray *filteredArray = [uniqueReleases filteredArrayUsingPredicate:filterPredicate];
     
     if ([filteredArray count] > 0) {
-        indexOfLatestRelease = [[self.releasesArrayController arrangedObjects] indexOfObjectIdenticalTo:[filteredArray lastObject]];
+        
+        indexOfLatestRelease = [[_releasesArrayController arrangedObjects] indexOfObjectIdenticalTo:[filteredArray lastObject]];
     }
-    [self.releasesArrayController setSelectionIndex:indexOfLatestRelease];
+    
+    [self.releaseVersionButton selectItemAtIndex:indexOfLatestRelease];
+    [self setRadioButtonsForRelease:[[_releasesArrayController arrangedObjects] objectAtIndex:indexOfLatestRelease]];
 }
 
 - (IBAction)selectJVMType:(id)sender
 {
-    NSString *selectionName = [_releaseVersionButton titleOfSelectedItem];
     
-    // filter the array controller
-    NSMutableArray *predicatesArray = [[NSMutableArray alloc] init];
-    [predicatesArray addObject:[NSPredicate predicateWithFormat:@"jvmType == %ld", [sender tag]]];
-    if (_isInstall) { [predicatesArray addObject:[NSPredicate predicateWithFormat:@"installURL == nil AND downloadURLForCurrentArchitecture != nil"]]; }
-    [self.releasesArrayController setFilterPredicate:[NSCompoundPredicate andPredicateWithSubpredicates:predicatesArray]];
+}
+
+- (IBAction)selectRelease:(id)sender
+{
+    [self setRadioButtonsForRelease:[[_releasesArrayController arrangedObjects] objectAtIndex:[_releaseVersionButton indexOfSelectedItem]]];
+}
+
+- (void)setRadioButtonsForRelease:(MTSapMachineAsset*)asset
+{
+    self.enableJREButton = [self enableRelease:asset ofType:MTSapMachineJVMTypeJRE shouldBeInstalled:_isInstall];
+    self.enableJDKButton = [self enableRelease:asset ofType:MTSapMachineJVMTypeJDK shouldBeInstalled:_isInstall];
     
-    // try to select the same release again
-    NSInteger itemIndex = [_releaseVersionButton indexOfItemWithTitle:selectionName];
-    if (itemIndex == -1) { itemIndex = 0; }
-    [self.releaseVersionButton selectItemAtIndex:itemIndex];
-    [self.releasesArrayController setSelectionIndex:[_releaseVersionButton indexOfSelectedItem]];
+    if (_enableJREButton) {
+        
+        [_typeJREButton setState:NSControlStateValueOn];
+        
+    } else if (_enableJDKButton) {
+        
+        [_typeJDKButton setState:NSControlStateValueOn];
+    }
+}
+
+- (BOOL)enableRelease:(MTSapMachineAsset*)asset ofType:(MTSapMachineJVMType)type shouldBeInstalled:(BOOL)install
+{
+    BOOL enable = NO;
+    
+    if (install) {
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"currentVersion.majorVersion == %ld AND jvmType == %ld AND isEA == %@ AND installURL == nil AND downloadURLForCurrentArchitecture != nil", [[asset currentVersion] majorVersion], type, [NSNumber numberWithBool:[asset isEA]]];
+        enable = ([[_assetCatalog filteredArrayUsingPredicate:predicate] count] > 0) ? YES : NO;
+        
+    } else {
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"currentVersion.majorVersion == %ld AND jvmType == %ld AND isEA == %@", [[asset currentVersion] majorVersion], type, [NSNumber numberWithBool:[asset isEA]]];
+        enable = ([[_assetCatalog filteredArrayUsingPredicate:predicate] count] > 0) ? YES : NO;
+    }
+    
+    return enable;
 }
 
 - (IBAction)goToNextStep:(id)sender
@@ -141,11 +131,13 @@
 
 - (void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender
 {
-    NSInteger selectionIndex = [_releasesArrayController selectionIndex];
+    NSInteger selectionIndex = [_releaseVersionButton indexOfSelectedItem];
     
     if (selectionIndex >= 0 && selectionIndex < [[_releasesArrayController arrangedObjects] count]) {
         
-        MTSapMachineAsset *selectedAsset = (MTSapMachineAsset*)[[_releasesArrayController arrangedObjects] objectAtIndex:selectionIndex];
+        MTSapMachineAsset *selectedRelease = (MTSapMachineAsset*)[[_releasesArrayController arrangedObjects] objectAtIndex:selectionIndex];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"currentVersion.majorVersion == %ld AND jvmType == %ld AND isEA == %@", [[selectedRelease currentVersion] majorVersion], ([_typeJREButton state] == NSControlStateValueOn) ? MTSapMachineJVMTypeJRE : MTSapMachineJVMTypeJDK, [NSNumber numberWithBool:[selectedRelease isEA]]];
+        MTSapMachineAsset *selectedAsset = [[_assetCatalog filteredArrayUsingPredicate:predicate] firstObject];
         
         if ([[segue identifier] isEqualToString:@"corp.sap.SapMachineManager.pkgBuilder.arch"]) {
             

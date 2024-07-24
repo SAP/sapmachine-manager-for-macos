@@ -425,7 +425,7 @@
     BOOL isEnabled = NO;
     BOOL isForced = CFPreferencesAppValueIsForced(kMTPrefsEnableAutoUpdateKey, kMTDaemonPreferenceDomain);
     
-    CFPropertyListRef property = CFPreferencesCopyValue(kMTPrefsEnableAutoUpdateKey, kMTDaemonPreferenceDomain, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
+    CFPropertyListRef property = CFPreferencesCopyAppValue(kMTPrefsEnableAutoUpdateKey, kMTDaemonPreferenceDomain);
     
     if (property) {
         isEnabled = CFBooleanGetValue(property);
