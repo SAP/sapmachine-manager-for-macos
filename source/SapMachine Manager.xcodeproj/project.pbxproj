@@ -45,6 +45,7 @@
 		AD9A51602A52C71F00601849 /* MTJavaHome.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A43529ED29B40038D09F /* MTJavaHome.m */; };
 		AD9A51632A52CE8F00601849 /* corp.sap.SMUDaemon.plist in Embed Daemon Plist */ = {isa = PBXBuildFile; fileRef = AD9A51612A52CE7F00601849 /* corp.sap.SMUDaemon.plist */; };
 		AD9E88722AA784BC007A0D55 /* MTTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9E88712AA784BC007A0D55 /* MTTableView.m */; };
+		ADA5E2542D08415F00AEECB0 /* MTCodeSigning.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5E2532D08415F00AEECB0 /* MTCodeSigning.m */; };
 		ADA87FAB2A56B0AF00DEAFBB /* SMUDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA87FAA2A56B0AF00DEAFBB /* SMUDaemon.m */; };
 		ADA87FAC2A56B3EC00DEAFBB /* MTChecksum.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC76FB529F8F5F700BB27DA /* MTChecksum.m */; };
 		ADABBA5F2A554AFD005FD105 /* MTReleaseStatusTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADABBA5E2A554AFD005FD105 /* MTReleaseStatusTransformer.m */; };
@@ -196,6 +197,8 @@
 		AD9A51612A52CE7F00601849 /* corp.sap.SMUDaemon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = corp.sap.SMUDaemon.plist; sourceTree = "<group>"; };
 		AD9E88702AA784BC007A0D55 /* MTTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTTableView.h; sourceTree = "<group>"; };
 		AD9E88712AA784BC007A0D55 /* MTTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTTableView.m; sourceTree = "<group>"; };
+		ADA5E2522D08415F00AEECB0 /* MTCodeSigning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCodeSigning.h; sourceTree = "<group>"; };
+		ADA5E2532D08415F00AEECB0 /* MTCodeSigning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCodeSigning.m; sourceTree = "<group>"; };
 		ADA87FA92A56B0AF00DEAFBB /* SMUDaemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUDaemon.h; sourceTree = "<group>"; };
 		ADA87FAA2A56B0AF00DEAFBB /* SMUDaemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMUDaemon.m; sourceTree = "<group>"; };
 		ADABBA5D2A554AFD005FD105 /* MTReleaseStatusTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTReleaseStatusTransformer.h; sourceTree = "<group>"; };
@@ -449,6 +452,8 @@
 			children = (
 				ADF0AA3F2A52B5AD006DB834 /* main.m */,
 				AD6EF05F2A52D3BE006E8325 /* SMUDaemon-Info.plist */,
+				ADA5E2522D08415F00AEECB0 /* MTCodeSigning.h */,
+				ADA5E2532D08415F00AEECB0 /* MTCodeSigning.m */,
 				ADA87FA92A56B0AF00DEAFBB /* SMUDaemon.h */,
 				ADA87FAA2A56B0AF00DEAFBB /* SMUDaemon.m */,
 				AD9A515C2A52C4D300601849 /* SMUDaemonProtocol.h */,
@@ -645,6 +650,7 @@
 				AD70853A2A7D350D00392389 /* MTDaemonConnection.m in Sources */,
 				AD9A515F2A52C71900601849 /* MTSapMachineVersion.m in Sources */,
 				ADD7702E2A70F95D003F1C9A /* MTOperationQueue.m in Sources */,
+				ADA5E2542D08415F00AEECB0 /* MTCodeSigning.m in Sources */,
 				AD9A51602A52C71F00601849 /* MTJavaHome.m in Sources */,
 				ADF0AA402A52B5AD006DB834 /* main.m in Sources */,
 				AD094F6D2A67FD18006A1BD6 /* MTSapMachineDownload.m in Sources */,
@@ -707,10 +713,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SapMachineXPC/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SapMachineXPC;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -731,10 +737,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SapMachineXPC/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SapMachineXPC;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -869,14 +875,14 @@
 				CODE_SIGN_ENTITLEMENTS = "SapMachine Manager/SapMachine_Manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 623;
+				CURRENT_PROJECT_VERSION = 631;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SapMachine Manager/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2024 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -884,7 +890,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
@@ -900,14 +906,14 @@
 				CODE_SIGN_ENTITLEMENTS = "SapMachine Manager/SapMachine_Manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 623;
+				CURRENT_PROJECT_VERSION = 631;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SapMachine Manager/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2024 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -915,7 +921,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
@@ -928,15 +934,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 277;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				CURRENT_PROJECT_VERSION = 301;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SMUDaemon/SMUDaemon-Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -948,15 +955,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 277;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				CURRENT_PROJECT_VERSION = 301;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SMUDaemon/SMUDaemon-Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

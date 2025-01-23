@@ -1,6 +1,6 @@
 /*
      MTPackageReleaseSelectController.m
-     Copyright 2023-2024 SAP SE
+     Copyright 2023-2025 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -50,10 +50,13 @@
     
     for (MTSapMachineAsset *asset in _assetCatalog) {
         
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"displayName == %@", [asset displayName]];
-        
-        if ([[uniqueReleases filteredArrayUsingPredicate:predicate] count] == 0) {
-            [uniqueReleases addObject:asset];
+        if ([[[asset downloadURLs] allKeys] count] > 0) {
+            
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"displayName == %@", [asset displayName]];
+            
+            if ([[uniqueReleases filteredArrayUsingPredicate:predicate] count] == 0) {
+                [uniqueReleases addObject:asset];
+            }
         }
     }
     

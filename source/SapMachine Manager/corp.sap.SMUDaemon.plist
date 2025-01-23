@@ -17,5 +17,12 @@
 	<integer>7200</integer>
 	<key>RunAtLoad</key>
 	<true/>
+	<key>SpawnConstraint</key>
+	<dict>
+		<key>team-identifier</key>
+		<string>7R5ZEU67FQ</string>
+		<key>signing-identifier</key>
+		<string>corp.sap.SMUDaemon</string>
+	</dict>
 </dict>
 </plist>

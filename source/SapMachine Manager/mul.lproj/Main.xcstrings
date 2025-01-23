@@ -73,24 +73,6 @@
         }
       }
     },
-    "5L3-9R-Xa8.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Text Cell\"; ObjectID = \"5L3-9R-Xa8\";",
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Text Cell"
-          }
-        }
-      }
-    },
     "6cr-S6-yAI.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Edit\"; ObjectID = \"6cr-S6-yAI\";",
       "extractionState" : "extracted_with_value",
@@ -830,19 +812,19 @@
       }
     },
     "IIn-IZ-rre.title" : {
-      "comment" : "Class = \"NSButtonCell\"; title = \"Don't notify me about new major releases\"; ObjectID = \"IIn-IZ-rre\";",
+      "comment" : "Class = \"NSButtonCell\"; title = \"Don't notify me about new major LTS releases\"; ObjectID = \"IIn-IZ-rre\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nicht über neue Hauptversionen informieren"
+            "value" : "Keine Benachrichtigung über neue LTS-Hauptversionen"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Don't notify me about new major releases"
+            "value" : "Don't notify me about new major LTS releases"
           }
         }
       }
@@ -1514,19 +1496,19 @@
       }
     },
     "OGC-9l-oSZ.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"This program can notify you when a new major release of SapMachine is available. You can then easily upgrade to this new release. If you don't want to be notified about new major releases, please activate the option below.\"; ObjectID = \"OGC-9l-oSZ\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"This application can notify you when a new major release of a Long Term Support (LTS) version of SapMachine is available. You can then easily upgrade to this new LTS release. If you don't want to be notified about new major LTS releases, please enable the option below.\"; ObjectID = \"OGC-9l-oSZ\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dieses Programm kann Sie informieren, wenn eine neue Hauptversion von SapMachine zur Verfügung steht. Sie können dann bequem auf diese neue Version aktualisieren. Wenn Sie nicht über neue Hauptversionen informiert werden wollen, aktivieren Sie bitte die unten stehende Option."
+            "value" : "Dieses Programm kann Sie benachrichtigen, wenn eine neue Hauptversion einer Long Term Support (LTS)-Version von SapMachine zur Verfügung steht. Sie können dann bequem auf diese neue LTS-Version aktualisieren. Wenn Sie nicht über neue LTS-Hauptversionen benachrichtigt werden möchten, aktivieren Sie bitte die unten stehende Option."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "This program can notify you when a new major release of SapMachine is available. You can then easily upgrade to this new release. If you don't want to be notified about new major releases, please activate the option below."
+            "value" : "This application can notify you when a new major release of a Long Term Support (LTS) version of SapMachine is available. You can then easily upgrade to this new LTS release. If you don't want to be notified about new major LTS releases, please enable the option below."
           }
         }
       }
@@ -1910,19 +1892,19 @@
       }
     },
     "VUX-Z8-82J.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Updates for your installed SapMachine releases can be downloaded and installed automatically, so they are always up-to-date. Automatic update checks take place regularly in the background and updates are installed as soon as they are available and this application is not running. Please enable the option below if you want to activate automatic updates.\"; ObjectID = \"VUX-Z8-82J\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Updates for your installed SapMachine releases can be downloaded and installed automatically, so they are always up-to-date. Automatic update checks run regularly in the background and updates are installed as soon as they are available and this application is not running. To enable automatic updates, enable the option below.\"; ObjectID = \"VUX-Z8-82J\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Updates für Ihre installierten SapMachine-Versionen können automatisch heruntergeladen und installiert werden, sodass sie immer auf dem neuesten Stand sind. Automatische Update-Prüfungen finden regelmäßig im Hintergrund statt, und Updates werden installiert, sobald sie verfügbar sind und dieses Programm nicht ausgeführt wird. Bitte aktivieren Sie die untenstehende Option, wenn Sie automatische Updates aktivieren möchten."
+            "value" : "Updates für Ihre installierten SapMachine-Versionen können automatisch heruntergeladen und installiert werden, sodass sie immer auf dem neuesten Stand sind. Automatische Update-Prüfungen finden regelmäßig im Hintergrund statt, und Updates werden installiert, sobald sie verfügbar sind und dieses Programm nicht ausgeführt wird. Um automatische Updates zu aktivieren, aktivieren Sie die unten stehende Option."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Updates for your installed SapMachine releases can be downloaded and installed automatically, so they are always up-to-date. Automatic update checks take place regularly in the background and updates are installed as soon as they are available and this application is not running. Please enable the option below if you want to activate automatic updates."
+            "value" : "Updates for your installed SapMachine releases can be downloaded and installed automatically, so they are always up-to-date. Automatic update checks run regularly in the background and updates are installed as soon as they are available and this application is not running. To enable automatic updates, enable the option below."
           }
         }
       }

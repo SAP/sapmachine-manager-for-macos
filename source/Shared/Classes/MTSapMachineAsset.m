@@ -1,6 +1,6 @@
 /*
      MTSapMachineAsset.m
-     Copyright 2023-2024 SAP SE
+     Copyright 2023-2025 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -121,9 +121,16 @@
 
 - (NSString*)displayName
 {
-    NSString *releaseName = [NSString stringWithFormat:@"%@%@",
-                             _name,
-                             (_isEA) ? [NSString stringWithFormat:@" (%@)", NSLocalizedString(@"preRelease", nil)] : @""];
+    NSString *releaseName = _name;
+    
+    if (_isEA) {
+        
+        releaseName = [releaseName stringByAppendingFormat:@" (%@)", NSLocalizedString(@"preRelease", nil)];
+        
+    } else if (_isLTS) {
+        
+        releaseName = [releaseName stringByAppendingFormat:@" (%@)", NSLocalizedString(@"longTermRelease", nil)];
+    }
     
     return releaseName;
 }

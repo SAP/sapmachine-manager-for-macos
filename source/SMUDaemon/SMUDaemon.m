@@ -1,6 +1,6 @@
 /*
      SMUDaemon.m
-     Copyright 2023-2024 SAP SE
+     Copyright 2023-2025 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@
 #import "MTSapMachine.h"
 #import "MTSapMachineUser.h"
 #import "MTJavaHome.h"
+#import "MTCodeSigning.h"
 #import <os/log.h>
 
 @interface SMUDaemon ()
@@ -60,44 +61,59 @@
     
     if (listener == _listener && newConnection != nil) {
         
-        NSXPCInterface *exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(SMUDaemonProtocol)];
+        NSError *error = nil;
+        NSString *signingAuth = [MTCodeSigning getSigningAuthorityWithError:&error];
+        NSString *requiredVersion = [[NSBundle bundleForClass:[self class]] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
         
-        [exportedInterface setClasses:[NSSet setWithObjects:[MTSapMachineAsset class], [NSArray class], nil]
-                          forSelector:@selector(downloadAssets:install:authorization:completionHandler:)
-                        argumentIndex:0
-                              ofReply:NO
-        ];
-        [exportedInterface setClasses:[NSSet setWithObjects:[MTSapMachineAsset class], [NSArray class], nil]
-                          forSelector:@selector(deleteAssets:authorization:completionHandler:)
-                        argumentIndex:0
-                              ofReply:NO
-        ];
-        
-        [newConnection setExportedInterface:exportedInterface];
-        [newConnection setRemoteObjectInterface:[NSXPCInterface interfaceWithProtocol:@protocol(MTSapMachineAssetUpdateDelegate)]];
-        [newConnection setExportedObject:self];
-        
+        if (signingAuth) {
+            
+            NSString *reqString = [MTCodeSigning codeSigningRequirementsWithCommonName:signingAuth
+                                                                      bundleIdentifier:@"corp.sap.SapMachine*"
+                                                                         versionString:requiredVersion
+            ];
+
+            [newConnection setCodeSigningRequirement:reqString];
+            
+            NSXPCInterface *exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(SMUDaemonProtocol)];
+            
+            [exportedInterface setClasses:[NSSet setWithObjects:[MTSapMachineAsset class], [NSArray class], nil]
+                              forSelector:@selector(downloadAssets:install:authorization:completionHandler:)
+                            argumentIndex:0
+                                  ofReply:NO
+            ];
+            [exportedInterface setClasses:[NSSet setWithObjects:[MTSapMachineAsset class], [NSArray class], nil]
+                              forSelector:@selector(deleteAssets:authorization:completionHandler:)
+                            argumentIndex:0
+                                  ofReply:NO
+            ];
+            
+            [newConnection setExportedInterface:exportedInterface];
+            [newConnection setRemoteObjectInterface:[NSXPCInterface interfaceWithProtocol:@protocol(MTSapMachineAssetUpdateDelegate)]];
+            [newConnection setExportedObject:self];
+            
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-retain-cycles"
-        [newConnection setInvalidationHandler:^{
-                      
-            [newConnection setInvalidationHandler:nil];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.activeConnections removeObject:newConnection];
-                os_log(OS_LOG_DEFAULT, "SAPCorp: %{public}@ invalidated", newConnection);
-            });
-        }];
+            [newConnection setInvalidationHandler:^{
+                          
+                [newConnection setInvalidationHandler:nil];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.activeConnections removeObject:newConnection];
+                    os_log(OS_LOG_DEFAULT, "SAPCorp: %{public}@ invalidated", newConnection);
+                });
+            }];
 #pragma clang diagnostic pop
-        
-        // Resuming the connection allows the system to deliver more incoming messages.
-        [newConnection resume];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            os_log(OS_LOG_DEFAULT, "SAPCorp: %{public}@ established", newConnection);
-            [self.activeConnections addObject:newConnection];
-        });
-        
-        acceptConnection = YES;
+            
+            // Resuming the connection allows the system to deliver more incoming messages.
+            [newConnection resume];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                os_log(OS_LOG_DEFAULT, "SAPCorp: %{public}@ established", newConnection);
+                [self.activeConnections addObject:newConnection];
+            });
+            
+            
+            acceptConnection = YES;
+        }
     }
 
     return acceptConnection;
