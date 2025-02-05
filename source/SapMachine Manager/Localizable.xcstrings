@@ -1052,7 +1052,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SapMachine is up-to-date on your Mac."
+            "value" : "SapMachine is up to date on your Mac."
           }
         }
       }
@@ -1325,6 +1325,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Try Again"
+          }
+        }
+      }
+    },
+    "updateOneMenuEntry" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese SapMachine aktualisieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update this SapMachine"
+          }
+        }
+      }
+    },
+    "updateSelectedMenuEntry" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausgewählte SapMachine-Versionen aktualisieren (%ld Objekte)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update selected SapMachines (%ld items)"
           }
         }
       }

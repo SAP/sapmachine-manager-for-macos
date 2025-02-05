@@ -17,7 +17,8 @@
             "value" : "SapMachine Manager"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "2Rg-cQ-1p9.headerCell.title" : {
       "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Type\"; ObjectID = \"2Rg-cQ-1p9\";",
@@ -341,7 +342,8 @@
             "value" : "Status"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "aUF-d1-5bR.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Window\"; ObjectID = \"aUF-d1-5bR\";",
@@ -359,7 +361,8 @@
             "value" : "Window"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "AYu-sK-qS6.title" : {
       "comment" : "Class = \"NSMenu\"; title = \"Main Menu\"; ObjectID = \"AYu-sK-qS6\";",
@@ -377,7 +380,8 @@
             "value" : "Main Menu"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "aZ2-oV-hI1.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Checking for updates…\"; ObjectID = \"aZ2-oV-hI1\";",
@@ -485,7 +489,8 @@
             "value" : "Label"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "CcC-Kn-cmL.label" : {
       "comment" : "Class = \"NSToolbarItem\"; label = \"Reload\"; ObjectID = \"CcC-Kn-cmL\";",
@@ -649,24 +654,6 @@
         }
       }
     },
-    "eVd-9s-0Gt.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"Item 2\"; ObjectID = \"eVd-9s-0Gt\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Item 2"
-          }
-        }
-      }
-    },
     "EVt-qD-lTh.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Close\"; ObjectID = \"EVt-qD-lTh\";",
       "extractionState" : "extracted_with_value",
@@ -809,7 +796,8 @@
             "value" : "Services"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "IIn-IZ-rre.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Don't notify me about new major LTS releases\"; ObjectID = \"IIn-IZ-rre\";",
@@ -863,7 +851,8 @@
             "value" : "Settings"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "IuM-cQ-vO2.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"IuM-cQ-vO2\";",
@@ -1243,24 +1232,6 @@
         }
       }
     },
-    "mWN-SN-LhH.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"Item 1\"; ObjectID = \"mWN-SN-LhH\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Item 1"
-          }
-        }
-      }
-    },
     "N3P-XD-EBx.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Previous\"; ObjectID = \"N3P-XD-EBx\";",
       "extractionState" : "extracted_with_value",
@@ -1349,7 +1320,8 @@
             "value" : "Delete this SapMachine"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "Ncv-lg-ZnG.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Check for updates\"; ObjectID = \"Ncv-lg-ZnG\";",
@@ -1367,7 +1339,8 @@
             "value" : "Check for updates"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "NcW-WO-ZfD.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Macs with Apple silicon\"; ObjectID = \"NcW-WO-ZfD\";",
@@ -1401,24 +1374,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "The Java Development Kit is needed for developing java applications. It needs more disk space as it contains the JRE along with various development tools."
-          }
-        }
-      }
-    },
-    "nlw-oG-yy1.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"Item 3\"; ObjectID = \"nlw-oG-yy1\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Item 3"
           }
         }
       }
@@ -1563,6 +1518,24 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "The package will contain only a version of SapMachine that is running on Intel-based Macs."
+          }
+        }
+      }
+    },
+    "oXg-ZU-f1K.ibExternalAccessibilityDescription" : {
+      "comment" : "Class = \"NSPopUpButton\"; ibExternalAccessibilityDescription = \"PopUp button to the select a SapMachine release\"; ObjectID = \"oXg-ZU-f1K\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PopUp Button, um eine SapMachine-Version auszuwählen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "PopUp button to the select a SapMachine release"
           }
         }
       }
@@ -1799,7 +1772,8 @@
             "value" : "SapMachine Manager"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "V3H-Cu-aRm.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Paste and Match Style\"; ObjectID = \"V3H-Cu-aRm\";",
@@ -1925,7 +1899,8 @@
             "value" : "Release"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "wpr-3q-Mcd.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Help\"; ObjectID = \"wpr-3q-Mcd\";",
@@ -1943,7 +1918,8 @@
             "value" : "Help"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "wV2-vo-j5l.ibShadowedDateFormat" : {
       "comment" : "Class = \"NSDateFormatter\"; ibShadowedDateFormat = \"yyyy-MM-dd HH:mm:ss.SSSZ\"; ObjectID = \"wV2-vo-j5l\";",
@@ -1974,6 +1950,25 @@
             "value" : "File"
           }
         }
+      },
+      "shouldTranslate" : false
+    },
+    "XdY-4t-MLZ.ibExternalAccessibilityDescription" : {
+      "comment" : "Class = \"NSTableView\"; ibExternalAccessibilityDescription = \"A list of installed SapMachine JVMs\"; ObjectID = \"XdY-4t-MLZ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine Liste der installierten SapMachine JVMs"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "A list of installed SapMachine JVMs"
+          }
+        }
       }
     },
     "XfG-lQ-9wD.title" : {
@@ -1992,7 +1987,8 @@
             "value" : "Installed Releases"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "XOy-zF-DCU.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Installation successfully finished.\"; ObjectID = \"XOy-zF-DCU\";",
@@ -2028,7 +2024,8 @@
             "value" : "Release"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "xrS-zq-sSd.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Reset Default Environment\"; ObjectID = \"xrS-zq-sSd\";",
@@ -2047,6 +2044,19 @@
           }
         }
       }
+    },
+    "YBO-cI-5rH.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Update this SapMachine\"; ObjectID = \"YBO-cI-5rH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Update this SapMachine"
+          }
+        }
+      },
+      "shouldTranslate" : false
     },
     "yMq-3O-vhR.label" : {
       "comment" : "Class = \"NSToolbarItem\"; label = \"Save\"; ObjectID = \"yMq-3O-vhR\";",

@@ -584,6 +584,7 @@ CA
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <accessibility description="A list of installed SapMachine JVMs"/>
                                             <connections>
                                                 <binding destination="dyP-OD-CDz" name="content" keyPath="arrangedObjects" id="Uww-OA-9BT"/>
                                                 <binding destination="dyP-OD-CDz" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="Uww-OA-9BT" id="TJv-sm-tZR"/>
@@ -625,14 +626,14 @@ DQ
                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                         </dictionary>
                                     </binding>
-                                    <binding destination="XfG-lQ-9wD" name="title" keyPath="self.updatesAvailable" id="MoE-N5-ap4">
-                                        <dictionary key="options">
-                                            <string key="NSValueTransformerName">MTButtonTitleTransformer</string>
-                                        </dictionary>
-                                    </binding>
                                     <binding destination="XfG-lQ-9wD" name="enabled" keyPath="updateCheckInProgress" id="k0u-Lx-gc7">
                                         <dictionary key="options">
                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="XfG-lQ-9wD" name="title" keyPath="updatesAvailable" id="voZ-br-9mn">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">MTButtonTitleTransformer</string>
                                         </dictionary>
                                     </binding>
                                 </connections>
@@ -692,8 +693,16 @@ DQ
                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                         </dictionary>
                                     </binding>
+                                    <binding destination="XfG-lQ-9wD" name="hidden3" keyPath="installInProgress" previousBinding="iPy-hJ-mse" id="xGB-cb-Y2Y">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                        </dictionary>
+                                    </binding>
                                     <binding destination="XfG-lQ-9wD" name="hidden" keyPath="updateCheckInProgress" id="gy0-tI-Sug"/>
-                                    <binding destination="XfG-lQ-9wD" name="value" keyPath="updatesAvailable" id="K4R-P2-Iij">
+                                    <binding destination="XfG-lQ-9wD" name="value" keyPath="updatesAvailable" id="Zes-Pf-5Pg">
                                         <dictionary key="options">
                                             <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
                                             <string key="NSValueTransformerName">MTLabelTextTransformer</string>
@@ -745,8 +754,12 @@ DQ
                         <menuItem title="Use as Default Environment" tag="1100" id="S4Z-9F-zZU">
                             <modifierMask key="keyEquivalentModifierMask"/>
                         </menuItem>
+                        <menuItem isSeparatorItem="YES" id="bhF-sN-x7c"/>
+                        <menuItem title="Update this SapMachine" tag="2000" id="YBO-cI-5rH">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
                         <menuItem isSeparatorItem="YES" id="n1A-4g-0LG"/>
-                        <menuItem title="Delete this SapMachine" tag="2000" id="Nao-6p-5K4">
+                        <menuItem title="Delete this SapMachine" tag="3000" id="Nao-6p-5K4">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
                                 <action selector="deleteAsset:" target="rPt-NT-nkU" id="bI7-wb-qNS"/>
@@ -1376,17 +1389,12 @@ Gw
                                                     <subviews>
                                                         <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oXg-ZU-f1K">
                                                             <rect key="frame" x="59" y="146" width="345" height="25"/>
-                                                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="mWN-SN-LhH" id="EuT-fc-M4M">
+                                                            <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="EuT-fc-M4M">
                                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" usesAppearanceFont="YES"/>
-                                                                <menu key="menu" id="jcX-V0-XPI">
-                                                                    <items>
-                                                                        <menuItem title="Item 1" state="on" id="mWN-SN-LhH"/>
-                                                                        <menuItem title="Item 2" id="eVd-9s-0Gt"/>
-                                                                        <menuItem title="Item 3" id="nlw-oG-yy1"/>
-                                                                    </items>
-                                                                </menu>
+                                                                <menu key="menu" id="jcX-V0-XPI"/>
                                                             </popUpButtonCell>
+                                                            <accessibility description="PopUp button to the select a SapMachine release"/>
                                                             <connections>
                                                                 <action selector="selectRelease:" target="4cP-Jt-kQz" id="jOz-Ow-TeK"/>
                                                                 <binding destination="W7i-Nz-O69" name="content" keyPath="arrangedObjects" id="jsm-pu-U1E"/>
@@ -2065,13 +2073,13 @@ Gw
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMn-xv-Gfy">
-                                <rect key="frame" x="0.0" y="0.0" width="856" height="202"/>
+                                <rect key="frame" x="0.0" y="0.0" width="874" height="202"/>
                                 <clipView key="contentView" ambiguous="YES" id="Zq3-MH-j1p">
-                                    <rect key="frame" x="1" y="1" width="854" height="200"/>
+                                    <rect key="frame" x="1" y="1" width="872" height="200"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="plain" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveName="LogViewer" rowHeight="24" usesAutomaticRowHeights="YES" headerView="vaH-hA-L5b" viewBased="YES" id="aCA-iR-hiX">
-                                            <rect key="frame" x="0.0" y="0.0" width="854" height="172"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="872" height="172"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="16" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -2217,7 +2225,7 @@ Gw
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="370" minWidth="150" maxWidth="10000" id="drV-nY-sE5">
+                                                <tableColumn width="388" minWidth="150" maxWidth="10000" id="drV-nY-sE5">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Message">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2231,11 +2239,11 @@ Gw
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="Jo7-Uc-qnY">
-                                                            <rect key="frame" x="476" y="0.0" width="370" height="24"/>
+                                                            <rect key="frame" x="476" y="0.0" width="388" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField focusRingType="none" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="2Gv-xH-Bac">
-                                                                    <rect key="frame" x="0.0" y="3" width="370" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="3" width="388" height="18"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="18" id="VJb-U4-5X1"/>
                                                                     </constraints>
@@ -2279,7 +2287,7 @@ Gw
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="C6q-KL-34F"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="HZU-3s-LwC">
-                                    <rect key="frame" x="1" y="185" width="853" height="16"/>
+                                    <rect key="frame" x="1" y="185" width="863" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="uJe-oj-oph">
@@ -2287,12 +2295,12 @@ Gw
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" wantsLayer="YES" id="vaH-hA-L5b">
-                                    <rect key="frame" x="0.0" y="0.0" width="854" height="28"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="872" height="28"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="CVr-Hg-adB">
-                                <rect key="frame" x="377" y="44" width="102" height="58"/>
+                                <rect key="frame" x="386" y="44" width="102" height="58"/>
                                 <subviews>
                                     <progressIndicator verticalHuggingPriority="1000" maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="m1C-wR-Jcs">
                                         <rect key="frame" x="35" y="26" width="32" height="32"/>
@@ -2405,7 +2413,7 @@ Gw
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yx4-jn-np1"/>
-        <segue reference="XIN-Ie-TEU"/>
+        <segue reference="Blj-7x-Y8f"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="14" height="16"/>

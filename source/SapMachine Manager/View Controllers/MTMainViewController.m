@@ -29,12 +29,14 @@
 @property (nonatomic, strong, readwrite) NSMutableArray *jvmReleases;
 @property (nonatomic, strong, readwrite) NSArray *assetsToDeleted;
 @property (nonatomic, strong, readwrite) NSUserDefaults *userDefaults;
+@property (nonatomic, strong, readwrite) NSEvent *eventMonitor;
 @property (atomic, copy, readwrite) NSData *authData;
 @property (assign) BOOL updateCheckInProgress;
 @property (assign) BOOL installInProgress;
 @property (assign) BOOL skipRecommendedInstall;
 @property (assign) BOOL upgradeCheckDone;
 @property (assign) NSInteger updatesAvailable;
+@property (assign) NSInteger updatesAvailableTemp;
 @property (assign) NSInteger updatesFailed;
 
 @property (weak) IBOutlet NSArrayController *releasesController;
@@ -55,6 +57,21 @@
     self.updatesAvailable = 0;
     self.updatesFailed = 0;
     self.jvmReleases = [[NSMutableArray alloc] init];
+    
+    _eventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskFlagsChanged handler:^NSEvent *(NSEvent *event) {
+        
+        if ([event modifierFlags] & NSEventModifierFlagOption) {
+            
+            self.updatesAvailableTemp = self.updatesAvailable;
+            if (self.updatesAvailable > 0) { self.updatesAvailable = -1; }
+            
+        } else {
+            
+            self.updatesAvailable = self.updatesAvailableTemp;
+        }
+        
+        return event;
+    }];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self checkForLoginItem];
@@ -140,6 +157,7 @@
                     [self.releasesController setFilterPredicate:predicate];
                     
                     self.updatesAvailable = [self numberOfAvailableUpdates];
+                    self.updatesAvailableTemp = self.updatesAvailable;
                     self.installInProgress = [self updateInProgress];
                     
                     if (![self->_userDefaults boolForKey:kMTDefaultsNoUpgradeAlertsKey] && !self.installInProgress && !self.upgradeCheckDone) {
@@ -658,6 +676,43 @@
     }
 }
 
+- (IBAction)updateAsset:(id)sender
+{
+    NSInteger clickedRow = [_tableView clickedRow];
+
+    if ((clickedRow >= 0 && clickedRow < [[self->_releasesController arrangedObjects] count]) || [[_tableView selectedRowIndexes] count] > 0) {
+        
+        NSIndexSet *toBeUpdated = nil;
+        
+        if (clickedRow == NSUIntegerMax || [[_tableView selectedRowIndexes] containsIndex:clickedRow]) {
+            toBeUpdated = [_tableView selectedRowIndexes];
+        } else {
+            toBeUpdated = [NSIndexSet indexSetWithIndex:clickedRow];
+        }
+        
+        NSMutableArray *assets = [NSMutableArray arrayWithArray:[[self->_releasesController arrangedObjects] objectsAtIndexes:toBeUpdated]];
+        
+        for (MTSapMachineAsset *asset in assets) {
+            
+            if (([[asset currentVersion] compare:[asset installedVersion]] != NSOrderedDescending) || [[asset downloadURLs] count] == 0) {
+                [assets removeObject:asset];
+            }
+        }
+        
+        if ([assets count] > 0) {
+            
+            self.installInProgress = YES;
+            self.updatesFailed = 0;
+            
+            [_daemonConnection connectToDaemonWithExportedObject:self
+                                          andExecuteCommandBlock:^{
+                
+                [[self->_daemonConnection remoteObjectProxy] updateAssets:assets completionHandler:^(BOOL success) {}];
+            }];
+        }
+    }
+}
+
 - (IBAction)showAssetInFinder:(id)sender
 {
     NSInteger clickedRow = [_tableView clickedRow];
@@ -677,7 +732,7 @@
         
         for (MTSapMachineAsset *asset in assets) {
             
-            if (asset && [asset installURL]) {
+            if ([asset installURL]) {
                 [displayURLs addObject:[asset installURL]];
             }
         }

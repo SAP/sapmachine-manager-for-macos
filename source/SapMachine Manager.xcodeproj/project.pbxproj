@@ -19,7 +19,8 @@
 		AD10D1B32AAA0E6D009463D7 /* MTSapMachineUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD10D1B12AAA0E6D009463D7 /* MTSapMachineUser.m */; };
 		AD1555B92A53E0E30024B0C2 /* MTSapMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1555B82A53E0E30024B0C2 /* MTSapMachine.m */; };
 		AD1555BA2A53E0E30024B0C2 /* MTSapMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1555B82A53E0E30024B0C2 /* MTSapMachine.m */; };
-		AD192AA92A531161001C4E63 /* MTButtonTitleTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD192AA82A531161001C4E63 /* MTButtonTitleTransformer.m */; };
+		AD17595D2D47D5530029B65E /* MTButtonTitleTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD17595A2D47D5530029B65E /* MTButtonTitleTransformer.m */; };
+		AD17595E2D47D5530029B65E /* MTLabelTextTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD17595C2D47D5530029B65E /* MTLabelTextTransformer.m */; };
 		AD204D582A77DD3000D0752A /* MTLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD204D572A77DD3000D0752A /* MTLogController.m */; };
 		AD204D5A2A77E0E700D0752A /* SapMachine Manager.mobileconfig in Resources */ = {isa = PBXBuildFile; fileRef = AD204D592A77E0E700D0752A /* SapMachine Manager.mobileconfig */; };
 		AD2A0A732A793E1C006DB604 /* MTLogLevelValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2A0A722A793E1C006DB604 /* MTLogLevelValueTransformer.m */; };
@@ -36,7 +37,6 @@
 		AD70CC692A4ED37B00C48A93 /* SapMachineXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = AD70CC5D2A4ED37B00C48A93 /* SapMachineXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AD8C00132A815EEF00C9B0A1 /* MTStoryboardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C000F2A815EEF00C9B0A1 /* MTStoryboardAnimator.m */; };
 		AD8C00142A815EEF00C9B0A1 /* MTStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C00122A815EEF00C9B0A1 /* MTStoryboardSegue.m */; };
-		AD92189C2A546025001F3963 /* MTLabelTextTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92189B2A546025001F3963 /* MTLabelTextTransformer.m */; };
 		AD92189F2A5463CB001F3963 /* MTReleaseNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92189E2A5463CB001F3963 /* MTReleaseNameTransformer.m */; };
 		AD9A03302B5544C400ECC98B /* MTLogDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9A032F2B5544C400ECC98B /* MTLogDetailsController.m */; };
 		AD9A03332B554DEF00ECC98B /* MTConsoleSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9A03322B554DEF00ECC98B /* MTConsoleSplitViewController.m */; };
@@ -155,8 +155,10 @@
 		AD10D1B12AAA0E6D009463D7 /* MTSapMachineUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTSapMachineUser.m; path = Shared/Classes/MTSapMachineUser.m; sourceTree = SOURCE_ROOT; };
 		AD1555B72A53E0E30024B0C2 /* MTSapMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTSapMachine.h; path = Shared/Classes/MTSapMachine.h; sourceTree = SOURCE_ROOT; };
 		AD1555B82A53E0E30024B0C2 /* MTSapMachine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTSapMachine.m; path = Shared/Classes/MTSapMachine.m; sourceTree = SOURCE_ROOT; };
-		AD192AA72A531161001C4E63 /* MTButtonTitleTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTButtonTitleTransformer.h; sourceTree = "<group>"; };
-		AD192AA82A531161001C4E63 /* MTButtonTitleTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTButtonTitleTransformer.m; sourceTree = "<group>"; };
+		AD1759592D47D5530029B65E /* MTButtonTitleTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTButtonTitleTransformer.h; sourceTree = "<group>"; };
+		AD17595A2D47D5530029B65E /* MTButtonTitleTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTButtonTitleTransformer.m; sourceTree = "<group>"; };
+		AD17595B2D47D5530029B65E /* MTLabelTextTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLabelTextTransformer.h; sourceTree = "<group>"; };
+		AD17595C2D47D5530029B65E /* MTLabelTextTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLabelTextTransformer.m; sourceTree = "<group>"; };
 		AD204D562A77DD3000D0752A /* MTLogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLogController.h; sourceTree = "<group>"; };
 		AD204D572A77DD3000D0752A /* MTLogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLogController.m; sourceTree = "<group>"; };
 		AD204D592A77E0E700D0752A /* SapMachine Manager.mobileconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "SapMachine Manager.mobileconfig"; sourceTree = "<group>"; };
@@ -185,8 +187,6 @@
 		AD8C00102A815EEF00C9B0A1 /* MTStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStoryboardSegue.h; sourceTree = "<group>"; };
 		AD8C00112A815EEF00C9B0A1 /* MTStoryboardAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStoryboardAnimator.h; sourceTree = "<group>"; };
 		AD8C00122A815EEF00C9B0A1 /* MTStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStoryboardSegue.m; sourceTree = "<group>"; };
-		AD92189A2A546025001F3963 /* MTLabelTextTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLabelTextTransformer.h; sourceTree = "<group>"; };
-		AD92189B2A546025001F3963 /* MTLabelTextTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLabelTextTransformer.m; sourceTree = "<group>"; };
 		AD92189D2A5463CB001F3963 /* MTReleaseNameTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTReleaseNameTransformer.h; sourceTree = "<group>"; };
 		AD92189E2A5463CB001F3963 /* MTReleaseNameTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTReleaseNameTransformer.m; sourceTree = "<group>"; };
 		AD9A032E2B5544C400ECC98B /* MTLogDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLogDetailsController.h; sourceTree = "<group>"; };
@@ -321,14 +321,14 @@
 		AD3C1C1A2A4C7E850018F8D0 /* Value Transformers */ = {
 			isa = PBXGroup;
 			children = (
-				AD192AA72A531161001C4E63 /* MTButtonTitleTransformer.h */,
-				AD192AA82A531161001C4E63 /* MTButtonTitleTransformer.m */,
+				AD1759592D47D5530029B65E /* MTButtonTitleTransformer.h */,
+				AD17595A2D47D5530029B65E /* MTButtonTitleTransformer.m */,
 				AD0C2E512B079444000A5E12 /* MTDefaultEnvironmentImageTransformer.h */,
 				AD0C2E522B079444000A5E12 /* MTDefaultEnvironmentImageTransformer.m */,
 				AD0C2E552B07A35C000A5E12 /* MTDefaultEnvironmentToolTipTransformer.h */,
 				AD0C2E542B07A35C000A5E12 /* MTDefaultEnvironmentToolTipTransformer.m */,
-				AD92189A2A546025001F3963 /* MTLabelTextTransformer.h */,
-				AD92189B2A546025001F3963 /* MTLabelTextTransformer.m */,
+				AD17595B2D47D5530029B65E /* MTLabelTextTransformer.h */,
+				AD17595C2D47D5530029B65E /* MTLabelTextTransformer.m */,
 				AD2A0A712A793E1C006DB604 /* MTLogLevelValueTransformer.h */,
 				AD2A0A722A793E1C006DB604 /* MTLogLevelValueTransformer.m */,
 				ADABBA602A554F55005FD105 /* MTReleaseImageTransformer.h */,
@@ -611,9 +611,7 @@
 				AD9A03302B5544C400ECC98B /* MTLogDetailsController.m in Sources */,
 				AD8C00142A815EEF00C9B0A1 /* MTStoryboardSegue.m in Sources */,
 				ADD4D2762A82869A005C1798 /* MTPackageBuildController.m in Sources */,
-				AD192AA92A531161001C4E63 /* MTButtonTitleTransformer.m in Sources */,
 				ADD4D2702A825E24005C1798 /* MTPackageArchSelectController.m in Sources */,
-				AD92189C2A546025001F3963 /* MTLabelTextTransformer.m in Sources */,
 				ADABBA5F2A554AFD005FD105 /* MTReleaseStatusTransformer.m in Sources */,
 				AD8C00132A815EEF00C9B0A1 /* MTStoryboardAnimator.m in Sources */,
 				AD6079922A9F7D15006BE22E /* MTInstallController.m in Sources */,
@@ -638,6 +636,8 @@
 				8462E0B22B0622B900A20FFC /* MTTableCellView.m in Sources */,
 				ADBDF9B42A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.m in Sources */,
 				AD60A45C2A9E29B500C57284 /* MTInstallIntroController.m in Sources */,
+				AD17595D2D47D5530029B65E /* MTButtonTitleTransformer.m in Sources */,
+				AD17595E2D47D5530029B65E /* MTLabelTextTransformer.m in Sources */,
 				ADE2A40029ED28200038D09F /* main.m in Sources */,
 				ADE2A3F629ED281F0038D09F /* AppDelegate.m in Sources */,
 			);
@@ -706,7 +706,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -716,7 +716,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -730,7 +730,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -740,7 +740,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -873,9 +873,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SapMachine Manager/SapMachine_Manager.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 631;
+				CURRENT_PROJECT_VERSION = 649;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -890,9 +891,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -904,9 +906,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SapMachine Manager/SapMachine_Manager.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 631;
+				CURRENT_PROJECT_VERSION = 649;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -921,9 +924,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -935,7 +939,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				CURRENT_PROJECT_VERSION = 301;
+				CURRENT_PROJECT_VERSION = 311;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -943,7 +947,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SMUDaemon/SMUDaemon-Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -956,7 +960,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				CURRENT_PROJECT_VERSION = 301;
+				CURRENT_PROJECT_VERSION = 311;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -964,7 +968,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SMUDaemon/SMUDaemon-Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

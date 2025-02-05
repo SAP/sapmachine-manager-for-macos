@@ -86,6 +86,11 @@
                             argumentIndex:0
                                   ofReply:NO
             ];
+            [exportedInterface setClasses:[NSSet setWithObjects:[MTSapMachineAsset class], [NSArray class], nil]
+                              forSelector:@selector(updateAssets:completionHandler:)
+                            argumentIndex:0
+                                  ofReply:NO
+            ];
             
             [newConnection setExportedInterface:exportedInterface];
             [newConnection setRemoteObjectInterface:[NSXPCInterface interfaceWithProtocol:@protocol(MTSapMachineAssetUpdateDelegate)]];
@@ -217,7 +222,7 @@
     }
 }
 
-- (void)updateAllAssetsWithCompletionHandler:(void (^)(BOOL success))completionHandler
+- (void)updateAssets:(NSArray<MTSapMachineAsset*>*)assets completionHandler:(void (^)(BOOL success))completionHandler
 {
     // set our delegate
     NSXPCConnection *currentConnection = [NSXPCConnection currentConnection];
@@ -237,7 +242,28 @@
             
             self->_assetCatalog = assetCatalog;
             
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"installURL != nil"];
+            NSPredicate *predicate = nil;
+            
+            if ([assets count] > 0) {
+                
+                NSMutableArray *subPredicates = [NSMutableArray array];
+                
+                for (MTSapMachineAsset *asset in assets) {
+                    
+                    if ([asset installURL]) {
+                        
+                        NSPredicate *subPredicate = [NSPredicate predicateWithFormat:@"installURL.absoluteString == %@", [[asset installURL] absoluteString]];
+                        [subPredicates addObject:subPredicate];
+                    }
+                }
+                
+                predicate = [NSCompoundPredicate orPredicateWithSubpredicates:subPredicates];
+                
+            } else {
+                
+                predicate = [NSPredicate predicateWithFormat:@"installURL != nil"];
+            }
+            
             [sapMachine downloadAssets:[assetCatalog filteredArrayUsingPredicate:predicate]
                                install:YES
                      completionHandler:^(BOOL success) {
@@ -254,6 +280,13 @@
         
         completionHandler(NO);
     }
+}
+
+- (void)updateAllAssetsWithCompletionHandler:(void (^)(BOOL success))completionHandler
+{
+    [self updateAssets:nil completionHandler:^(BOOL success) {
+        completionHandler(success);
+    }];
 }
 
 - (void)downloadAssets:(NSArray<MTSapMachineAsset*>*)assets install:(BOOL)install authorization:(NSData *)authData completionHandler:(void (^)(BOOL success, NSError *error))completionHandler

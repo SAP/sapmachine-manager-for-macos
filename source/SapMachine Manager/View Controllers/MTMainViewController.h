@@ -21,6 +21,5 @@
 
 @interface MTMainViewController : NSViewController <MTSapMachineAssetUpdateDelegate, MTDaemonConnectionDelegate, NSMenuItemValidation>
 
-
 @end
 

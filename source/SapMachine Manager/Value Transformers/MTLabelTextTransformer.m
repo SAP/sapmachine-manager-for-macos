@@ -26,10 +26,14 @@
 
 - (id)transformedValue:(id)value
 {
-    NSString *buttonText = NSLocalizedString(@"noUpdatesAvailable", nil);
+    NSString *buttonText = @"";
     NSInteger updateCount = [value integerValue];
     
-    if (updateCount == 1) {
+    if (updateCount == 0) {
+        
+        buttonText = NSLocalizedString(@"noUpdatesAvailable", nil);
+        
+    } else if (updateCount == 1) {
         
         buttonText = NSLocalizedString(@"oneUpdateAvailable", nil);
         

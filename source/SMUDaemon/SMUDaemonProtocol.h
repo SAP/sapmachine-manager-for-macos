@@ -55,6 +55,14 @@
 - (void)updateAllAssetsWithCompletionHandler:(void (^)(BOOL success))completionHandler;
 
 /*!
+ @method        updateAssets:completionHandler
+ @abstract      Updates the given assets to the latest version.
+ @param         completionHandler The handler to call when the request is complete.
+ @discussion    Returns YES if all updates have been successfully applied, otherwise returns NO.
+*/
+- (void)updateAssets:(NSArray<MTSapMachineAsset*>*)assets completionHandler:(void (^)(BOOL success))completionHandler;
+
+/*!
  @method        downloadAssets:install:authorization:completionHandler:
  @abstract      Downloads and optionally installs the given assets.
  @param         assets An array of MTSapMachineAsset objects.
