@@ -18,7 +18,7 @@
 #define kMTJavaHomePath                     @"/usr/libexec/java_home"
 #define kMTUnarchiverPath                   @"/usr/bin/tar"
 #define kMTJVMFolderPath                    @"/Library/Java/JavaVirtualMachines"
-#define kMTSapMachineReleasesURL            @"https://sap.github.io/SapMachine/assets/data/sapmachine-releases-latest.json"
+#define kMTSapMachineReleasesURL            @"https://sapmachine.io/assets/data/sapmachine-releases-latest.json"
 #define kMTGitHubURL                        @"https://github.com/SAP/sapmachine-manager-for-macos"
 #define kMTSapMachineWebsiteURL             @"https://sapmachine.io/"
 #define kMTErrorDomain                      @"corp.sap.SapMachineManager.ErrorDomain"
