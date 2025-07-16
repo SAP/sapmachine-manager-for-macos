@@ -20,7 +20,7 @@ _SapMachine Manager_ is the standard tool within _SAP_ to install _SapMachine_ o
 
 ✅ Automatic download and install of new SapMachine versions  
 
-📣 Update notifications  
+🔔 Update notifications  
 
 📦 Create SapMachine installer packages  
   
