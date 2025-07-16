@@ -12,7 +12,7 @@ _SapMachine Manager_ is the standard tool within _SAP_ to install _SapMachine_ o
 
 <br/>
 
-## Features
+# Features
 
 🛠️ Easy install  
 
@@ -30,7 +30,7 @@ _SapMachine Manager_ is the standard tool within _SAP_ to install _SapMachine_ o
 
 <br/>
 
-## Demo
+# Demo
 
 ⚡ Have a look at how quick and easy a new SapMachine release can be installed:
 
@@ -38,7 +38,7 @@ _SapMachine Manager_ is the standard tool within _SAP_ to install _SapMachine_ o
 
 <br/>
 
-## Documentation 
+# Documentation 
 
 📚 If you want to learn more about _SapMachine Manager_'s features, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
 
@@ -60,23 +60,23 @@ _SapMachine Manager_ is the standard tool within _SAP_ to install _SapMachine_ o
 
 <br/>
 
-## Support, Feedback, Contributing
+# Support, Feedback, Contributing
 
 This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/sapmachine-manager-for-macos/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
 
 <br/>
 
-## Security / Disclosure
+# Security / Disclosure
 If you find any bug that may be a security problem, please follow our instructions at [in our security policy](https://github.com/SAP/sapmachine-manager-for-macos/security/policy) on how to report it. Please do not create GitHub issues for security-related doubts or problems.
 
 <br/>
 
-## Code of Conduct
+# Code of Conduct
 
 We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone. By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/SAP/.github/blob/main/CODE_OF_CONDUCT.md) at all times.
 
 <br/>
 
-## Licensing
+# Licensing
 
 Copyright 2024-2025 SAP SE or an SAP affiliate company and SapMachine Manager contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/sapmachine-manager-for-macos).
