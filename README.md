@@ -1,4 +1,4 @@
-![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/banner.png)
+![SapMachine Manager Banner](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/banner.png)
 
 <br/>
 
