@@ -1,0 +1,78 @@
+{
+  "fill" : {
+    "linear-gradient" : [
+      "display-p3:0.85127,0.92523,0.94532,1.00000",
+      "display-p3:0.58152,0.86647,0.93703,1.00000"
+    ]
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "blend-mode" : "normal",
+          "fill-specializations" : [
+            {
+              "appearance" : "tinted",
+              "value" : {
+                "solid" : "extended-gray:0.50000,1.00000"
+              }
+            }
+          ],
+          "glass" : false,
+          "hidden" : false,
+          "image-name" : "l2.svg",
+          "name" : "l2",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              252.515625,
+              313.171875
+            ]
+          }
+        },
+        {
+          "fill-specializations" : [
+            {
+              "value" : "none"
+            },
+            {
+              "appearance" : "tinted",
+              "value" : "none"
+            }
+          ],
+          "glass-specializations" : [
+            {
+              "value" : false
+            },
+            {
+              "appearance" : "light",
+              "value" : false
+            }
+          ],
+          "image-name" : "l1.svg",
+          "name" : "l1",
+          "position" : {
+            "scale" : 1.15,
+            "translation-in-points" : [
+              -42.3359375,
+              -56.2265625
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : [
+      "macOS"
+    ]
+  }
+}

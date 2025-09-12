@@ -39,7 +39,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nach Updates suchen"
+            "value" : "Nach Aktualisierungen suchen"
           }
         },
         "en" : {
@@ -158,7 +158,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "You can't undo this action."
+            "value" : "You can’t undo this action."
           }
         }
       }
@@ -168,7 +168,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sind Sie sicher, dass Sie die %ld ausgewählten SapMachine-Versionen von Ihrem Mac löschen wollen?"
+            "value" : "Bist Du sicher, dass Du die %ld ausgewählten SapMachine-Versionen von Deinem Mac löschen willst?"
           }
         },
         "en" : {
@@ -184,7 +184,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sind Sie sicher, dass Sie \"%@\" von Ihrem Mac löschen wollen?"
+            "value" : "Bist Du sicher, dass Du \"%@\" von Deinem Mac löschen willst?"
           }
         },
         "en" : {
@@ -200,7 +200,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Beim Versuch, die ausgewählten SapMachine-Versionen von Ihrem Mac zu löschen, ist ein Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll."
+            "value" : "Beim Versuch, die ausgewählten SapMachine-Versionen von Deinem Mac zu löschen, ist ein Fehler aufgetreten. Einzelheiten kannst Du dem Protokoll entnehmen."
           }
         },
         "en" : {
@@ -232,7 +232,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Beim Versuch, SapMachine von Ihrem Mac zu löschen, ist ein Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll."
+            "value" : "Beim Versuch, SapMachine von Deinem Mac zu löschen, ist ein Fehler aufgetreten. Einzelheiten kannst Du dem Protokoll entnehmen."
           }
         },
         "en" : {
@@ -264,7 +264,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Beim Schreiben der Protokolldatei ist ein Fehler aufgetreten. Bitte überprüfen Sie, ob der ausgewählte Speicherort korrekt ist und versuchen Sie es erneut."
+            "value" : "Beim Schreiben der Protokolldatei ist ein Fehler aufgetreten. Bitte überprüfe, ob der ausgewählte Speicherort korrekt ist und versuche es erneut."
           }
         },
         "en" : {
@@ -296,13 +296,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Das Anmeldeobjekt dieses Programms muss in den Systemeinstellungen aktiviert werden, damit das Programm korrekt funktionieren kann. Bitte aktivieren Sie das Anmeldeobjekt und versuchen Sie es erneut."
+            "value" : "Das Anmeldeobjekt dieses Programms muss in den Systemeinstellungen aktiviert werden, damit das Programm korrekt funktionieren kann. Bitte aktiviere das Anmeldeobjekt und versuche es erneut."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This application's login item needs to be enabled in System Settings for this application to work correctly. Please enable the login item and try again."
+            "value" : "This application’s login item needs to be enabled in System Settings for this application to work correctly. Please enable the login item and try again."
           }
         }
       }
@@ -360,13 +360,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Eine neue Hauptversion von SapMachine ist verfügbar. Es wird empfohlen, Ihre installierten Versionen auf die neue Version zu aktualisieren."
+            "value" : "Eine neue Hauptversion von SapMachine ist verfügbar. Es wird empfohlen, Deine installierten Versionen auf die neue Version zu aktualisieren."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A new major release of SapMachine is available. It's recommended to upgrade your installed releases to the new version."
+            "value" : "A new major release of SapMachine is available. It’s recommended to upgrade your installed releases to the new version."
           }
         }
       }
@@ -376,13 +376,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Eine neue Hauptversion von SapMachine ist verfügbar. Es wird empfohlen, Ihre installierte Version auf die neue Version zu aktualisieren."
+            "value" : "Eine neue Hauptversion von SapMachine ist verfügbar. Es wird empfohlen, Deine installierte Version auf die neue Version zu aktualisieren."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A new major release of SapMachine is available. It's recommended to upgrade your installed release to the new version."
+            "value" : "A new major release of SapMachine is available. It’s recommended to upgrade your installed release to the new version."
           }
         }
       }
@@ -392,7 +392,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Möchten Sie auf SapMachine %ld aktualisieren?"
+            "value" : "Möchtest Du auf SapMachine %ld aktualisieren?"
           }
         },
         "en" : {
@@ -408,7 +408,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bei der Installation mehrerer SapMachine Updates sind Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll.."
+            "value" : "Bei der Installation mehrerer SapMachine Aktualisierungen sind Fehler aufgetreten. Einzelheiten kannst Du dem Protokoll entnehmen."
           }
         },
         "en" : {
@@ -424,7 +424,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einige Updates konnten nicht durchgeführt werden!"
+            "value" : "Einige Aktualisierungen konnten nicht durchgeführt werden!"
           }
         },
         "en" : {
@@ -456,7 +456,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SapMachine ist momentan nicht auf Ihrem Mac installiert. Wenn Sie SapMachine installieren möchten, klicken Sie bitte auf die entsprechende untenstehende Taste."
+            "value" : "SapMachine ist momentan nicht auf Deinem Mac installiert. Wenn Du SapMachine installieren möchtest, klicke bitte auf die entsprechende untenstehende Taste."
           }
         },
         "en" : {
@@ -472,7 +472,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SapMachine ist momentan nicht auf Ihrem Mac installiert. Bitte installieren Sie eine beliebige SapMachine-Version und starten Sie dann dieses Programm erneut."
+            "value" : "SapMachine ist momentan nicht auf Deinem Mac installiert. Bitte installiere eine beliebige SapMachine-Version und starte dann dieses Programm erneut."
           }
         },
         "en" : {
@@ -504,7 +504,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Möchten Sie SapMachine installieren?"
+            "value" : "Möchtest Du SapMachine installieren?"
           }
         },
         "en" : {
@@ -520,7 +520,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Derzeit sind keine weiteren SapMachine-Versionen für die Installation auf Ihrem Mac verfügbar."
+            "value" : "Derzeit sind keine weiteren SapMachine-Versionen für die Installation auf Deinem Mac verfügbar."
           }
         },
         "en" : {
@@ -552,7 +552,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Derzeit sind keine SapMachine-Versionen verfügbar. Bitte versuchen Sie es später noch einmal."
+            "value" : "Derzeit sind keine SapMachine-Versionen verfügbar. Bitte versuche es später noch einmal."
           }
         },
         "en" : {
@@ -584,7 +584,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bei der Installation eines SapMachine Updates ist ein Fehler aufgetreten. Einzelheiten entnehmen Sie bitte dem Protokoll."
+            "value" : "Bei der Installation einer SapMachine Aktualisierung ist ein Fehler aufgetreten. Einzelheiten kannst Du dem Protokoll entnehmen."
           }
         },
         "en" : {
@@ -600,7 +600,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ein Update konnte nicht durchgeführt werden!"
+            "value" : "Eine Aktualisierung konnte nicht durchgeführt werden!"
           }
         },
         "en" : {
@@ -617,7 +617,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sie können die Standardumgebung entweder für den aktuellen Benutzer oder für alle Benutzer dieses Macs setzen. Individuelle Konfigurationen anderer Benutzer sind von den Änderungen nicht betroffen."
+            "value" : "Du kannst die Standardumgebung entweder für den aktuellen Benutzer oder für alle Benutzer dieses Macs setzen. Individuelle Konfigurationen anderer Benutzer sind von den Änderungen nicht betroffen."
           }
         },
         "en" : {
@@ -651,7 +651,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sie können die Standardumgebung entweder für den aktuellen Benutzer oder für alle Benutzer dieses Macs zurücksetzen. Individuelle Konfigurationen anderer Benutzer sind von den Änderungen nicht betroffen."
+            "value" : "Du kannst die Standardumgebung entweder für den aktuellen Benutzer oder für alle Benutzer dieses Macs zurücksetzen. Individuelle Konfigurationen anderer Benutzer sind von den Änderungen nicht betroffen."
           }
         },
         "en" : {
@@ -684,13 +684,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Damit dieses Programm korrekt funktionieren kann, muss es sich mit einem Daemon verbinden. Dafür muss das Anmeldeobjekt dieses Programms in den Systemeinstellungen aktiviert sein, was derzeit nicht der Fall ist. Bitte aktivieren Sie das Anmeldeobjekt und versuchen Sie es erneut."
+            "value" : "Damit dieses Programm korrekt funktionieren kann, muss es sich mit einem Daemon verbinden. Dafür muss das Anmeldeobjekt dieses Programms in den Systemeinstellungen aktiviert sein, was derzeit nicht der Fall ist. Bitte aktiviere das Anmeldeobjekt und versuche es erneut."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "For this application to work correctly, it must connect to a daemon. Therefore this application's login item needs to be enabled in System Settings which is currently not the case. Please enable the login item and try again."
+            "value" : "For this application to work correctly, it must connect to a daemon. Therefore this application’s login item needs to be enabled in System Settings which is currently not the case. Please enable the login item and try again."
           }
         }
       }
@@ -918,7 +918,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Updates installieren"
+            "value" : "Aktualisierungen installieren"
           }
         },
         "en" : {
@@ -934,7 +934,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Update installieren"
+            "value" : "Aktualisierung installieren"
           }
         },
         "en" : {
@@ -950,7 +950,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bitte wählen Sie die Version und den Typ der SapMachine, die Sie installieren möchten:"
+            "value" : "Bitte wähle die Version und den Typ der SapMachine, die Du installieren möchtest:"
           }
         },
         "en" : {
@@ -1030,7 +1030,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Es sind %ld Updates verfügbar."
+            "value" : "Es sind %ld Aktualisierungen verfügbar."
           }
         },
         "en" : {
@@ -1046,7 +1046,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SapMachine ist auf Ihrem Mac auf dem aktuellen Stand."
+            "value" : "SapMachine ist auf Deinem Mac auf dem aktuellen Stand."
           }
         },
         "en" : {
@@ -1078,7 +1078,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Es ist ein Update verfügbar."
+            "value" : "Es ist eine Aktualisierung verfügbar."
           }
         },
         "en" : {
@@ -1126,13 +1126,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ihr Paket wurde vorbereitet, konnte jedoch nicht an Script2Pkg zur Paketerstellung übergeben werden. Bitte überprüfen Sie, ob Script2Pkg im Programme-Ordner Ihres Macs installiert ist und versuchen Sie es erneut. Der Quellordner des Pakets wird im Finder angezeigt und kann nach der Installation von Script2Pkg verwendet werden, um das Paket manuell zu erstellen."
+            "value" : "Dein Paket wurde vorbereitet, konnte jedoch nicht an Script2Pkg zur Paketerstellung übergeben werden. Bitte überprüfe, ob Script2Pkg im Programme-Ordner Deines Macs installiert ist und versuche es erneut. Der Quellordner des Pakets wird im Finder angezeigt und kann nach der Installation von Script2Pkg verwendet werden, um das Paket manuell zu erstellen."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Your package has been prepared but could not be passed to Script2Pkg for package creation. Please check if Script2Pkg is installed in your Mac's Applications folder and try again. As the source folder of the package is displayed in the Finder, you can use it to create the package manually after installing Script2Pkg."
+            "value" : "Your package has been prepared but could not be passed to Script2Pkg for package creation. Please check if Script2Pkg is installed in your Mac’s Applications folder and try again. As the source folder of the package is displayed in the Finder, you can use it to create the package manually after installing Script2Pkg."
           }
         }
       }
@@ -1158,7 +1158,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bitte wählen Sie die Version und den Typ der SapMachine, die Sie paketieren möchten:"
+            "value" : "Bitte wähle die Version und den Typ der SapMachine, die Du paketieren möchtest:"
           }
         },
         "en" : {
@@ -1238,13 +1238,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Es ist ein Update verfügbar."
+            "value" : "Es ist eine Aktualisierung verfügbar."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "There's an update available."
+            "value" : "There’s an update available."
           }
         }
       }
@@ -1270,7 +1270,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Diese Version wird nicht mehr unterstützt und sollte von Ihrem Mac gelöscht werden."
+            "value" : "Diese Version wird nicht mehr unterstützt und sollte von Deinem Mac gelöscht werden."
           }
         },
         "en" : {

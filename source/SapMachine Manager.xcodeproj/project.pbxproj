@@ -34,7 +34,7 @@
 		AD70853A2A7D350D00392389 /* MTDaemonConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCF37152A7CFA0B00CD3886 /* MTDaemonConnection.m */; };
 		AD70CC612A4ED37B00C48A93 /* SapMachineXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD70CC602A4ED37B00C48A93 /* SapMachineXPC.m */; };
 		AD70CC642A4ED37B00C48A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD70CC632A4ED37B00C48A93 /* main.m */; };
-		AD70CC692A4ED37B00C48A93 /* SapMachineXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = AD70CC5D2A4ED37B00C48A93 /* SapMachineXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AD70CC692A4ED37B00C48A93 /* SapMachineXPC.xpc in Embed XPC Service */ = {isa = PBXBuildFile; fileRef = AD70CC5D2A4ED37B00C48A93 /* SapMachineXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AD8C00132A815EEF00C9B0A1 /* MTStoryboardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C000F2A815EEF00C9B0A1 /* MTStoryboardAnimator.m */; };
 		AD8C00142A815EEF00C9B0A1 /* MTStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C00122A815EEF00C9B0A1 /* MTStoryboardSegue.m */; };
 		AD92189F2A5463CB001F3963 /* MTReleaseNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92189E2A5463CB001F3963 /* MTReleaseNameTransformer.m */; };
@@ -59,6 +59,7 @@
 		ADBDF9B42A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBDF9B32A7CE29D00389799 /* MTReleaseStatusToolTipTransformer.m */; };
 		ADC326272A822ACF0072FEF5 /* MTPackageReleaseSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC326252A822ACF0072FEF5 /* MTPackageReleaseSelectController.m */; };
 		ADCF37172A7CFA0B00CD3886 /* MTDaemonConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCF37152A7CFA0B00CD3886 /* MTDaemonConnection.m */; };
+		ADD378F42E4B880B0021F699 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = ADD378F32E4B880B0021F699 /* AppIcon.icon */; };
 		ADD4D2702A825E24005C1798 /* MTPackageArchSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD4D26E2A825E24005C1798 /* MTPackageArchSelectController.m */; };
 		ADD4D2762A82869A005C1798 /* MTPackageBuildController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD4D2752A82869A005C1798 /* MTPackageBuildController.m */; };
 		ADD7702D2A70F95D003F1C9A /* MTOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7702B2A70F95D003F1C9A /* MTOperationQueue.m */; };
@@ -115,15 +116,15 @@
 			name = "Copy Daemon";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADE2A41B29ED28670038D09F /* Embed XPC Services */ = {
+		ADE2A41B29ED28670038D09F /* Embed XPC Service */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
 			dstSubfolderSpec = 16;
 			files = (
-				AD70CC692A4ED37B00C48A93 /* SapMachineXPC.xpc in Embed XPC Services */,
+				AD70CC692A4ED37B00C48A93 /* SapMachineXPC.xpc in Embed XPC Service */,
 			);
-			name = "Embed XPC Services";
+			name = "Embed XPC Service";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ADF0AA3B2A52B5AD006DB834 /* CopyFiles */ = {
@@ -219,6 +220,7 @@
 		ADC76FB529F8F5F700BB27DA /* MTChecksum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTChecksum.m; path = Shared/Classes/MTChecksum.m; sourceTree = SOURCE_ROOT; };
 		ADCF37152A7CFA0B00CD3886 /* MTDaemonConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDaemonConnection.m; sourceTree = "<group>"; };
 		ADCF37162A7CFA0B00CD3886 /* MTDaemonConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDaemonConnection.h; sourceTree = "<group>"; };
+		ADD378F32E4B880B0021F699 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		ADD4D26E2A825E24005C1798 /* MTPackageArchSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPackageArchSelectController.m; sourceTree = "<group>"; };
 		ADD4D26F2A825E24005C1798 /* MTPackageArchSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPackageArchSelectController.h; sourceTree = "<group>"; };
 		ADD4D2742A82869A005C1798 /* MTPackageBuildController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPackageBuildController.h; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				AD204D592A77E0E700D0752A /* SapMachine Manager.mobileconfig */,
 				AD08FB5F2AFE1CD500BE3350 /* SupportedShells.plist */,
 				ADFBE1B32ABC8776008A8476 /* postinstall.txt */,
+				ADD378F32E4B880B0021F699 /* AppIcon.icon */,
 				ADE2A3FA29ED28200038D09F /* Assets.xcassets */,
 				AD3F68F02AD6CD49007C1E5B /* Credits.rtf */,
 				ADE2A3FC29ED28200038D09F /* Main.storyboard */,
@@ -489,7 +492,7 @@
 				ADE2A3EE29ED281F0038D09F /* Frameworks */,
 				ADE2A3EF29ED281F0038D09F /* Resources */,
 				ADE0D4CA2AB9B87E008015C2 /* Copy Daemon */,
-				ADE2A41B29ED28670038D09F /* Embed XPC Services */,
+				ADE2A41B29ED28670038D09F /* Embed XPC Service */,
 				AD0286022A4DD28000DB339E /* Embed Daemon Plist */,
 			);
 			buildRules = (
@@ -527,7 +530,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1630;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					AD70CC5C2A4ED37B00C48A93 = {
 						CreatedOnToolsVersion = 15.0;
@@ -576,6 +579,7 @@
 			files = (
 				AD08FB602AFE1CD600BE3350 /* SupportedShells.plist in Resources */,
 				ADE2A3FB29ED28200038D09F /* Assets.xcassets in Resources */,
+				ADD378F42E4B880B0021F699 /* AppIcon.icon in Resources */,
 				ADAC86332AFE96D5001E93DD /* InfoPlist.xcstrings in Resources */,
 				ADFBE1B42ABC8776008A8476 /* postinstall.txt in Resources */,
 				ADAC86372AFE96D5001E93DD /* Localizable.xcstrings in Resources */,
@@ -704,9 +708,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 57;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -715,9 +722,10 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -727,9 +735,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 57;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -738,9 +749,10 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -807,6 +819,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Debug;
 		};
@@ -864,6 +877,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Release;
 		};
@@ -874,11 +888,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SapMachine Manager/SapMachine_Manager.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 651;
+				CURRENT_PROJECT_VERSION = 655;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SapMachine Manager/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -890,7 +910,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -906,11 +926,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SapMachine Manager/SapMachine_Manager.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 651;
+				CURRENT_PROJECT_VERSION = 655;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SapMachine Manager/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -922,7 +948,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -937,14 +963,14 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				CURRENT_PROJECT_VERSION = 313;
+				CURRENT_PROJECT_VERSION = 315;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SMUDaemon/SMUDaemon-Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -957,14 +983,14 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				CURRENT_PROJECT_VERSION = 313;
+				CURRENT_PROJECT_VERSION = 315;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SMUDaemon/SMUDaemon-Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -153,7 +153,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bitte wählen Sie aus, für welche Art von Macs Sie das Paket erstellen möchten:"
+            "value" : "Bitte wähle aus, für welche Art von Macs Du das Paket erstellen möchtest:"
           }
         },
         "en" : {
@@ -390,7 +390,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Suche nach Updates …"
+            "value" : "Suche nach Aktualisierungen …"
           }
         },
         "en" : {
@@ -733,7 +733,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dieser Assistent unterstützt Sie dabei, ein SapMachine-Installationspaket für macOS zu erstellen. Wählen Sie einfach die Optionen, die Ihren Anforderungen entsprechen, und das Paket wird vorbereitet. Bei Erfolg wird das vorbereitete Paket an Script2Pkg zur Paketerstellung übergeben."
+            "value" : "Dieser Assistent unterstützt Dich dabei, ein SapMachine-Installationspaket für macOS zu erstellen. Wähle einfach die Optionen, die Deinen Anforderungen entsprechen, und das Paket wird vorbereitet. Bei Erfolg wird das vorbereitete Paket an Script2Pkg zur Paketerstellung übergeben."
           }
         },
         "en" : {
@@ -879,7 +879,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Updates automatisch herunterladen und installieren"
+            "value" : "Aktualisierungen automatisch herunterladen und installieren"
           }
         },
         "en" : {
@@ -933,7 +933,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ihr Paket wurde vorbereitet und an Script2Pkg zur Paketerstellung übergeben. Der Quellordner des Pakets wird im Finder angezeigt, so dass Sie ihn nach Belieben verschieben, ändern oder löschen können."
+            "value" : "Dein Paket wurde vorbereitet und an Script2Pkg zur Paketerstellung übergeben. Der Quellordner des Pakets wird im Finder angezeigt, so dass Du ihn nach Belieben verschieben, ändern oder löschen kannst."
           }
         },
         "en" : {
@@ -1457,7 +1457,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dieses Programm kann Sie benachrichtigen, wenn eine neue Hauptversion einer Long Term Support (LTS)-Version von SapMachine zur Verfügung steht. Sie können dann bequem auf diese neue LTS-Version aktualisieren. Wenn Sie nicht über neue LTS-Hauptversionen benachrichtigt werden möchten, aktivieren Sie bitte die unten stehende Option."
+            "value" : "Dieses Programm kann Dich benachrichtigen, wenn eine neue Hauptversion einer Long Term Support (LTS)-Version von SapMachine zur Verfügung steht. Du kannst dann bequem auf diese neue LTS-Version aktualisieren. Wenn Du nicht über neue LTS-Hauptversionen benachrichtigt werden möchtest, aktiviere bitte die unten stehende Option."
           }
         },
         "en" : {
@@ -1493,7 +1493,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dieser Assistent wird Sie durch die Schritte führen, die notwendig sind, um SapMachine auf Ihrem Mac zu installieren."
+            "value" : "Dieser Assistent wird Dich durch die Schritte führen, die notwendig sind, um SapMachine auf Deinem Mac zu installieren."
           }
         },
         "en" : {
@@ -1583,7 +1583,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Die Paketerstellung benötigt das SAP Open-Source-Programm Script2Pkg in der Version 1.1.0 oder höher. Script2Pkg kann kostenlos vom offiziellen SAP GitHub unter https://github.com/SAP/script-to-package-tool-for-macos heruntergeladen werden.\n\nAufgrund technischer Einschränkungen können Installationspakete, welche Vorabversionen von SapMachine enthalten, nicht beglaubigt werden. Wenn Sie ein Installationspaket mit einer Vorabversion von SapMachine erstellen möchten, stellen Sie bitte sicher, dass die Beglaubigung von Paketen in Script2Pkg deaktiviert ist, da die Paketerstellung sonst fehlschlägt."
+            "value" : "Die Paketerstellung benötigt das SAP Open-Source-Programm Script2Pkg in der Version 1.1.0 oder höher. Script2Pkg kann kostenlos vom offiziellen SAP GitHub unter https://github.com/SAP/script-to-package-tool-for-macos heruntergeladen werden.\n\nAufgrund technischer Einschränkungen können Installationspakete, welche Vorabversionen von SapMachine enthalten, nicht beglaubigt werden. Wenn Du ein Installationspaket mit einer Vorabversion von SapMachine erstellen möchtest, stelle bitte sicher, dass die Beglaubigung von Paketen in Script2Pkg deaktiviert ist, da die Paketerstellung sonst fehlschlägt."
           }
         },
         "en" : {
@@ -1691,7 +1691,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sie können entweder die von uns empfohlene Version von SapMachine installieren, oder selbst entscheiden, welche Version Sie installieren möchten. Um die Version und den Typ von SapMachine selbst zu wählen, deaktivieren Sie bitte die untenstehende Option."
+            "value" : "Du kannst entweder die von uns empfohlene Version von SapMachine installieren, oder selbst entscheiden, welche Version Du installieren möchtest. Um die Version und den Typ von SapMachine selbst zu wählen, deaktiviere bitte die untenstehende Option."
           }
         },
         "en" : {
@@ -1872,7 +1872,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Updates für Ihre installierten SapMachine-Versionen können automatisch heruntergeladen und installiert werden, sodass sie immer auf dem neuesten Stand sind. Automatische Update-Prüfungen finden regelmäßig im Hintergrund statt, und Updates werden installiert, sobald sie verfügbar sind und dieses Programm nicht ausgeführt wird. Um automatische Updates zu aktivieren, aktivieren Sie die unten stehende Option."
+            "value" : "Aktualisierungen für Deine installierten SapMachine-Versionen können automatisch heruntergeladen und installiert werden, sodass sie immer auf dem aktuellen Stand sind. Automatische Prüfungen finden regelmäßig im Hintergrund statt, und Aktualisierungen werden installiert, sobald sie verfügbar sind und dieses Programm nicht ausgeführt wird. Um automatische Aktualisierungen zu aktivieren, aktiviere die unten stehende Option."
           }
         },
         "en" : {
