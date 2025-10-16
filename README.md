@@ -8,7 +8,7 @@
 
 _SapMachine Manager_ is a handy and easy-to-use tool allowing Mac users to easily install, uninstall, manage, and automatically update one or more instances of [SapMachine](https://sapmachine.io/) on a Mac. _SapMachine_ is a version of OpenJDK maintained and supported by _SAP_. Additionally, the app supports the creation of _SapMachine_ installer packages for macOS and the definition of the default Java environment. _SapMachine Manager_ can be deployed and managed via MDM. 
 
-_SapMachine Manager_ is the standard tool within _SAP_ to install _SapMachine_ on macOS. 
+_SapMachine Manager_ is the standard tool within SAP to install _SapMachine_ on macOS. 
 
 <br/>
 
@@ -32,7 +32,7 @@ _SapMachine Manager_ is the standard tool within _SAP_ to install _SapMachine_ o
 
 # Demo
 
-⚡ Have a look at how quick and easy a new SapMachine release can be installed:
+Have a look at how quick and easy a new SapMachine release can be installed:
 
 ![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/DemoInstallGif.gif)
 
@@ -40,7 +40,7 @@ _SapMachine Manager_ is the standard tool within _SAP_ to install _SapMachine_ o
 
 # Documentation 
 
-📚 If you want to learn more about _SapMachine Manager_'s features, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
+If you want to learn more about _SapMachine Manager_'s features, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
 
 * [Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation) 
 * [Install a new SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Install-a-new-SapMachine-release)  
@@ -70,6 +70,6 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 <br/>
 
-# Licensing
+# License
 
 Copyright 2024-2025 SAP SE or an SAP affiliate company and SapMachine Manager contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/sapmachine-manager-for-macos).
