@@ -34,7 +34,7 @@ _SapMachine Manager_ is the standard tool within SAP to install _SapMachine_ on 
 
 Have a look at how quick and easy a new SapMachine release can be installed:
 
-![](https://github.com/SAP/sapmachine-manager-for-macos/blob/main/readme_images/DemoInstallGif.gif)
+https://github.com/user-attachments/assets/507afc68-de79-4a05-a523-489ca5257108
 
 <br/>
 
