@@ -42,10 +42,11 @@ https://github.com/user-attachments/assets/507afc68-de79-4a05-a523-489ca5257108
 
 To learn more about _SapMachine Manager_'s features, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
 
-* [Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation) 
-* [Install a new SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Install-a-new-SapMachine-release)  
-* [Uninstall a SapMachine release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Uninstall-a-SapMachine-release)  
-* [Create SapMachine installer packages](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Create-SapMachine-installer-packages)  
+* [Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation)
+* [Uninstallation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Uninstallation) 
+* [Install a new _SapMachine_ release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Install-a-new-SapMachine-release)  
+* [Uninstall a _SapMachine_ release](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Uninstall-a-SapMachine-release)  
+* [Create _SapMachine_ installer packages](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Create-SapMachine-installer-packages)  
 * [How to deactivate automatic updates](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-deactivate-automatic-updates)  
 * [How to turn off notifications](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-turn-off-notifications)  
 * [How to open the log window](https://github.com/SAP/sapmachine-manager-for-macos/wiki/How-to-open-the-log-window)  
