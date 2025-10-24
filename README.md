@@ -18,13 +18,11 @@ _SapMachine Manager_ is the standard tool within SAP to install _SapMachine_ on 
 
 🔓 Install and uninstall SapMachine without admin rights  
 
-✅ Automatic download and install of new SapMachine versions  
+✅ Automatic download and install of new SapMachine releases  
 
 🔔 Update notifications  
 
 📦 Create SapMachine installer packages  
-  
-🗃️ Log window  
 
 💻 For macOS 13 and newer  
 
