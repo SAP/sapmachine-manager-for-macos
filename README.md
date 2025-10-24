@@ -38,7 +38,7 @@ https://github.com/user-attachments/assets/507afc68-de79-4a05-a523-489ca5257108
 
 # Documentation 
 
-To learn more about _SapMachine Manager_'s features, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
+To learn more about _SapMachine Manager's_ features, make sure to take a look at our [wiki](https://github.com/SAP/sapmachine-manager-for-macos/wiki) or the links below:
 
 * [Installation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Installation)
 * [Uninstallation](https://github.com/SAP/sapmachine-manager-for-macos/wiki/Uninstallation) 
