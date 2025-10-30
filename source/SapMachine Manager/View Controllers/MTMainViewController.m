@@ -144,7 +144,7 @@
     [_daemonConnection connectToDaemonWithExportedObject:self
                                   andExecuteCommandBlock:^{
         
-        [[self->_daemonConnection remoteObjectProxy] availableAssetsWithReply:^(NSArray<MTSapMachineAsset *> *availableAssets) {
+        [[self->_daemonConnection remoteObjectProxy] availableAssetsWithReply:^(NSArray<MTSapMachineAsset*> *availableAssets) {
 
             dispatch_async(dispatch_get_main_queue(), ^{
 
@@ -203,40 +203,41 @@
                                 [theAlert beginSheetModalForWindow:[[self view] window]
                                                  completionHandler:^(NSModalResponse returnCode) {
                                     
-                                    [self->_userDefaults setBool:([[theAlert suppressionButton] state] == NSControlStateValueOn) ? NO : YES
-                                                          forKey:kMTDefaultsNoUpgradeDeleteKey];
+                                    dispatch_async(dispatch_get_main_queue(), ^{
                                     
-                                    if (returnCode == NSAlertFirstButtonReturn) {
+                                        [self->_userDefaults setBool:([[theAlert suppressionButton] state] == NSControlStateValueOn) ? NO : YES
+                                                              forKey:kMTDefaultsNoUpgradeDeleteKey];
                                         
-                                        // get the types of the installed lts releases. if they are all of
-                                        // type jre, we install the jre of the new version, otherwise we
-                                        // we install the jdk.
-                                        MTSapMachineJVMType type = MTSapMachineJVMTypeJDK;
-                                        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"jvmType == %ld", MTSapMachineJVMTypeJRE];
-                                        if ([[installedLTS filteredArrayUsingPredicate:predicate] count] == [installedLTS count]) {
-                                            type = MTSapMachineJVMTypeJRE;
-                                        }
-                                        
-                                        // get the asset to upgrade to
-                                        predicate = [NSPredicate predicateWithFormat:@"currentVersion.majorVersion == %ld AND jvmType == %ld", highestAvailableLTS, type];
-                                        NSArray *highestLTS = [availableLTS filteredArrayUsingPredicate:predicate];
-                                        
-                                        // if we got more than one asset back,
-                                        // there is something wrong
-                                        if ([highestLTS count] == 1) {
+                                        if (returnCode == NSAlertFirstButtonReturn) {
                                             
-                                            if ([self->_userDefaults boolForKey:kMTDefaultsNoUpgradeDeleteKey]) {
-                                                self->_assetsToDeleted = nil;
-                                            } else {
-                                                self->_assetsToDeleted = [NSArray arrayWithArray:installedLTS];
+                                            // get the types of the installed lts releases. if they are all of
+                                            // type jre, we install the jre of the new version, otherwise we
+                                            // we install the jdk.
+                                            MTSapMachineJVMType type = MTSapMachineJVMTypeJDK;
+                                            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"jvmType == %ld", MTSapMachineJVMTypeJRE];
+                                            if ([[installedLTS filteredArrayUsingPredicate:predicate] count] == [installedLTS count]) {
+                                                type = MTSapMachineJVMTypeJRE;
                                             }
                                             
-                                            dispatch_async(dispatch_get_main_queue(), ^{
+                                            // get the asset to upgrade to
+                                            predicate = [NSPredicate predicateWithFormat:@"currentVersion.majorVersion == %ld AND jvmType == %ld", highestAvailableLTS, type];
+                                            NSArray *highestLTS = [availableLTS filteredArrayUsingPredicate:predicate];
+                                            
+                                            // if we got more than one asset back,
+                                            // there is something wrong
+                                            if ([highestLTS count] == 1) {
+                                                
+                                                if ([self->_userDefaults boolForKey:kMTDefaultsNoUpgradeDeleteKey]) {
+                                                    self->_assetsToDeleted = nil;
+                                                } else {
+                                                    self->_assetsToDeleted = [NSArray arrayWithArray:installedLTS];
+                                                }
+                                                
                                                 MTSapMachineAsset *upgradeAsset = (MTSapMachineAsset*)[highestLTS firstObject];
                                                 [self installSapMachine:upgradeAsset];
-                                            });
+                                            }
                                         }
-                                    }
+                                    });
                                 }];
                             }
                         }
@@ -343,7 +344,7 @@
                 
                 [[self->_daemonConnection remoteObjectProxy] deleteAssets:assets
                                                             authorization:self->_authData
-                                                        completionHandler:^(NSArray<MTSapMachineAsset *> *deletedAssets, NSError *error) {
+                                                        completionHandler:^(NSArray<MTSapMachineAsset*> *deletedAssets, NSError *error) {
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
                         
@@ -586,7 +587,16 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"installURL == nil AND downloadURLForCurrentArchitecture != nil"];
     
     if ([[_jvmReleases filteredArrayUsingPredicate:predicate] count] > 0) {
-
+        
+        if (sender && [[sender class] isEqualTo:[MTSapMachineAsset class]]) {
+            
+            [self performSegueWithIdentifier:@"corp.sap.SapMachineManager.Install.recommended" sender:sender];
+            
+        } else {
+            
+            [self performSegueWithIdentifier:@"corp.sap.SapMachineManager.Install.main" sender:_jvmReleases];
+        }
+        
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(installSheetDidClose)
                                                      name:NSWindowDidEndSheetNotification
@@ -598,15 +608,6 @@
                                                      name:kMTNotificationNameInstallFinished
                                                    object:nil
         ];
-        
-        if (sender && [[sender class] isEqualTo:[MTSapMachineAsset class]]) {
-            
-            [self performSegueWithIdentifier:@"corp.sap.SapMachineManager.Install.recommended" sender:sender];
-            
-        } else {
-            
-            [self performSegueWithIdentifier:@"corp.sap.SapMachineManager.Install.main" sender:_jvmReleases];
-        }
         
     } else {
         
@@ -974,11 +975,13 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                [self deleteAssetsPermanently:self->_assetsToDeleted allowUserInteraction:NO completionHandler:^(NSError *error) {
-                    
-                    self->_assetsToDeleted = nil;
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
+                [self deleteAssetsPermanently:self->_assetsToDeleted
+                         allowUserInteraction:NO
+                            completionHandler:^(NSError *error) {
+
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        
+                        self->_assetsToDeleted = nil;
                         [self checkForUpdates];
                     });
                 }];
