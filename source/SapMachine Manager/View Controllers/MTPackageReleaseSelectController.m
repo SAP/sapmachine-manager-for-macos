@@ -1,6 +1,6 @@
 /*
      MTPackageReleaseSelectController.m
-     Copyright 2023-2025 SAP SE
+     Copyright 2023-2026 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -79,7 +79,7 @@
 
 - (IBAction)selectJVMType:(id)sender
 {
-    
+    // just to group the radio buttons
 }
 
 - (IBAction)selectRelease:(id)sender
@@ -87,10 +87,18 @@
     [self setRadioButtonsForRelease:[[_releasesArrayController arrangedObjects] objectAtIndex:[_releaseVersionButton indexOfSelectedItem]]];
 }
 
+- (BOOL)enableNextButton
+{
+    BOOL enable = ([[_releasesArrayController arrangedObjects] count] > 0 && (_enableJDKButton || _enableJREButton));
+    return enable;
+}
+
 - (void)setRadioButtonsForRelease:(MTSapMachineAsset*)asset
 {
+    [self willChangeValueForKey:@"enableNextButton"];
     self.enableJREButton = [self enableRelease:asset ofType:MTSapMachineJVMTypeJRE shouldBeInstalled:_isInstall];
     self.enableJDKButton = [self enableRelease:asset ofType:MTSapMachineJVMTypeJDK shouldBeInstalled:_isInstall];
+    [self didChangeValueForKey:@"enableNextButton"];
     
     if (_enableJREButton) {
         

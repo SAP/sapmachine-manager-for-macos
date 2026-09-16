@@ -1,6 +1,6 @@
 /*
      MTMainViewController.m
-     Copyright 2023-2025 SAP SE
+     Copyright 2023-2026 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -48,7 +48,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+            
     _userDefaults = [NSUserDefaults standardUserDefaults];
             
     _daemonConnection = [[MTDaemonConnection alloc] init];
@@ -128,7 +128,7 @@
     }
 }
 
-#pragma mark SMUDaemon methods
+#pragma mark - SMUDaemon methods
 
 - (void)checkForUpdates
 {
@@ -415,7 +415,7 @@
     }];
 }
 
-#pragma mark MTSapMachineAssetUpdateDelegate
+#pragma mark - MTSapMachineAssetUpdateDelegate
 
 - (void)updateStartedForAsset:(MTSapMachineAsset*)asset
 {
@@ -506,7 +506,7 @@
     }
 }
 
-#pragma mark MTDaemonConnectionDelegate
+#pragma mark - MTDaemonConnectionDelegate
 
 - (void)connection:(NSXPCConnection *)connection didFailWithError:(NSError *)error
 {
@@ -536,7 +536,7 @@
     });
 }
 
-#pragma mark NSMenuItemValidation
+#pragma mark - NSMenuItemValidation
 
 - (BOOL)validateMenuItem:(NSMenuItem *)item
 {
@@ -565,7 +565,7 @@
     return enableItem;
 }
 
-#pragma mark IBActions
+#pragma mark - IBActions
 
 - (IBAction)performButtonAction:(id)sender
 {
@@ -827,7 +827,7 @@
     }];
 }
 
-#pragma mark other methods
+#pragma mark - other methods
 
 - (MTSapMachineAsset*)matchingAssetForAsset:(MTSapMachineAsset*)asset
 {

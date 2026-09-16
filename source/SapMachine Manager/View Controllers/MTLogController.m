@@ -1,6 +1,6 @@
 /*
      MTLogController.m
-     Copyright 2023-2025 SAP SE
+     Copyright 2023-2026 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -79,7 +79,7 @@
     }];
 }
 
-#pragma mark IBActions
+#pragma mark - IBActions
 
 - (IBAction)searchLogMessages:(id)sender
 {
@@ -240,7 +240,7 @@
     }];
 }
 
-#pragma mark NSTableViewDelegate
+#pragma mark - NSTableViewDelegate
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification
 {
@@ -263,7 +263,7 @@
     }
 }
 
-#pragma mark NSToolbarItemValidation
+#pragma mark - NSToolbarItemValidation
 
 - (BOOL)enableToolbarItem:(NSToolbarItem *)item
 {

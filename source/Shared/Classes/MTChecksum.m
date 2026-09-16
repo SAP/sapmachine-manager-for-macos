@@ -1,6 +1,6 @@
 /*
      MTChecksum.m
-     Copyright 2023-2025 SAP SE
+     Copyright 2023-2026 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -23,38 +23,41 @@
 {
     NSMutableString *checksumString = [[NSMutableString alloc] init];
     
-    NSFileHandle *handle = [NSFileHandle fileHandleForReadingAtPath:path];
-    
-    if (handle) {
+    if (path) {
         
-        BOOL done = NO;
+        NSFileHandle *handle = [NSFileHandle fileHandleForReadingAtPath:path];
         
-        CC_SHA256_CTX sha;
-        CC_SHA256_Init(&sha);
-
-        while (!done) {
+        if (handle) {
             
-            NSError *error = nil;
-            NSData *fileData = [handle readDataUpToLength:4096 error:&error];
+            BOOL done = NO;
             
-            if (error) {
+            CC_SHA256_CTX sha;
+            CC_SHA256_Init(&sha);
+            
+            while (!done) {
                 
-                break;
+                NSError *error = nil;
+                NSData *fileData = [handle readDataUpToLength:4096 error:&error];
                 
-            } else {
-                
-                CC_SHA256_Update(&sha, [fileData bytes], (unsigned int)[fileData length]);
-                if ([fileData length] == 0 ) { done = YES; }
+                if (error) {
+                    
+                    break;
+                    
+                } else {
+                    
+                    CC_SHA256_Update(&sha, [fileData bytes], (unsigned int)[fileData length]);
+                    if ([fileData length] == 0 ) { done = YES; }
+                }
             }
-        }
-        
-        if (done) {
             
-            unsigned char digest[CC_SHA256_DIGEST_LENGTH];
-            CC_SHA256_Final(digest, &sha);
-            
-            for (int i = 0; i < sizeof(digest); ++i) {
-                [checksumString appendFormat:@"%02x", digest[i]];
+            if (done) {
+                
+                unsigned char digest[CC_SHA256_DIGEST_LENGTH];
+                CC_SHA256_Final(digest, &sha);
+                
+                for (int i = 0; i < sizeof(digest); ++i) {
+                    [checksumString appendFormat:@"%02x", digest[i]];
+                }
             }
         }
     }

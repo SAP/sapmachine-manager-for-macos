@@ -35,6 +35,8 @@
 		AD70CC612A4ED37B00C48A93 /* SapMachineXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD70CC602A4ED37B00C48A93 /* SapMachineXPC.m */; };
 		AD70CC642A4ED37B00C48A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD70CC632A4ED37B00C48A93 /* main.m */; };
 		AD70CC692A4ED37B00C48A93 /* SapMachineXPC.xpc in Embed XPC Service */ = {isa = PBXBuildFile; fileRef = AD70CC5D2A4ED37B00C48A93 /* SapMachineXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AD865E1D3025D3C800B7C424 /* AppIcon-Beta.icon in Resources */ = {isa = PBXBuildFile; fileRef = AD865E1C3025D3C800B7C424 /* AppIcon-Beta.icon */; };
+		AD865E263025D57A00B7C424 /* Beta-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AD865E253025D57A00B7C424 /* Beta-InfoPlist.xcstrings */; };
 		AD8C00132A815EEF00C9B0A1 /* MTStoryboardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C000F2A815EEF00C9B0A1 /* MTStoryboardAnimator.m */; };
 		AD8C00142A815EEF00C9B0A1 /* MTStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8C00122A815EEF00C9B0A1 /* MTStoryboardSegue.m */; };
 		AD92189F2A5463CB001F3963 /* MTReleaseNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92189E2A5463CB001F3963 /* MTReleaseNameTransformer.m */; };
@@ -50,7 +52,7 @@
 		ADA87FAC2A56B3EC00DEAFBB /* MTChecksum.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC76FB529F8F5F700BB27DA /* MTChecksum.m */; };
 		ADABBA5F2A554AFD005FD105 /* MTReleaseStatusTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADABBA5E2A554AFD005FD105 /* MTReleaseStatusTransformer.m */; };
 		ADABBA622A554F55005FD105 /* MTReleaseImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADABBA612A554F55005FD105 /* MTReleaseImageTransformer.m */; };
-		ADAC86332AFE96D5001E93DD /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ADAC86322AFE96D5001E93DD /* InfoPlist.xcstrings */; };
+		ADAC86332AFE96D5001E93DD /* Release-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ADAC86322AFE96D5001E93DD /* Release-InfoPlist.xcstrings */; };
 		ADAC86352AFE96D5001E93DD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ADAC86342AFE96D5001E93DD /* Localizable.xcstrings */; };
 		ADAC86372AFE96D5001E93DD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ADAC86362AFE96D5001E93DD /* Localizable.xcstrings */; };
 		ADB21B872A768F1600E45C2D /* MTSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB21B862A768F1600E45C2D /* MTSystemInfo.m */; };
@@ -71,6 +73,7 @@
 		ADE2A3FE29ED28200038D09F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE2A3FC29ED28200038D09F /* Main.storyboard */; };
 		ADE2A40029ED28200038D09F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A3FF29ED28200038D09F /* main.m */; };
 		ADE2A43F29ED87CF0038D09F /* MTSapMachineAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE2A43D29ED49E10038D09F /* MTSapMachineAsset.m */; };
+		ADEDA2933010CC290072A6C8 /* MTUpdateChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDA2923010CC290072A6C8 /* MTUpdateChecker.m */; };
 		ADF0AA402A52B5AD006DB834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF0AA3F2A52B5AD006DB834 /* main.m */; };
 		ADFBE1B42ABC8776008A8476 /* postinstall.txt in Resources */ = {isa = PBXBuildFile; fileRef = ADFBE1B32ABC8776008A8476 /* postinstall.txt */; };
 		ADFD3C5F2A49D79E001BFE61 /* MTSapMachineVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFD3C5D2A49D79D001BFE61 /* MTSapMachineVersion.m */; };
@@ -184,6 +187,10 @@
 		AD70CC622A4ED37B00C48A93 /* SapMachineXPCProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SapMachineXPCProtocol.h; sourceTree = "<group>"; };
 		AD70CC632A4ED37B00C48A93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD70CC652A4ED37B00C48A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD865E1C3025D3C800B7C424 /* AppIcon-Beta.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "AppIcon-Beta.icon"; sourceTree = "<group>"; };
+		AD865E223025D54F00B7C424 /* Release-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Release-Info.plist"; sourceTree = "<group>"; };
+		AD865E243025D57A00B7C424 /* Beta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Beta-Info.plist"; sourceTree = "<group>"; };
+		AD865E253025D57A00B7C424 /* Beta-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Beta-InfoPlist.xcstrings"; sourceTree = "<group>"; };
 		AD8C000F2A815EEF00C9B0A1 /* MTStoryboardAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStoryboardAnimator.m; sourceTree = "<group>"; };
 		AD8C00102A815EEF00C9B0A1 /* MTStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStoryboardSegue.h; sourceTree = "<group>"; };
 		AD8C00112A815EEF00C9B0A1 /* MTStoryboardAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStoryboardAnimator.h; sourceTree = "<group>"; };
@@ -206,7 +213,7 @@
 		ADABBA5E2A554AFD005FD105 /* MTReleaseStatusTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTReleaseStatusTransformer.m; sourceTree = "<group>"; };
 		ADABBA602A554F55005FD105 /* MTReleaseImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTReleaseImageTransformer.h; sourceTree = "<group>"; };
 		ADABBA612A554F55005FD105 /* MTReleaseImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTReleaseImageTransformer.m; sourceTree = "<group>"; };
-		ADAC86322AFE96D5001E93DD /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		ADAC86322AFE96D5001E93DD /* Release-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Release-InfoPlist.xcstrings"; sourceTree = "<group>"; };
 		ADAC86342AFE96D5001E93DD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		ADAC86362AFE96D5001E93DD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		ADAC86382AFE96D5001E93DD /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/Main.xcstrings; sourceTree = "<group>"; };
@@ -241,6 +248,8 @@
 		ADE2A43729ED2CE10038D09F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		ADE2A43C29ED49E10038D09F /* MTSapMachineAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSapMachineAsset.h; sourceTree = "<group>"; };
 		ADE2A43D29ED49E10038D09F /* MTSapMachineAsset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSapMachineAsset.m; sourceTree = "<group>"; };
+		ADEDA2913010CC290072A6C8 /* MTUpdateChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTUpdateChecker.h; sourceTree = "<group>"; };
+		ADEDA2923010CC290072A6C8 /* MTUpdateChecker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTUpdateChecker.m; sourceTree = "<group>"; };
 		ADF0AA3D2A52B5AD006DB834 /* SMUDaemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SMUDaemon; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF0AA3F2A52B5AD006DB834 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADFBE1B32ABC8776008A8476 /* postinstall.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = postinstall.txt; sourceTree = "<group>"; };
@@ -362,6 +371,8 @@
 				AD9E88712AA784BC007A0D55 /* MTTableView.m */,
 				AD5FA6722A7B9D58006BF8BD /* MTToolbarItem.h */,
 				AD5FA6712A7B9D58006BF8BD /* MTToolbarItem.m */,
+				ADEDA2913010CC290072A6C8 /* MTUpdateChecker.h */,
+				ADEDA2923010CC290072A6C8 /* MTUpdateChecker.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -404,23 +415,27 @@
 		ADE2A3F329ED281F0038D09F /* SapMachine Manager */ = {
 			isa = PBXGroup;
 			children = (
-				AD5FA6742A7B9ED2006BF8BD /* Classes */,
-				AD3C1C1A2A4C7E850018F8D0 /* Value Transformers */,
-				AD3863872A741FE500618546 /* View Controllers */,
-				ADAC86322AFE96D5001E93DD /* InfoPlist.xcstrings */,
 				ADE2A3F429ED281F0038D09F /* AppDelegate.h */,
 				ADE2A3F529ED281F0038D09F /* AppDelegate.m */,
-				AD9A51612A52CE7F00601849 /* corp.sap.SMUDaemon.plist */,
-				AD204D592A77E0E700D0752A /* SapMachine Manager.mobileconfig */,
-				AD08FB5F2AFE1CD500BE3350 /* SupportedShells.plist */,
-				ADFBE1B32ABC8776008A8476 /* postinstall.txt */,
 				ADD378F32E4B880B0021F699 /* AppIcon.icon */,
+				AD865E1C3025D3C800B7C424 /* AppIcon-Beta.icon */,
 				ADE2A3FA29ED28200038D09F /* Assets.xcassets */,
+				AD865E243025D57A00B7C424 /* Beta-Info.plist */,
+				AD865E253025D57A00B7C424 /* Beta-InfoPlist.xcstrings */,
+				AD5FA6742A7B9ED2006BF8BD /* Classes */,
+				AD9A51612A52CE7F00601849 /* corp.sap.SMUDaemon.plist */,
 				AD3F68F02AD6CD49007C1E5B /* Credits.rtf */,
-				ADE2A3FC29ED28200038D09F /* Main.storyboard */,
 				ADAC86362AFE96D5001E93DD /* Localizable.xcstrings */,
 				ADE2A3FF29ED28200038D09F /* main.m */,
+				ADE2A3FC29ED28200038D09F /* Main.storyboard */,
+				ADFBE1B32ABC8776008A8476 /* postinstall.txt */,
+				AD865E223025D54F00B7C424 /* Release-Info.plist */,
+				ADAC86322AFE96D5001E93DD /* Release-InfoPlist.xcstrings */,
+				AD204D592A77E0E700D0752A /* SapMachine Manager.mobileconfig */,
 				ADE2A40129ED28200038D09F /* SapMachine_Manager.entitlements */,
+				AD08FB5F2AFE1CD500BE3350 /* SupportedShells.plist */,
+				AD3C1C1A2A4C7E850018F8D0 /* Value Transformers */,
+				AD3863872A741FE500618546 /* View Controllers */,
 			);
 			path = "SapMachine Manager";
 			sourceTree = "<group>";
@@ -530,7 +545,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					AD70CC5C2A4ED37B00C48A93 = {
 						CreatedOnToolsVersion = 15.0;
@@ -579,13 +594,15 @@
 			files = (
 				AD08FB602AFE1CD600BE3350 /* SupportedShells.plist in Resources */,
 				ADE2A3FB29ED28200038D09F /* Assets.xcassets in Resources */,
+				AD865E263025D57A00B7C424 /* Beta-InfoPlist.xcstrings in Resources */,
 				ADD378F42E4B880B0021F699 /* AppIcon.icon in Resources */,
-				ADAC86332AFE96D5001E93DD /* InfoPlist.xcstrings in Resources */,
+				ADAC86332AFE96D5001E93DD /* Release-InfoPlist.xcstrings in Resources */,
 				ADFBE1B42ABC8776008A8476 /* postinstall.txt in Resources */,
 				ADAC86372AFE96D5001E93DD /* Localizable.xcstrings in Resources */,
 				ADE2A3FE29ED28200038D09F /* Main.storyboard in Resources */,
 				AD3F68EE2AD6CD49007C1E5B /* Credits.rtf in Resources */,
 				AD204D5A2A77E0E700D0752A /* SapMachine Manager.mobileconfig in Resources */,
+				AD865E1D3025D3C800B7C424 /* AppIcon-Beta.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +643,7 @@
 				ADE2A43F29ED87CF0038D09F /* MTSapMachineAsset.m in Sources */,
 				ADCF37172A7CFA0B00CD3886 /* MTDaemonConnection.m in Sources */,
 				AD5509B72A7D4D1800C44CE8 /* MTMainWindowController.m in Sources */,
+				ADEDA2933010CC290072A6C8 /* MTUpdateChecker.m in Sources */,
 				AD0285F12A4DBDC600DB339E /* MTSettingsTabViewController.m in Sources */,
 				AD1555B92A53E0E30024B0C2 /* MTSapMachine.m in Sources */,
 				AD0C2E532B079444000A5E12 /* MTDefaultEnvironmentImageTransformer.m in Sources */,
@@ -711,7 +729,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -719,10 +737,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SapMachineXPC/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SapMachineXPC;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2026 SAP SE. All rights reserved.";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -738,7 +756,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -746,10 +764,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SapMachineXPC/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SapMachineXPC;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2026 SAP SE. All rights reserved.";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -757,6 +775,154 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
+		};
+		AD865E1E3025D40C00B7C424 /* Release Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+			};
+			name = "Release Beta";
+		};
+		AD865E1F3025D40C00B7C424 /* Release Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Beta";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SapMachine Manager/SapMachine_Manager.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 675;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"Release-InfoPlist.xcstrings",
+					AppIcon.icon,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SapMachine Manager/Beta-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SapMachine Manager";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2026 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = "Release Beta";
+		};
+		AD865E203025D40C00B7C424 /* Release Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 63;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/SapMachineXPC/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SapMachineXPC;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2026 SAP SE. All rights reserved.";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineXPC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = "Release Beta";
+		};
+		AD865E213025D40C00B7C424 /* Release Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				CURRENT_PROJECT_VERSION = 321;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/SMUDaemon/SMUDaemon-Info.plist";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = "Release Beta";
 		};
 		ADE2A40229ED28200038D09F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -891,7 +1057,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 657;
+				CURRENT_PROJECT_VERSION = 675;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
@@ -899,10 +1065,15 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readwrite;
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"Beta-InfoPlist.xcstrings",
+					"AppIcon-Beta.icon",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SapMachine Manager/Info.plist";
+				INFOPLIST_FILE = "SapMachine Manager/Release-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SapMachine Manager";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2026 SAP SE. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -910,7 +1081,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -929,7 +1100,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 657;
+				CURRENT_PROJECT_VERSION = 675;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7R5ZEU67FQ;
@@ -937,10 +1108,15 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readwrite;
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"Beta-InfoPlist.xcstrings",
+					"AppIcon-Beta.icon",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SapMachine Manager/Info.plist";
+				INFOPLIST_FILE = "SapMachine Manager/Release-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SapMachine Manager";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2025 SAP SE. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023-2026 SAP SE. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -948,7 +1124,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SapMachineManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -963,14 +1139,14 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				CURRENT_PROJECT_VERSION = 317;
+				CURRENT_PROJECT_VERSION = 321;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SMUDaemon/SMUDaemon-Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -983,14 +1159,14 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				CURRENT_PROJECT_VERSION = 317;
+				CURRENT_PROJECT_VERSION = 321;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SMUDaemon/SMUDaemon-Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.SMUDaemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1005,6 +1181,7 @@
 			buildConfigurations = (
 				AD70CC6B2A4ED37C00C48A93 /* Debug */,
 				AD70CC6C2A4ED37C00C48A93 /* Release */,
+				AD865E203025D40C00B7C424 /* Release Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1014,6 +1191,7 @@
 			buildConfigurations = (
 				ADE2A40229ED28200038D09F /* Debug */,
 				ADE2A40329ED28200038D09F /* Release */,
+				AD865E1E3025D40C00B7C424 /* Release Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1023,6 +1201,7 @@
 			buildConfigurations = (
 				ADE2A40529ED28200038D09F /* Debug */,
 				ADE2A40629ED28200038D09F /* Release */,
+				AD865E1F3025D40C00B7C424 /* Release Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1032,6 +1211,7 @@
 			buildConfigurations = (
 				ADF0AA412A52B5AD006DB834 /* Debug */,
 				ADF0AA422A52B5AD006DB834 /* Release */,
+				AD865E213025D40C00B7C424 /* Release Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,6 +1,6 @@
 /*
      MTInstallController.m
-     Copyright 2023-2025 SAP SE
+     Copyright 2023-2026 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -117,7 +117,7 @@
                        waitUntilFinished:NO];
 }
 
-#pragma mark MTSapMachineAssetUpdateDelegate
+#pragma mark - MTSapMachineAssetUpdateDelegate
 
 - (void)updateStartedForAsset:(MTSapMachineAsset*)asset
 {

@@ -20,6 +20,24 @@
       },
       "shouldTranslate" : false
     },
+    "2Cj-wb-5Vv.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Install\"; ObjectID = \"2Cj-wb-5Vv\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Install"
+          }
+        }
+      }
+    },
     "2Rg-cQ-1p9.headerCell.title" : {
       "comment" : "Class = \"NSTableColumn\"; headerCell.title = \"Type\"; ObjectID = \"2Rg-cQ-1p9\";",
       "extractionState" : "extracted_with_value",
@@ -1464,6 +1482,24 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "This application can notify you when a new major release of a Long Term Support (LTS) version of SapMachine is available. You can then easily upgrade to this new LTS release. If you don't want to be notified about new major LTS releases, please enable the option below."
+          }
+        }
+      }
+    },
+    "OkR-4t-x8T.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Check for Updates\"; ObjectID = \"OkR-4t-x8T\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach Updates suchen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Check for Updates"
           }
         }
       }

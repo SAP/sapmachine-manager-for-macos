@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="24118.1" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="25094" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="24118.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="25094"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,10 +24,16 @@
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                        <menuItem title="Check for Updates" secondaryImage="arrow.3.trianglepath" catalog="system" tag="9000" hidden="YES" id="OkR-4t-x8T">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="showSettingsWindow:" target="Ady-hI-5gd" id="MXo-cL-8Di"/>
+                                                <action selector="checkForUpdates:" target="Voe-Tx-rLC" id="qnt-rI-F0W"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" secondaryImage="gearshape" catalog="system" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <action selector="showSettingsWindow:" target="Voe-Tx-rLC" id="cYu-Gw-zli"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
@@ -66,12 +72,12 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="KmT-rW-98g">
                                     <items>
-                                        <menuItem title="Install SapMachine…" tag="1000" keyEquivalent="i" id="eGF-gK-nPT" userLabel="Install SapMachine…">
+                                        <menuItem title="Install SapMachine…" secondaryImage="square.and.arrow.down" catalog="system" tag="1000" keyEquivalent="i" id="eGF-gK-nPT" userLabel="Install SapMachine…">
                                             <connections>
                                                 <action selector="installSapMachine:" target="Ady-hI-5gd" id="jyU-ui-w0p"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Delete Selected SapMachine" tag="1500" id="9x9-cM-4tY">
+                                        <menuItem title="Delete Selected SapMachine" secondaryImage="trash" catalog="system" tag="1500" id="9x9-cM-4tY">
                                             <string key="keyEquivalent" base64-UTF8="YES">
 CA
 </string>
@@ -80,14 +86,14 @@ CA
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="tvj-un-Ig4"/>
-                                        <menuItem title="Reset Default Environment" tag="1800" id="xrS-zq-sSd">
+                                        <menuItem title="Reset Default Environment" secondaryImage="arrow.counterclockwise" catalog="system" tag="1800" id="xrS-zq-sSd">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="setJavaHome:" target="Ady-hI-5gd" id="yRs-Y0-gVw"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="51h-gP-QHX"/>
-                                        <menuItem title="Build SapMachine Installer Package…" tag="2000" keyEquivalent="b" id="GjT-nM-E08">
+                                        <menuItem title="Build SapMachine Installer Package…" secondaryImage="shippingbox" catalog="system" tag="2000" keyEquivalent="b" id="GjT-nM-E08">
                                             <connections>
                                                 <action selector="buildInstallerPackage:" target="Ady-hI-5gd" id="bjq-kl-eNI"/>
                                             </connections>
@@ -166,9 +172,9 @@ CA
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
-                                        <menuItem title="Show Log" keyEquivalent="l" id="sNp-sm-oMJ">
+                                        <menuItem title="Show Log" secondaryImage="text.document" catalog="system" keyEquivalent="l" id="sNp-sm-oMJ">
                                             <connections>
-                                                <action selector="showLogWindow:" target="Ady-hI-5gd" id="7sS-Xh-hvd"/>
+                                                <action selector="showLogWindow:" target="Voe-Tx-rLC" id="Nyo-ld-EoM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="sM4-2p-VSm"/>
@@ -185,16 +191,16 @@ CA
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="SapMachine Manager on GitHub" tag="1000" id="Aft-wB-7bF">
+                                        <menuItem title="SapMachine Manager on GitHub" secondaryImage="globe" catalog="system" tag="1000" id="Aft-wB-7bF">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="openWebsite:" target="Ady-hI-5gd" id="CBZ-2P-2BF"/>
+                                                <action selector="openWebsite:" target="Voe-Tx-rLC" id="Ib7-IW-xe2"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="SapMachine Website" tag="2000" id="V6b-kE-4cb">
+                                        <menuItem title="SapMachine Website" secondaryImage="globe" catalog="system" tag="2000" id="V6b-kE-4cb">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="openWebsite:" target="Ady-hI-5gd" id="gCg-C5-aNT"/>
+                                                <action selector="openWebsite:" target="Voe-Tx-rLC" id="ySZ-tW-ANu"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -210,13 +216,13 @@ CA
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="74" y="-101"/>
         </scene>
         <!--Main Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController storyboardIdentifier="corp.sap.SapMachineManager.MainController" id="B8D-0N-5wS" userLabel="Main Window Controller" customClass="MTMainWindowController" sceneMemberID="viewController">
-                    <window key="window" title="SapMachine Manager" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="MainWindow" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="SapMachine Manager" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="MainWindow" animationBehavior="default" tabbingMode="disallowed" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="261"/>
@@ -237,7 +243,7 @@ CA
         <scene sceneID="g1a-fp-rTb">
             <objects>
                 <windowController storyboardIdentifier="corp.sap.SapMachineManager.SettingsController" id="tFw-Tj-cC2" userLabel="Settings Window Controller" sceneMemberID="viewController">
-                    <window key="window" title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="SettingsWindow" animationBehavior="default" id="ITm-a6-dFB">
+                    <window key="window" title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="SettingsWindow" animationBehavior="default" tabbingMode="disallowed" id="ITm-a6-dFB">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="425" y="462" width="480" height="208"/>
@@ -262,7 +268,7 @@ CA
         <scene sceneID="aeG-VC-BHn">
             <objects>
                 <windowController storyboardIdentifier="corp.sap.SapMachineManager.LogController" id="7vq-Fv-tsU" userLabel="Log Window Controller" sceneMemberID="viewController">
-                    <window key="window" title="SapMachine Manager Log" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="LogWindow" animationBehavior="default" toolbarStyle="unified" id="aZl-r6-7nr">
+                    <window key="window" title="SapMachine Manager Log" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="LogWindow" animationBehavior="default" tabbingMode="disallowed" toolbarStyle="unified" id="aZl-r6-7nr">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="211" y="267" width="480" height="270"/>
@@ -504,7 +510,7 @@ CA
                                                                         <binding destination="frW-YZ-ae6" name="hidden" keyPath="objectValue.isUpdating" id="wVk-o3-eDy"/>
                                                                     </connections>
                                                                 </imageView>
-                                                                <progressIndicator maxValue="100" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="TgM-4o-vJb">
+                                                                <progressIndicator wantsLayer="YES" maxValue="100" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="TgM-4o-vJb">
                                                                     <rect key="frame" x="392" y="16" width="24" height="24"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="24" id="RKR-Nw-uhu"/>
@@ -710,12 +716,42 @@ DQ
                                     </binding>
                                 </connections>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uV3-1D-JPa">
+                                <rect key="frame" x="215" y="20" width="100" height="24"/>
+                                <buttonCell key="cell" type="push" title="Install" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2Cj-wb-5Vv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="installSapMachine:" target="rPt-NT-nkU" id="0b5-Xh-oo4"/>
+                                    </connections>
+                                </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ntz-hx-Pkl"/>
+                                </constraints>
+                                <connections>
+                                    <binding destination="XfG-lQ-9wD" name="enabled2" keyPath="installInProgress" previousBinding="XWR-hT-6Db" id="Ju4-d0-1ZI">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="XfG-lQ-9wD" name="enabled" keyPath="updateCheckInProgress" id="XWR-hT-6Db">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="KSq-HJ-o4x" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qWW-23-bM4" secondAttribute="trailing" constant="20" id="AQ8-ij-KxH"/>
+                            <constraint firstItem="uV3-1D-JPa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qWW-23-bM4" secondAttribute="trailing" constant="20" id="9BO-GJ-RZ0"/>
                             <constraint firstItem="3Pa-I8-rfL" firstAttribute="centerX" secondItem="zWP-VU-VOl" secondAttribute="centerX" id="Chh-Kx-qZK"/>
                             <constraint firstAttribute="trailing" secondItem="zWP-VU-VOl" secondAttribute="trailing" constant="20" id="HgE-g9-4ni"/>
                             <constraint firstItem="zWP-VU-VOl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="TKD-g6-7H5"/>
+                            <constraint firstItem="KSq-HJ-o4x" firstAttribute="leading" secondItem="uV3-1D-JPa" secondAttribute="trailing" constant="10" id="ULX-hY-2eu"/>
                             <constraint firstItem="KSq-HJ-o4x" firstAttribute="top" secondItem="zWP-VU-VOl" secondAttribute="bottom" constant="10" id="WPt-JG-J0O"/>
                             <constraint firstAttribute="bottom" secondItem="KSq-HJ-o4x" secondAttribute="bottom" constant="20" id="YSq-BA-ZgS"/>
                             <constraint firstItem="zWP-VU-VOl" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="cL3-yu-8S3"/>
@@ -723,6 +759,7 @@ DQ
                             <constraint firstAttribute="trailing" secondItem="KSq-HJ-o4x" secondAttribute="trailing" constant="20" id="dkl-bE-lrf"/>
                             <constraint firstItem="qWW-23-bM4" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="ghI-Z1-FYt"/>
                             <constraint firstItem="3Pa-I8-rfL" firstAttribute="centerY" secondItem="zWP-VU-VOl" secondAttribute="centerY" id="qX0-HC-ghc"/>
+                            <constraint firstItem="uV3-1D-JPa" firstAttribute="firstBaseline" secondItem="KSq-HJ-o4x" secondAttribute="firstBaseline" id="ubs-nU-4xz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1040,7 +1077,7 @@ Gw
                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                         </textField>
-                                                        <progressIndicator maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Wck-mm-iYq">
+                                                        <progressIndicator wantsLayer="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Wck-mm-iYq">
                                                             <rect key="frame" x="0.0" y="21" width="400" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="400" id="rKS-Ik-I1Z"/>
@@ -1359,7 +1396,14 @@ DQ
                                 </buttonCell>
                                 <connections>
                                     <action selector="goToNextStep:" target="4cP-Jt-kQz" id="yUv-bC-mtc"/>
-                                    <binding destination="W7i-Nz-O69" name="enabled" keyPath="arrangedObjects.@count" id="yfg-wZ-q5S"/>
+                                    <binding destination="4cP-Jt-kQz" name="enabled" keyPath="enableNextButton" id="vlS-US-4xT">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                        </dictionary>
+                                    </binding>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H7S-xT-e7p">
@@ -1408,7 +1452,7 @@ Gw
                                                             </connections>
                                                         </popUpButton>
                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wl2-9t-OVt">
-                                                            <rect key="frame" x="-2" y="155" width="56" height="16"/>
+                                                            <rect key="frame" x="-2" y="154" width="56" height="16"/>
                                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Release:" id="Nsu-rU-9DR">
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1830,7 +1874,7 @@ Gw
                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                         </textField>
-                                                        <progressIndicator maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="tTH-Dy-Tlp">
+                                                        <progressIndicator wantsLayer="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="tTH-Dy-Tlp">
                                                             <rect key="frame" x="0.0" y="21" width="400" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="400" id="6Y6-az-i3O"/>
@@ -2073,13 +2117,13 @@ Gw
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMn-xv-Gfy">
-                                <rect key="frame" x="0.0" y="0.0" width="882" height="202"/>
+                                <rect key="frame" x="0.0" y="0.0" width="912" height="202"/>
                                 <clipView key="contentView" ambiguous="YES" id="Zq3-MH-j1p">
-                                    <rect key="frame" x="1" y="1" width="880" height="200"/>
+                                    <rect key="frame" x="1" y="1" width="910" height="200"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="plain" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveName="LogViewer" rowHeight="24" usesAutomaticRowHeights="YES" headerView="vaH-hA-L5b" viewBased="YES" id="aCA-iR-hiX">
-                                            <rect key="frame" x="0.0" y="0.0" width="880" height="172"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="910" height="172"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="16" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -2225,7 +2269,7 @@ Gw
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="396" minWidth="150" maxWidth="10000" id="drV-nY-sE5">
+                                                <tableColumn width="426" minWidth="150" maxWidth="10000" id="drV-nY-sE5">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Message">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2239,11 +2283,11 @@ Gw
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="Jo7-Uc-qnY">
-                                                            <rect key="frame" x="476" y="0.0" width="396" height="24"/>
+                                                            <rect key="frame" x="476" y="0.0" width="426" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField focusRingType="none" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="2Gv-xH-Bac">
-                                                                    <rect key="frame" x="0.0" y="3" width="396" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="3" width="426" height="18"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="18" id="VJb-U4-5X1"/>
                                                                     </constraints>
@@ -2295,12 +2339,12 @@ Gw
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" wantsLayer="YES" id="vaH-hA-L5b">
-                                    <rect key="frame" x="0.0" y="0.0" width="880" height="28"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="910" height="28"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="CVr-Hg-adB">
-                                <rect key="frame" x="390" y="44" width="102" height="58"/>
+                                <rect key="frame" x="405" y="44" width="102" height="58"/>
                                 <subviews>
                                     <progressIndicator verticalHuggingPriority="1000" maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="m1C-wR-Jcs">
                                         <rect key="frame" x="35" y="26" width="32" height="32"/>
@@ -2416,18 +2460,24 @@ Gw
         <segue reference="Blj-7x-Y8f"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.3.trianglepath" catalog="system" width="17" height="16"/>
         <image name="arrow.clockwise" catalog="system" width="14" height="16"/>
         <image name="arrow.clockwise.circle.fill" catalog="system" width="15" height="15"/>
+        <image name="arrow.counterclockwise" catalog="system" width="14" height="16"/>
         <image name="checkmark.circle" catalog="system" width="20" height="20"/>
         <image name="exclamationmark.triangle" catalog="system" width="21" height="19"/>
         <image name="gearshape" catalog="system" width="16" height="16"/>
+        <image name="globe" catalog="system" width="15" height="15"/>
         <image name="house" catalog="system" width="24" height="21"/>
         <image name="info.circle" catalog="system" width="15" height="15"/>
         <image name="info.circle.fill" catalog="system" width="15" height="15"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="15" height="15"/>
         <image name="line.3.horizontal.decrease.circle.fill" catalog="system" width="15" height="15"/>
+        <image name="shippingbox" catalog="system" width="16" height="17"/>
         <image name="square.and.arrow.down" catalog="system" width="15" height="17"/>
         <image name="square.and.arrow.down.fill" catalog="system" width="15" height="16"/>
+        <image name="text.document" catalog="system" width="14" height="16"/>
+        <image name="trash" catalog="system" width="15" height="17"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.5607843137254902" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

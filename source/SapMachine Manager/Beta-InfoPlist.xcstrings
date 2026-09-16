@@ -2,55 +2,53 @@
   "sourceLanguage" : "en",
   "strings" : {
     "CFBundleDisplayName" : {
-      "comment" : "the localized app name",
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SapMachine Manager"
+            "value" : "SapMachine Manager Beta"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SapMachine Manager"
+            "value" : "SapMachine Manager Beta"
           }
         }
       }
     },
     "CFBundleName" : {
-      "comment" : "Bundle name",
-      "extractionState" : "extracted_with_value",
+      "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SapMachine Manager"
+            "value" : "SapMachine Manager Beta"
           }
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "SapMachine Manager"
+            "state" : "translated",
+            "value" : "SapMachine Manager Beta"
           }
         }
       }
     },
     "NSHumanReadableCopyright" : {
       "comment" : "the copyright string (for the application's info window in Finder)",
-      "extractionState" : "extracted_with_value",
+      "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Copyright © 2023-2024 SAP SE. Alle Rechte vorbehalten."
+            "state" : "translated",
+            "value" : "Copyright © 2023-2026 SAP SE. Alle Rechte vorbehalten."
           }
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Copyright © 2023-2025 SAP SE. All rights reserved."
+            "state" : "translated",
+            "value" : "Copyright © 2023-2026 SAP SE. All rights reserved."
           }
         }
       }

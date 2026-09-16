@@ -1,6 +1,6 @@
 /*
      AppDelegate.m
-     Copyright 2023-2025 SAP SE
+     Copyright 2023-2026 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 
 #import "AppDelegate.h"
 #import "Constants.h"
+#import "MTUpdateChecker.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong, readwrite) NSWindowController *settingsController;
@@ -31,7 +32,7 @@
     
     NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
     _settingsController = [storyboard instantiateControllerWithIdentifier:@"corp.sap.SapMachineManager.SettingsController"];
-    [_settingsController loadWindow];
+    [_settingsController loadWindow];    
 }
 
 - (NSError*)deleteTemporaryItems
@@ -52,6 +53,8 @@
     return error;
 }
 
+#pragma mark - IBActions
+
 - (IBAction)openWebsite:(id)sender
 {
     NSString *urlString = ([sender tag] == 1000) ? kMTGitHubURL : kMTSapMachineWebsiteURL;
@@ -69,6 +72,36 @@
                                                         object:nil
                                                       userInfo:nil
     ];
+}
+
+- (IBAction)checkForUpdates:(id)sender
+{
+    MTUpdateChecker *updateChecker = [[MTUpdateChecker alloc] initWithBundleIdentifier:kMTUpdateCheckerBundleIdentifier];
+    [updateChecker launch];
+}
+
+#pragma mark - NSMenuItemValidation
+
+- (BOOL)validateMenuItem:(NSMenuItem *)item
+{
+    BOOL enableItem = YES;
+
+    if ([item tag] == 9000) {
+        
+        enableItem = !([[NSUserDefaults standardUserDefaults] objectIsForcedForKey:kMTDefaultsUpdateCheckDisabledKey] &&
+                       [[NSUserDefaults standardUserDefaults] boolForKey:kMTDefaultsUpdateCheckDisabledKey]);
+        
+        // if update checking has not been disabled, we check if the Patcher app is installed
+        if (enableItem) {
+            
+            MTUpdateChecker *updateChecker = [[MTUpdateChecker alloc] initWithBundleIdentifier:kMTUpdateCheckerBundleIdentifier];
+            enableItem = [updateChecker isAvailable];
+        }
+        
+        [item setHidden:!enableItem];
+    }
+
+    return enableItem;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification

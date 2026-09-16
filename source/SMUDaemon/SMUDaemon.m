@@ -1,6 +1,6 @@
 /*
      SMUDaemon.m
-     Copyright 2023-2025 SAP SE
+     Copyright 2023-2026 SAP SE
      
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -116,7 +116,6 @@
                 [self.activeConnections addObject:newConnection];
             });
             
-            
             acceptConnection = YES;
         }
     }
@@ -177,7 +176,7 @@
     return isAllowed;
 }
 
-#pragma mark exported methods
+#pragma mark - exported methods
 
 - (void)connectWithEndpointReply:(void (^)(NSXPCListenerEndpoint *endpoint))reply
 {
@@ -577,7 +576,7 @@
     }
 }
 
-#pragma mark MTSapMachineAssetUpdateDelegate methods
+#pragma mark - MTSapMachineAssetUpdateDelegate methods
 
 - (void)updateStartedForAsset:(MTSapMachineAsset*)asset
 {
