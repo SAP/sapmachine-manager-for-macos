@@ -24,7 +24,7 @@ _SapMachine Manager_ is the standard tool within SAP to install _SapMachine_ on 
 
 📦 Create SapMachine installer packages  
 
-💻 For macOS 13 and newer  
+💻 Runs on macOS 13 and newer  
 
 <br/>
 
